@@ -118,10 +118,8 @@ function processTarget(target, seen) {
     return [id, newRow]
 }
 
-
-function main() {
+function update(refresh_seconds) {
     var newData = []
-    const refresh_seconds = 10
 
     fetch('https://eyes.nasa.gov/dsn/data/dsn.xml?r=' + Date.now())
         .then(response => response.text())
@@ -149,6 +147,15 @@ function main() {
         .catch(error => {
             console.error('Error fetching or parsing XML:', error);
         });
+}
+
+function main() {
+    const refresh_seconds = 10
+    
+    
+    update(refresh_seconds)
+
+
 }
 
 setInterval(main, 100000)
