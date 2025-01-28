@@ -1,1 +1,648 @@
-Hello World
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+
+        .frame {
+            width: 60%;
+            float: right;
+            height: 1000px;
+            transform: scale(1.00);
+            transform-origin: 0 0;
+        }
+
+        body {
+            background-color: #000;
+            color: #FFF;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .countdown {
+            color: #333:
+        }
+
+        tr:nth-child(even) {
+            background-color: #34282C;
+        }
+
+
+        .explainer {
+            position: relative;
+            top: 90px;
+            padding: 20px;
+            float: left;
+            width: 25%;
+            height: 1250px;
+            border: none;
+            background-color: #000;
+        }
+
+        .DSN {
+            float: left;
+            width: 65%;
+            height: 1250px;
+            border: none;
+            background-color: #000;
+        }
+    </style>
+    <script type="text/javascript">
+        const parser = new DOMParser();
+
+        const spacecraftList =
+            [
+                {
+                    id: 'ace',
+                    title: 'Advanced Composition Explorer',
+                    mission: 'solar wind',
+                    location: 'heliocentric',
+                    flag: ''
+                },
+                {id: 'apm1', title: 'Astrobotic Peregrine 1', mission: '', location: 'lunar', flag: ''},
+                {id: 'argo', title: 'ArgoMoon', mission: 'demo', location: 'deep space', flag: ''},
+                {
+                    id: 'atot',
+                    title: 'Advanced Tracking and Observational Techniques',
+                    mission: '',
+                    location: '',
+                    flag: ''
+                },
+                {
+                    id: 'bepi', title: 'BepiColombo', mission: '', location: '',
+                    flag: '<IMG SRC="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Flag_of_Europe.svg/2560px-Flag_of_Europe.svg.png" height="20">'
+                },
+                {id: 'bios', title: 'BioSentinel', mission: '', location: '', flag: ''},
+                {id: 'caps', title: 'CAPSTONE', mission: 'orbit stability test', location: 'lunar', flag: ''},
+                {id: 'cas', title: 'Cassini', mission: '', location: '', flag: ''},
+                {id: 'cass', title: 'Testing', mission: 'maintenance', location: '', flag: ''},
+                {
+                    id: 'ch1',
+                    title: 'Chandrayaan',
+                    mission: '',
+                    location: 'lunar',
+                    flag: '<IMG SRC="https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/2560px-Flag_of_India.svg.png" height="20">'
+                },
+                {
+                    id: 'ch2',
+                    title: 'Chandrayaan-2',
+                    mission: '',
+                    location: 'lunar',
+                    flag: '<IMG SRC="https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/2560px-Flag_of_India.svg.png" height="20">'
+                },
+                {
+                    id: 'ch2l',
+                    title: 'Chandrayaan-2 Lander',
+                    mission: '',
+                    location: 'lunar',
+                    flag: '<IMG SRC="https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/2560px-Flag_of_India.svg.png" height="20">'
+                },
+                {
+                    id: 'ch2o',
+                    title: 'Chandrayaan-2 Orbiter',
+                    mission: '',
+                    location: 'lunar',
+                    flag: '<IMG SRC="https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/2560px-Flag_of_India.svg.png" height="20">'
+                },
+                {
+                    id: 'ch3',
+                    title: 'Chandrayaan-3',
+                    mission: '',
+                    location: 'lunar',
+                    flag: '<IMG SRC="https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/2560px-Flag_of_India.svg.png" height="20">'
+                },
+                {id: 'chdr', title: 'Chandra Space Telescope', mission: 'X-ray Observatory', location: 'HEO', flag: ''},
+                {id: 'clu1', title: 'Cluster 1', mission: '', location: '', flag: ''},
+                {id: 'clu2', title: 'Cluster 2', mission: '', location: '', flag: ''},
+                {id: 'clu3', title: 'Cluster 3', mission: '', location: '', flag: ''},
+                {id: 'clu4', title: 'Cluster 4', mission: '', location: '', flag: ''},
+                {id: 'cue3', title: 'CU Earth Escape Explorer', mission: '', location: 'LEO', flag: ''},
+                {id: 'cusp', title: 'CubeSat for Solar Particles', mission: '', location: '', flag: ''},
+                {
+                    id: 'dart',
+                    title: 'Double Asteroid Redirection Test',
+                    mission: 'small body',
+                    location: 'small body',
+                    flag: ''
+                },
+                {id: 'dawn', title: 'Dawn', mission: '', location: 'small body', flag: ''},
+                {id: 'dif', title: 'Deep Impact', mission: '', location: 'lunar', flag: ''},
+                {
+                    id: 'dsco',
+                    title: 'Deep Space Climate Observatory (DSCOVR)',
+                    mission: 'space weather',
+                    location: 'L1',
+                    flag: ''
+                },
+                {id: 'dsn', title: 'Testing', mission: 'maintenance', location: '', flag: ''},
+                {id: 'dss', title: 'Testing', mission: 'maintenance', location: '', flag: ''},
+                {id: 'egs', title: 'EVN and Global Services', mission: '', location: '', flag: ''},
+                {id: 'em1', title: 'Human Space Flight: Artemis I', mission: '', location: '', flag: ''},
+                {id: 'em2', title: 'Human Space Flight: Artemis II', mission: '', location: '', flag: ''},
+                {id: 'em3', title: 'Human Space Flight: Artemis III', mission: '', location: '', flag: ''},
+                {id: 'emm', title: 'Emirates Mars Mission (Hope)', mission: '', location: 'Mars', flag: ''},
+                {id: 'em-1', title: 'Exploration Mission-1', mission: '', location: '', flag: ''},
+                {id: 'em-2', title: 'Exploration Mission-2', mission: '', location: '', flag: ''},
+                {id: 'em-3', title: 'Exploration Mission-3', mission: '', location: '', flag: ''},
+                {id: 'em-4', title: 'Exploration Mission-4', mission: '', location: '', flag: ''},
+                {id: 'em-5', title: 'Exploration Mission-5', mission: '', location: '', flag: ''},
+                {id: 'em-6', title: 'Exploration Mission-6', mission: '', location: '', flag: ''},
+                {id: 'em-7', title: 'Exploration Mission-7', mission: '', location: '', flag: ''},
+                {id: 'em-8', title: 'Exploration Mission-8', mission: '', location: '', flag: ''},
+                {id: 'em-9', title: 'Exploration Mission-9', mission: '', location: '', flag: ''},
+                {id: 'em-10', title: 'Exploration Mission-10', mission: '', location: '', flag: ''},
+                {id: 'equl', title: 'EQUilibriUm Lunar-Earth point 6U Spacecraft)', mission: 'mapping Earth plasmasphere', location: 'lunar', flag: '<IMG SRC="https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/2560px-Flag_of_Japan.svg.png" height=20">' },
+                {id: 'escg', title: 'Engineering and Science Contract Group', mission: '', location: '', flag: ''},
+                {
+                    id: 'eurc',
+                    title: 'Europa Clipper',
+                    mission: 'subsurface ocean',
+                    location: 'Jupiter (en-route)'
+                    , flag: ''
+                },
+                {id: 'eus', title: 'Exploration Upper Stage', mission: '', location: '', flag: ''},
+                {id: 'gaia', title: 'Gaia', mission: 'mapping Milky Way', location: 'L2', flag: '<IMG SRC="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Flag_of_Europe.svg/2560px-Flag_of_Europe.svg.png" height="20">'},
+                {id: 'gbra', title: 'Ground Based Radio Astronomy', mission: 'radio telescope', location: '', flag: ''},
+                {id: 'go10', title: 'GOES 10', mission: 'weather', location: 'Earth', flag: ''},
+                {id: 'go11', title: 'GOES 11', mission: 'weather', location: 'Earth', flag: ''},
+                {id: 'go12', title: 'GOES 12', mission: 'weather', location: 'Earth', flag: ''},
+                {id: 'go13', title: 'GOES 13', mission: 'weather', location: 'Earth', flag: ''},
+                {id: 'go14', title: 'GOES 14', mission: 'weather', location: 'Earth', flag: ''},
+                {id: 'go15', title: 'GOES 15', mission: 'weather', location: 'Earth', flag: ''},
+                {id: 'go16', title: 'GOES 16', mission: 'weather', location: 'Earth', flag: ''},
+                {id: 'go17', title: 'GOES 17', mission: 'weather', location: 'Earth', flag: ''},
+                {id: 'grla', title: 'GRAIL A', mission: '', location: '', flag: ''},
+                {id: 'grlb', title: 'GRAIL B', mission: '', location: '', flag: ''},
+                {id: 'gssr', title: 'Solar System Radar', mission: 'NEO threat detection', location: 'Goldstone', flag: ''},
+                {id: 'gtl', title: 'Geotail', mission: '', location: '', flag: ''},
+                {id: 'gvrt', title: 'GAVRT', mission: 'radio telescope', location: 'Goldstone', flag: ''},
+                {id: 'hcra', title: 'Host Country Radio Astronomy', mission: '', location: '', flag: ''},
+                {id: 'hmap', title: 'LunaH-Map', mission: '', location: '', flag: ''},
+                {id: 'hst', title: 'Hubble Space Telescope', mission: '', location: '', flag: ''},
+                {id: 'hyb2', title: 'Hayabusa-2', mission: '', location: '', flag: '<IMG SRC="https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/2560px-Flag_of_Japan.svg.png" height=20">' },
+                {id: 'ice', title: 'ISEE-3 Reboot', mission: '', location: '', flag: ''},
+                {id: 'icps', title: 'Interim Cryogenic Propulsion Stage', mission: '', location: '', flag: ''},
+                {id: 'imag', title: 'IMAGE', mission: '', location: '', flag: ''},
+                {id: 'intg', title: 'INTEGRAL', mission: '', location: '', flag: ''},
+                {id: 'jno', title: 'Juno', mission: 'magnetosphere', location: 'Jupiter', flag: ''},
+                {id: 'jnsa', title: 'Janus A', mission: '', location: '', flag: ''},
+                {id: 'jnsb', title: 'Janus B', mission: '', location: '', flag: ''},
+                {id: 'jwst', title: 'James Webb Space Telescope', mission: 'early universe', location: 'L2', flag: ''},
+                {id: 'kepl', title: 'Kepler', mission: '', location: '', flag: ''},
+                {id: 'kplo', title: 'Korea Pathfinder Lunar Orbiter', mission: 'demonstration', location: 'Lunar', flag: '<IMG SRC="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/2560px-Flag_of_South_Korea.svg.png" height=20">' },
+                {id: 'lade', title: 'Lunar Atmosphere and Dust Environment Explorer', mission: '', location: '', flag: ''},
+                {id: 'lcro', title: 'LCROSS', mission: '', location: '', flag: ''},
+                {id: 'lfl', title: 'Lunar Flashlight', mission: '', location: '', flag: ''},
+                {id: 'lici', title: 'LICIACube', mission: '', location: '', flag: ''},
+                {id: 'lro', title: 'Lunar Reconnaissance Orbiter', mission: 'mapping', location: 'lunar', flag: ''},
+                {id: 'lnd1', title: 'Lunar Node 1', mission: '', location: '', flag: ''},
+                {id: 'ltst', title: 'Interim Cryogenic Propulsion Stage', mission: '', location: '', flag: ''},
+                {id: 'lucy', title: 'Lucy', mission: 'trojan asteroids', location: 'en-route', flag: ''},
+                {id: 'lunah-map', title: 'Lunar Hydrogen MAPper', mission: '', location: '', flag: ''},
+                {
+                    id: 'm01o',
+                    title: 'Mars Odyssey',
+                    mission: 'climate, geology, & radiation',
+                    location: 'Mars',
+                    flag: ''
+                },
+                {
+                    id: 'm01s',
+                    title: 'Mars Odyssey',
+                    mission: 'climate, geology, & radiation',
+                    location: 'Mars',
+                    flag: ''
+                },
+                {id: 'm20', title: 'Mars 2020 (Perseverance)', mission: 'rover', location: 'Mars', flag: ''},
+                {id: 'map', title: 'WMAP', mission: '', location: '', flag: ''},
+                {id: 'mcoa', title: 'MarCO A', mission: '', location: '', flag: ''},
+                {id: 'mcob', title: 'MarCO B', mission: '', location: '', flag: ''},
+                {id: 'mer1', title: 'Opportunity', mission: '', location: '', flag: ''},
+                {id: 'mer2', title: 'Spirit', mission: '', location: '', flag: ''},
+                {id: 'mex', title: 'Mars Express', mission: '', location: 'Mars', flag: ''},
+                {id: 'mgs', title: 'Mars Global Surveyor', mission: '', location: 'Mars', flag: ''},
+                {id: 'mlic', title: 'Lunar IceCube', mission: '', location: '', flag: ''},
+                {id: 'mms1', title: 'MMS 1', mission: '', location: '', flag: ''},
+                {id: 'mms2', title: 'MMS 2', mission: '', location: '', flag: ''},
+                {id: 'mms3', title: 'MMS 3', mission: '', location: '', flag: ''},
+                {id: 'mms4', title: 'MMS 4', mission: '', location: '', flag: ''},
+                {id: 'mom', title: 'Mars Orbiter Mission', mission: '', location: 'Mars', flag: ''},
+                {
+                    id: 'mro',
+                    title: 'Mars Reconnaissance Orbiter',
+                    mission: 'climate & geology',
+                    location: 'Mars',
+                    flag: ''
+                },
+                {
+                    id: 'mros',
+                    title: 'Mars Reconnaissance Orbiter',
+                    mission: 'climate & geology',
+                    location: 'Mars',
+                    flag: ''
+                },
+                {id: 'msgr', title: 'MESSENGER', mission: '', location: 'Mercury', flag: ''},
+                {id: 'msl', title: 'Mars Science Laboratory (Curiosity)', mission: 'rover', location: 'Mars', flag: ''},
+                {id: 'musc', title: 'Hayabusa', mission: '', location: '', flag: ''},
+                {id: 'mvn', title: 'MAVEN', mission: 'atmosphere', location: 'Mars', flag: ''},
+                {id: 'neas', title: 'Near Earth Asteroid Scout', mission: '', location: '', flag: ''},
+                {id: 'nhpc', title: 'New Horizons', mission: '', location: 'Pluto/Kuiper Belt', flag: ''},
+                {id: 'no15', title: 'NOAA 15', mission: 'weather', location: 'Earth', flag: ''},
+                {id: 'no16', title: 'NOAA 16', mission: 'weather', location: 'Earth', flag: ''},
+                {id: 'no17', title: 'NOAA 17', mission: 'weather', location: 'Earth', flag: ''},
+                {id: 'no18', title: 'NOAA 18', mission: 'weather', location: 'Earth', flag: ''},
+                {id: 'nsyt', title: 'InSight', mission: 'geology, atmosphere', location: 'Mars surface', flag: ''},
+                {id: 'olin', title: 'SWARM-EX', mission: '', location: '', flag: ''},
+                {id: 'omot', title: 'OMOTENASHI', mission: '', location: '', flag: ''},
+                {
+                    id: 'orx',
+                    title: 'OSIRIS-REx',
+                    mission: 'small body sample',
+                    location: 'asteroid Apophis (en-route)',
+                    flag: ''
+                },
+                {id: 'phx', title: 'Phoenix', mission: '', location: '', flag: ''},
+                {id: 'plc', title: 'Akatsuki', mission: '', location: '', flag: ''},
+                {id: 'polr', title: 'POLAR', mission: '', location: '', flag: ''},
+                {
+                    id: 'psyc',
+                    title: 'Psyche',
+                    mission: 'planet formation',
+                    location: 'Asteroid 16 Psyche (en-route',
+                    flag: ''
+                },
+                {id: 'rd1', title: 'Red Dragon 1', mission: '', location: '', flag: ''},
+                {id: 'rfc', title: 'Reference Frame Calibration', mission: '', location: '', flag: ''},
+                {id: 'rose', title: 'Rosetta', mission: '', location: '', flag: ''},
+                {id: 'rp', title: 'Resource Prospector', mission: '', location: '', flag: ''},
+                {
+                    id: 'rsp',
+                    title: 'ExoMars Rover and Surface Platform',
+                    mission: '',
+                    location: '',
+                    flag: '<IMG SRC="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Flag_of_Europe.svg/2560px-Flag_of_Europe.svg.png" height="20">'
+                },
+                {id: 'rsts', title: 'Resource System Time Sharing', mission: '', location: '', flag: ''},
+                {id: 'sdu', title: 'Stardust', mission: '', location: '', flag: ''},
+                {id: 'sele', title: 'Kaguya', mission: '', location: '', flag: ''},
+                {id: 'sgp', title: 'Space Geodesy Program', mission: '', location: '', flag: ''},
+                {id: 'slim', title: 'Smart Lander for Investigating Moon', mission: '', location: '', flag: ''},
+                {
+                    id: 'soho',
+                    title: 'SOlar Heliophisics Observatory',
+                    mission: 'heliophysics',
+                    location: 'L1',
+                    flag: ''
+                },
+                {id: 'spil', title: 'Beresheet', mission: '', location: '', flag: ''},
+                {id: 'spp', title: 'Parker Solar Probe', mission: 'heliophysics', location: 'HEO', flag: ''},
+                {id: 'sta', title: 'STEREO A', mission: 'heliophysics', location: 'trojan', flag: ''},
+                {id: 'stab', title: 'STEREO B', mission: 'heliophysics', location: 'trojan', flag: ''},
+                {id: 'stb', title: 'STEREO B', mission: 'heliophysics', location: 'trojan', flag: ''},
+                {id: 'stf', title: 'Spitzer Space Telescope', mission: '', location: '', flag: ''},
+                {id: 'td10', title: 'TDRS 10', mission: '', location: '', flag: ''},
+                {id: 'td11', title: 'TDRS 11', mission: '', location: '', flag: ''},
+                {id: 'td12', title: 'TDRS 12', mission: '', location: '', flag: ''},
+                {id: 'td13', title: 'TDRS 13', mission: '', location: '', flag: ''},
+                {id: 'tdr1', title: 'TDRS 1', mission: '', location: '', flag: ''},
+                {id: 'tdr3', title: 'TDRS 3', mission: '', location: '', flag: ''},
+                {id: 'tdr4', title: 'TDRS 4', mission: '', location: '', flag: ''},
+                {id: 'tdr5', title: 'TDRS 5', mission: '', location: '', flag: ''},
+                {id: 'tdr6', title: 'TDRS 6', mission: '', location: '', flag: ''},
+                {id: 'tdr7', title: 'TDRS 7', mission: '', location: '', flag: ''},
+                {id: 'tdr8', title: 'TDRS 8', mission: '', location: '', flag: ''},
+                {id: 'tdr9', title: 'TDRS 9', mission: '', location: '', flag: ''},
+                {id: 'terr', title: 'TERRA', mission: '', location: '', flag: ''},
+                {id: 'tess', title: 'Transiting Exoplanet Survey Satellite', mission: '', location: '', flag: ''},
+                {
+                    id: 'tgo',
+                    title: 'Trace Gas Orbiter',
+                    mission: 'atmosphere',
+                    location: 'Mars',
+                    flag: '<IMG SRC="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Flag_of_Europe.svg/2560px-Flag_of_Europe.svg.png" height="20">'
+                },
+                {id: 'thb', title: 'THEMIS B', mission: 'Earths magnetosphere', location: 'LEO', flag: ''},
+                {id: 'thc', title: 'THEMIS C', mission: '', location: '', flag: ''},
+                {id: 'tm', title: 'Team Miles', mission: '', location: '', flag: ''},
+                {id: 'tmm', title: 'Team Miles', mission: '', location: '', flag: ''},
+                {id: 'ulys', title: 'Ulysses', mission: '', location: '', flag: ''},
+                {id: 'vex', title: 'Venus Express', mission: '', location: '', flag: ''},
+                {
+                    id: 'vgr1',
+                    title: 'Voyager 1',
+                    mission: 'beyond the solar system',
+                    location: 'interstellar',
+                    flag: ''
+                },
+                {
+                    id: 'vgr2',
+                    title: 'Voyager 2',
+                    mission: 'beyond the solar system',
+                    location: 'interstellar',
+                    flag: ''
+                },
+                {id: 'vlbi', title: 'V.L.B. Interferometry', mission: '', location: '', flag: ''},
+                {id: 'wind', title: 'WIND', mission: 'solar wind', location: 'L1', flag: ''},
+                {id: 'xmm', title: 'X-ray Multi-Mirror Mission (XMM-Newton)', mission: '', location: '', flag: ''},
+            ]
+
+        const spacecraftMap = spacecraftList.reduce((result, dict) => {
+            result[dict.id] = dict;
+            result[dict.id].total_down = 0;
+            return result;
+        }, {});
+
+        function replaceTableRows(tableId, newData) {
+            const table = document.getElementById(tableId);
+            const tbody = table.querySelector("tbody");
+
+            // Clear existing rows
+            tbody.innerHTML = "";
+
+            // Add new rows
+            newData.forEach(rowData => {
+                var cnt = 0
+                const row = tbody.insertRow();
+                rowData.forEach(cellData => {
+                    cnt++
+                    const cell = row.insertCell();
+                    cell.style.textAlign = 'center';
+                    if (cnt == 6) {
+                        if (cellData.includes('billion')) {
+                            cell.style.color = 'yellow';
+                        }
+                    } else if (cnt == 3) {
+                        cell.style.textAlign = 'center';
+                        if (cellData.includes('Mb')) {
+                            cell.style.color = 'yellow';
+                        }
+                    }
+                    cell.innerHTML = cellData;
+                });
+            });
+        }
+
+        function countDown(seconds) {
+            let countdownElement = document.getElementById('countdown');
+            let timeLeft = seconds;
+
+            function startCountdown() {
+                countdownElement.innerText = timeLeft;
+                if (timeLeft === 0) {
+                    timeLeft = seconds;  // Reset countdown
+                    main();
+                } else {
+                    timeLeft--;
+                }
+            }
+
+            // Update countdown every second
+            setInterval(startCountdown, 1000);
+        }
+
+        function dataRateHuman(b) {
+            if (b > 1000000000) {
+                units = 'Gb'
+                places = 0
+                factor = 1000000000
+            } else if (b >= 1000000) {
+                units = 'Mb'
+                places = 1
+                factor = 1000000
+            } else if (b >= 1000) {
+                units = 'kb'
+                places = 0
+                factor = 1000
+            } else if (b >= 100) {
+                units = 'kb'
+                places = 1
+                factor = 1000
+            } else {
+                units = 'b'
+                places = 2
+                factor = 1
+            }
+            var dataDateDisplay = (b / factor).toFixed(places)
+            return [dataDateDisplay, units]
+        }
+
+        function processUpDown(obj, arrowchar) {
+            s = ''
+            for (let [band, value] of Object.entries(obj)) {
+                if (band == 'totalDataRate') {
+                    continue
+                }
+                if (s.length > 0) {
+                    s = '<br>' + s
+                }
+
+                var dataRate = value.dataRate
+                if (dataRate > 1000000000) {
+                    units = 'Gb'
+                    places = 0
+                    factor = 100000000
+                } else if (dataRate > 10000000) {
+                    units = 'Mb'
+                    places = 0
+                    factor = 100000
+                } else if (dataRate > 1000) {
+                    units = 'kb'
+                    places = 0
+                    factor = 1000
+                } else if (dataRate > 100) {
+                    units = 'kb'
+                    places = 1
+                    factor = 1000
+                } else {
+                    units = 'b'
+                    places = 2
+                    factor = 1
+                }
+                units += '/sec'
+                var dataDateDisplay = (dataRate / factor).toFixed(places)
+                s += '<font color="#808080">' + band + arrowchar + '&nbsp;' + dataDateDisplay + '&nbsp;' + units
+            }
+            return s
+        }
+
+        function processSignals(signalData, seconds) {
+            data = {}
+            for (let i = 0; i < signalData.length; i++) {
+                const signal = signalData[i];
+                var active = signal.getAttribute('active')
+                if (active != "true") {
+                    continue
+                }
+                const spacecraft = signal.getAttribute('spacecraft').toLowerCase();
+                var dataRate = Number(signal.getAttribute('dataRate'))
+                var power = signal.getAttribute('power')
+                var band = signal.getAttribute('band')
+                if (dataRate > 0) {
+                    if (!(spacecraft in data)) {
+                        data[spacecraft] = {
+                            totalDataRate: 0
+                        }
+                    }
+                    if (!(band in data[spacecraft])) {
+                        // track bands separately so we can display them
+                        data[spacecraft][band] = {dataRate: 0, power: 0}
+                    }
+                    // store this signal with the appropriate rf band
+                    data[spacecraft][band].dataRate += dataRate
+                    data[spacecraft][band].power += power
+                    // accumulate data
+                    data[spacecraft].totalDataRate += dataRate * seconds
+                }
+            }
+            return data
+        }
+
+        function processRange(uprange_km, rtlt_sec) {
+            uprange = uprange_km * 0.621371
+            if (uprange_km == -1) {
+                uprange = ''
+            } else if (uprange >= 1000000000) {
+                uprange = uprange / 1000000000
+                uprange = uprange.toFixed(2)
+                uprange = uprange.toString() + '&nbsp;billion&nbsp;mi'
+            } else if (uprange >= 1000000) {
+                uprange = uprange / 1000000
+                uprange = uprange.toFixed(2)
+                uprange = uprange.toString() + '&nbsp;million&nbsp;mi'
+            } else {
+                uprange = Math.round(uprange / 1000) * 1000
+                uprange = uprange.toLocaleString(2) + '&nbsp;mi'
+            }
+            rtlt_min = rtlt_sec / 60
+            rtlt_hours = rtlt_min / 60
+
+            uprange += '<br><font color="#808080">'
+            if (rtlt_hours > 1) {
+                uprange += rtlt_hours.toFixed(1) + '&nbsp;light&nbsp;hrs'
+            } else if (rtlt_min > 1) {
+                uprange += rtlt_min.toFixed(1) + '&nbsp;light&nbsp;min'
+            } else if (rtlt_sec > 0) {
+                uprange += rtlt_sec + '&nbsp;light&nbsp;sec'
+            }
+            uprange += '</font>'
+            return uprange
+        }
+
+        function main() {
+            var newData = []
+            const refresh_seconds = 10
+
+            fetch('https://eyes.nasa.gov/dsn/data/dsn.xml?r=' + Date.now())
+                .then(response => response.text())
+                .then(xmlString => {
+                        const parser = new DOMParser();
+                        const xmlDoc = parser.parseFromString(xmlString, 'text/xml');
+                        var seen = new Set();
+
+                        // gather signals
+                        upload = processSignals(xmlDoc.getElementsByTagName('upSignal'), refresh_seconds);
+                        download = processSignals(xmlDoc.getElementsByTagName('downSignal'), refresh_seconds);
+
+                        // gather targets
+                        const targets = xmlDoc.getElementsByTagName('target');
+                        for (let i = 0; i < targets.length; i++) {
+                            const target = targets[i];
+                            const id = target.getAttribute('name').toLowerCase();
+
+                            // accumulate data across all bands
+                            if (id in download) {
+                                spacecraftMap[id].total_down += download[id].totalDataRate
+                            }
+                            // process range
+                            var rtlt_sec = Number(target.getAttribute('rtlt')) / 2
+                            var uprange_km = Number(target.getAttribute('uplegRange'))
+                            uprange = processRange(uprange_km, rtlt_sec)
+
+                            // prepare table
+                            if (!(id in spacecraftMap)) {
+                                // new spacecraft, should be added to hard coded map above.
+                                spacecraftMap[id] = {
+                                    id: id,
+                                    title: target.getAttribute('name'),
+                                    mission: '',
+                                    location: '',
+                                    flag: ''
+                                }
+                            }
+                            if ((!seen.has(spacecraftMap[id].title)) & (spacecraftMap[id].title != 'Testing')) {
+                                updown = ''
+
+                                // build speed column
+                                // rate by band
+                                if (id in upload) {
+                                    updown += processUpDown(upload[id], '&uprr;')
+                                }
+                                if (id in download) {
+                                    updown += processUpDown(download[id], '&darr;')
+                                }
+                                if (updown.length <= 5) {
+                                    if (spacecraftMap[id].total_down > 0) {
+                                        updown += '<font color="#808080">teardown</font>'
+                                    } else {
+                                        updown += '<font color="#808080">startup</font>'
+                                    }
+                                }
+                                // accumulated total
+                                if (spacecraftMap[id].total_down > 0) {
+                                    [total_down_human, total_down_units] = dataRateHuman(spacecraftMap[id].total_down)
+                                    console.log(id, spacecraftMap[id].total_down, total_down_human, total_down_units)
+                                    updown += '<br>' + total_down_human + '&nbsp;'+total_down_units+'&nbsp;total'
+                                }
+                                // total_down_kb = spacecraftMap[id].total_down / 1000
+                                // total_down_mb = spacecraftMap[id].total_down / 1000
+                                // total_down_gb = total_down_mb / 1000
+                                // if (spacecraftMap[id].total_down > 1000000000) {
+                                //     updown += '<br>' + total_down_gb.toFixed(2) + '&nbsp;Gb&nbsp;total'
+                                // } else if (total_down_mb > 0) {
+                                //     updown += '<br>' + total_down_mb.toFixed(1) + '&nbsp;Mb&nbsp;total'
+                                // }
+
+                                newData.push([id.toUpperCase() + spacecraftMap[id].flag, spacecraftMap[id].title, updown, spacecraftMap[id].location, spacecraftMap[id].mission, uprange]);
+                            }
+                            seen.add(spacecraftMap[id].title);
+                        }
+                        newData.sort((a, b) => a[0].localeCompare(b[0]));
+                        replaceTableRows("SPACECRAFTTARGETS", newData);
+                    }
+                )
+                .catch(error => {
+                    console.error('Error fetching or parsing XML:', error);
+                });
+        }
+
+        setInterval(main, 100000)
+
+    </script>
+</head>
+<body onload="main();countDown(10)" background="#000">
+
+<div class="explainer">
+    <TABLE ID='SPACECRAFTTARGETS' BORDER="0" CELLPADDING="4" CELLSPACING="3">
+        <thead>
+        <tr>
+            <th style="color:#383838;">
+                <div id="countdown">-</div>
+            </th>
+            <th></th>
+            <th>Speed</th>
+            <th>Location</th>
+            <th>Studying</th>
+            <th>Distance</th>
+        </tr>
+        </thead>
+        <tbody>
+        <TR>
+            <TD>loading</TD>
+        </TR>
+        </tbody>
+    </TABLE>
+    <IMG SRC="qr_code.png" align="right">
+    <H2 valign='center' align="center">eyes.nasa.gov</H2>
+</div>
+<iframe class="frame" src="https://eyes.nasa.gov/apps/dsn-now/dsn.html" id="DSNNow" name="DSNNow" scrolling="no"
+        frameborder="0"></iframe>
+</body>
+</html>
