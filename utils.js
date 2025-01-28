@@ -11,7 +11,6 @@ function countDown(seconds) {
             timeLeft--;
         }
     }
-
     // Update countdown every second
     setInterval(startCountdown, 1000);
 }
@@ -78,7 +77,7 @@ function processUpDown(obj, arrowchar) {
         if (s.length > 0) {
             s += '<br>'
         }
-        s += '<font color="#808080">' + band + arrowchar + '&nbsp;' + dataDateDisplay + '&nbsp;' + units
+        s += '<font color="#808080">' + dataDateDisplay + '&nbsp;' + units + '&nbsp;(' + band + ')</font>'
     }
     return s
 }
