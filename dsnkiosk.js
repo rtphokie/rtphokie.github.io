@@ -70,7 +70,7 @@ function processTarget(target, seen, upload, download, timestamp) {
             if (spacecraftMap[id].total_down > 0) {
                 updown += '<font color="#afafaf">teardown</font>'
             } else {
-                updown += '<font color="#afafaf">startup</font>'
+                updown += '<div style="color: #afafaf; text-align: left;">startup</div>'
             }
         }
         // accumulated total
@@ -99,7 +99,12 @@ function processTarget(target, seen, upload, download, timestamp) {
 
         }
         const col1 = id.toUpperCase() + flag
-        const col2 = spacecraftMap[id].title + '<BR><font color="#afafaf">' + spacecraftMap[id].mission + '</font>'
+        console.log(id, spacecraftMap[id].launchdate)
+        var launchdate = ''
+        if (spacecraftMap[id].launchdate.length > 0) {
+            launchdate = '<font color="#afafaf">&nbsp;(' + spacecraftMap[id].launchdate.substr(0,4) + ')</font>'
+        }
+        const col2 = spacecraftMap[id].title + launchdate+ '<BR><font color="#afafaf">' + spacecraftMap[id].mission + '</font>'
         const col3 = updown
         const col4 = uprange
         newRow = [col1,col2,col3,col4]
@@ -111,6 +116,9 @@ function processTarget(target, seen, upload, download, timestamp) {
 
 function update(refresh_seconds) {
     var newData = []
+    var notesForTicker = []
+    var previousSpaceCraftlist= new Set()
+    var currentSpaceCraftlist= new Set()
 
 
     fetch('https://eyes.nasa.gov/dsn/data/dsn.xml?r=' + Date.now())
@@ -133,12 +141,24 @@ function update(refresh_seconds) {
                     const target = targets[i];
                     [id, newRow] = processTarget(target, seen, upload, download, timestamp)
                     seen.add(spacecraftMap[id].title);
+                    if (spacecraftMap[id].note.length > 0) {
+                        notesForTicker.push(spacecraftMap[id].note);
+                        console.log(id, spacecraftMap[id].note)
+                    }
                     if (newRow != undefined) {
+                        currentSpaceCraftlist.add(id)
                         newData.push(newRow)
                     }
                 }
                 newData.sort((a, b) => a[0].localeCompare(b[0]));
                 replaceTableRows("SPACECRAFTTARGETS", newData);
+                if (currentSpaceCraftlist != previousSpaceCraftlist) {
+                    const ticker = document.getElementById('ticker');
+                    ticker.innerHTML = notesForTicker.join('&nbsp;&bull;&nbsp;');
+                    ticker.innerHTML += '&nbsp;&bull;&nbsp;' + notesForTicker.join('&nbsp;&bull;&nbsp;');
+                    previousSpaceCraftlist = currentSpaceCraftlist
+                }
+
             }
         )
         .catch(error => {

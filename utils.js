@@ -52,14 +52,17 @@ function processUpDown(obj, arrowchar) {
         }
 
         var dataRate = value.dataRate
+        blink=false
         if (dataRate >= 1000000000) {
             units = 'Gb'
             places = 1
             factor = 1000000000
+            blink=true
         } else if (dataRate >= 1000000) {
             units = 'Mb'
             places = 1
             factor = 1000000
+            blink=true
         } else if (dataRate >= 10000) {
             units = 'kb'
             places = 0
@@ -82,16 +85,16 @@ function processUpDown(obj, arrowchar) {
         if (s.length > 0) {
             s += '<br>'
         }
-        RfBandColors = {X: '#DAF7A6', S: '#FF1493', Ka: 'yellow'}
+        RfBandColors = {X: '#b7d7e8', S: '#80ced6', Ka: '#f2ae72'}
 
         if (band in RfBandColors) {
-            console.log(band)
-            const thisone = '<font color=""' + RfBandColors[band] + '">' + dataDateDisplay + '&nbsp;' + units + '&nbsp;' + arrowchar + '</font>'
-            s += thisone
-            console.log(thisone)
+            s += '<span style="color: ' + RfBandColors[band] + '">' + band + ':&nbsp;' + dataDateDisplay + '&nbsp;' + units + '&nbsp;' + arrowchar + '</span>'
         } else {
-            s += '<font color="#808080">' + dataDateDisplay + '&nbsp;' + units + '&nbsp;(' + band + ')</font>'
+            s += dataDateDisplay + '&nbsp;' + units + '&nbsp;(' + band + ')'
         }
+    }
+    if (blink) {
+        s = '<span class="blink_me">' + s + '</span>'
     }
     return s
 }
@@ -99,12 +102,14 @@ function processUpDown(obj, arrowchar) {
 
 function processRange(uprange_km, rtlt_sec) {
     uprange = uprange_km * 0.621371
+    blink = false
     if (uprange_km == -1) {
         uprange = ''
     } else if (uprange >= 1000000000) {
         uprange = uprange / 1000000000
         uprange = uprange.toFixed(2)
         uprange = uprange.toString() + '&nbsp;billion&nbsp;mi'
+        blink = true
     } else if (uprange >= 1000000) {
         uprange = uprange / 1000000
         uprange = uprange.toFixed(2)
@@ -116,7 +121,7 @@ function processRange(uprange_km, rtlt_sec) {
     rtlt_min = rtlt_sec / 60
     rtlt_hours = rtlt_min / 60
 
-    uprange += '<br><font color="#808080">'
+    uprange += '<br>'
     if (rtlt_hours > 1) {
         uprange += rtlt_hours.toFixed(1) + '&nbsp;light&nbsp;hrs'
     } else if (rtlt_min > 1) {
@@ -124,7 +129,9 @@ function processRange(uprange_km, rtlt_sec) {
     } else if (rtlt_sec > 0) {
         uprange += rtlt_sec + '&nbsp;light&nbsp;sec'
     }
-    uprange += '</font>'
+    if (blink) {
+        uprange = '<span class="blink_me" style="color: yellow">' + uprange + '</span>'
+    }
     return uprange
 }
 

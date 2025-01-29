@@ -2,7 +2,7 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script type="text/javascript" src="spacecraftlist.js"></script>
+    <script type="text/javascript" src="spacecraftlist2.js"></script>
     <script type="text/javascript" src="utils.js"></script>
     <script type="text/javascript" src="dsnkiosk.js"></script>
 </head>
@@ -17,9 +17,15 @@
                 <th style="color:#383838;" colspan="1">
                     <div id="countdown"></div>
                 </th>
-                <TH>Mission<BR><font color="#808080">exploring</TH></TH>
-                <th>Data Transfer (band)</th>
-                <th>Distance</th>
+                <TH>Mission <font color="#808080">(launch year)</font><BR><font color="#808080">exploring</TH></TH>
+                <th>Data Transfer<BR>Rf Bands:
+<!--                            RfBandColors = {X: '#d5f4e6', S: '#80ced6', Ka: '#f7cac9'}-->
+
+                    <span style="color:#b7d7e8">X </span>
+                    <span style="color:#80ced6">S </span>
+                    <span style="color:#f9d5e5">Ka </span>
+                </th>
+                <th >Distance</th>
             </tr>
             </thead>
             <tbody>
@@ -44,7 +50,7 @@
                 frameborder="0" scrolling="no"></iframe>
     </main>
     <footer class="footer">
-        <div class="marquee">
+        <div class="marquee" id="ticker">
             Use the QR code above to visit <B>Deep Space Network Now</B> on your mobile device or any web browser at eyes.nasa.gov  &nbsp;&bull;&nbsp;
             Use the QR code above to visit <B>Deep Space Network Now</B> on your mobile device or any web browser at eyes.nasa.gov  &nbsp;&bull;&nbsp;
             Use the QR code above to visit <B>Deep Space Network Now</B> on your mobile device or any web browser at eyes.nasa.gov  &nbsp;&bull;&nbsp;
