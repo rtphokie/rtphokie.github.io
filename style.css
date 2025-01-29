@@ -25,7 +25,7 @@ tr:nth-child(even) {
 .dashboard {
     display: grid;
     grid-template-columns: 600px 1fr;
-    grid-template-rows: 50px 860px  80px;
+    grid-template-rows: 50px 900px 30px;
     grid-template-areas:
     "header header"
     "sidebar main-content"
