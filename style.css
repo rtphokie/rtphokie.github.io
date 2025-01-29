@@ -83,7 +83,7 @@ tr:nth-child(even) {
     white-space: nowrap;
     overflow: hidden;
     display: inline-block;
-    animation: marquee 25s linear infinite;
+    animation: marquee 195s linear infinite;
     scroll-behavior: smooth;
     scroll-amount: 4;
 }

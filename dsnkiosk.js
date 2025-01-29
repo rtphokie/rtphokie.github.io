@@ -39,7 +39,7 @@ function processTarget(target, seen, upload, download, timestamp) {
     // accumulate data across all bands
     if (id in download) {
         spacecraftMap[id].total_down += download[id].totalDataRate
-        if (spacecraftMap[id].first_seen == null ) {
+        if (spacecraftMap[id].first_seen == null) {
             spacecraftMap[id].first_seen = timestamp
         }
     }
@@ -54,6 +54,9 @@ function processTarget(target, seen, upload, download, timestamp) {
         spacecraftMap[id] = {
             id: id,
             title: target.getAttribute('name'),
+            launchdate: '',
+            flag: '',
+            note: ''
         }
     }
     if ((!seen.has(spacecraftMap[id].title)) & (spacecraftMap[id].title != 'Testing')) {
@@ -77,7 +80,7 @@ function processTarget(target, seen, upload, download, timestamp) {
         if (spacecraftMap[id].total_down > 0) {
             [total_down_human, total_down_units] = dataRateHuman(spacecraftMap[id].total_down)
             updown += '<br>' + total_down_human + '&nbsp;' + total_down_units;
-            if ( spacecraftMap[id].first_seen != null ){
+            if (spacecraftMap[id].first_seen != null) {
                 const elapsed = (Date.now() - spacecraftMap[id].first_seen) / 1000
                 var elapsed_str = ''
                 if (elapsed > 3660) {
@@ -98,15 +101,17 @@ function processTarget(target, seen, upload, download, timestamp) {
 
         }
         const col1 = id.toUpperCase() + flag
-        console.log(id, spacecraftMap[id].launchdate)
         var launchdate = ''
-        if (spacecraftMap[id].launchdate.length > 0) {
-            launchdate = '<font color="#afafaf">&nbsp;(' + spacecraftMap[id].launchdate.substr(0,4) + ')</font>'
+        if (spacecraftMap[id].title == id.toUpperCase()) {
+            console.log(id, 'needs entry in spacecraftMap')
         }
-        const col2 = spacecraftMap[id].title + launchdate+ '<BR><font color="#afafaf">' + spacecraftMap[id].mission + '</font>'
+        if (spacecraftMap[id].launchdate.length > 0) {
+            launchdate = '<font color="#afafaf">&nbsp;(' + spacecraftMap[id].launchdate.substr(0, 4) + ')</font>'
+        }
+        const col2 = spacecraftMap[id].title + launchdate + '<BR><font color="#afafaf">' + spacecraftMap[id].mission + '</font>'
         const col3 = updown
         const col4 = uprange
-        newRow = [col1,col2,col3,col4]
+        newRow = [col1, col2, col3, col4]
     } else {
         newRow = undefined
     }
@@ -116,8 +121,8 @@ function processTarget(target, seen, upload, download, timestamp) {
 function update(refresh_seconds) {
     var newData = []
     var notesForTicker = ['Use the QR code above to visit <B>Deep Space Network Now</B> on your mobile device or any web browser at eyes.nasa.gov']
-    var previousSpaceCraftlist= new Set()
-    var currentSpaceCraftlist= new Set()
+    var previousSpaceCraftlist = new Set()
+    var currentSpaceCraftlist = new Set()
 
 
     fetch('https://eyes.nasa.gov/dsn/data/dsn.xml?r=' + Date.now())
@@ -142,7 +147,6 @@ function update(refresh_seconds) {
                     seen.add(spacecraftMap[id].title);
                     if (spacecraftMap[id].note.length > 0) {
                         notesForTicker.push(spacecraftMap[id].note);
-                        console.log(id, spacecraftMap[id].note)
                     }
                     if (newRow != undefined) {
                         currentSpaceCraftlist.add(id)
@@ -167,7 +171,6 @@ function update(refresh_seconds) {
 
 function main() {
     const refresh_seconds = 10
-    // console.log(spacecraftMap)
     update(refresh_seconds)
 }
 
