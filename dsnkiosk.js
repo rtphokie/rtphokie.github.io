@@ -116,7 +116,7 @@ function processTarget(target, seen, upload, download, timestamp) {
 
 function update(refresh_seconds) {
     var newData = []
-    var notesForTicker = []
+    var notesForTicker = ['Use the QR code above to visit <B>Deep Space Network Now</B> on your mobile device or any web browser at eyes.nasa.gov']
     var previousSpaceCraftlist= new Set()
     var currentSpaceCraftlist= new Set()
 
