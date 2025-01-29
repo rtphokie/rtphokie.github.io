@@ -89,7 +89,6 @@ function processTarget(target, seen, upload, download, timestamp) {
                 }
                 updown += '&nbsp;in&nbsp;' + elapsed_str
             }
-            // updown += '&nbsp;in&nbsp;'+elapsed
         }
 
         // add flag for non-NASA spacecraft
