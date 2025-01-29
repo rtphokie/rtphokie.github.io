@@ -65,6 +65,7 @@ function processSignals(signalData, seconds) {
 
 function processTarget(target, seen, upload, download, timestamp) {
     const id = target.getAttribute('name').toLowerCase();
+    console.log(id)
 
     // accumulate data across all bands
     if (id in download) {
@@ -174,6 +175,7 @@ function update(refresh_seconds) {
 
 function main() {
     const refresh_seconds = 10
+    // console.log(spacecraftMap)
     update(refresh_seconds)
 }
 

@@ -51,21 +51,25 @@ function processUpDown(obj, arrowchar) {
         }
 
         var dataRate = value.dataRate
-        if (dataRate > 1000000000) {
+        if (dataRate >= 1000000000) {
             units = 'Gb'
-            places = 0
-            factor = 100000000
-        } else if (dataRate > 10000000) {
+            places = 1
+            factor = 1000000000
+        } else if (dataRate >= 1000000) {
             units = 'Mb'
-            places = 0
-            factor = 100000
-        } else if (dataRate > 1000) {
+            places = 1
+            factor = 1000000
+        } else if (dataRate >= 10000) {
             units = 'kb'
             places = 0
             factor = 1000
-        } else if (dataRate > 100) {
+        } else if (dataRate >= 1000) {
             units = 'kb'
             places = 1
+            factor = 1000
+        } else if (dataRate > 100) {
+            units = 'kb'
+            places = 2
             factor = 1000
         } else {
             units = 'b'
