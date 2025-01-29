@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="spacecraftlist.js"></script>
+    <script type="text/javascript" src="utils.js"></script>
+    <script type="text/javascript" src="dsnkiosk.js"></script>
+</head>
+<body onload="main();countDown(10)" background="#000">
+
+<div class="dashboard">
+    <header class="header"><h2>Live View of NASA/JPL Space Flight Operations Facility</h2></header>
+    <aside class="sidebar">
+        <TABLE ID='SPACECRAFTTARGETS' BORDER="0" CELLPADDING="4" CELLSPACING="3" width="100%">
+            <thead>
+            <tr>
+                <th style="color:#383838;" colspan="1">
+                    <div id="countdown"></div>
+                </th>
+                <TH>Mission <font color="#808080">(launch year)</font><BR><font color="#808080">exploring</TH></TH>
+                <th>Data Transfer<BR>Rf Bands:
+<!--                            RfBandColors = {X: '#d5f4e6', S: '#80ced6', Ka: '#f7cac9'}-->
+
+                    <span style="color:#b7d7e8">X </span>
+                    <span style="color:#80ced6">S </span>
+                    <span style="color:#f9d5e5">Ka </span>
+                </th>
+                <th >Distance</th>
+            </tr>
+            </thead>
+            <tbody>
+            <TR>
+                <TD>loading</TD>
+            </TR>
+            </tbody>
+        </TABLE>
+        <table style="background-image: url('map.png'); width: 600px; height: 241px" border="0">
+            <TR>
+                <TD align="center" valign="bottom">
+                    eyes.nasa.gov<BR>
+                    <IMG SRC="qr_code.png" width="100" height="100" align="CENTER"><BR><small><font
+                        color="#36454F">1.20</font></small>
+                </TD>
+            </TR>
+        </table>
+    </aside>
+
+    <main class="main-content">
+        <iframe class="DSN" src="https://eyes.nasa.gov/apps/dsn-now/dsn.html" width="100%" height="800px"
+                frameborder="0" scrolling="no"></iframe>
+    </main>
+    <footer class="footer">
+        <div class="marquee" id="ticker">
+            Use the QR code above to visit <B>Deep Space Network Now</B> on your mobile device or any web browser at eyes.nasa.gov  &nbsp;&bull;&nbsp;
+            Use the QR code above to visit <B>Deep Space Network Now</B> on your mobile device or any web browser at eyes.nasa.gov  &nbsp;&bull;&nbsp;
+            Use the QR code above to visit <B>Deep Space Network Now</B> on your mobile device or any web browser at eyes.nasa.gov  &nbsp;&bull;&nbsp;
+        </div>
+    </footer>
+</div>
