@@ -1,35 +1,5 @@
 const parser = new DOMParser();
 
-function replaceTableRows(tableId, newData) {
-    const table = document.getElementById(tableId);
-    const tbody = table.querySelector("tbody");
-
-    // Clear existing rows
-    tbody.innerHTML = "";
-
-    // Add new rows
-    newData.forEach(rowData => {
-        var cnt = 0
-        const row = tbody.insertRow();
-        rowData.forEach(cellData => {
-            cnt++
-            const cell = row.insertCell();
-            cell.style.textAlign = 'center';
-            if (cnt == 6) {
-                if (cellData.includes('billion')) {
-                    cell.style.color = 'yellow';
-                }
-            } else if (cnt == 3) {
-                cell.style.textAlign = 'center';
-                if (cellData.includes('Mb')) {
-                    cell.style.color = 'yellow';
-                }
-            }
-            cell.innerHTML = cellData;
-        });
-    });
-}
-
 
 function processSignals(signalData, seconds) {
     data = {}
@@ -98,9 +68,9 @@ function processTarget(target, seen, upload, download, timestamp) {
         }
         if (updown.length <= 5) {
             if (spacecraftMap[id].total_down > 0) {
-                updown += '<font color="#808080">teardown</font>'
+                updown += '<font color="#afafaf">teardown</font>'
             } else {
-                updown += '<font color="#808080">startup</font>'
+                updown += '<font color="#afafaf">startup</font>'
             }
         }
         // accumulated total
@@ -125,10 +95,14 @@ function processTarget(target, seen, upload, download, timestamp) {
         // add flag for non-NASA spacecraft
         flag = ''
         if (spacecraftMap[id].flag != null) {
-            flag = '<img src="' + spacecraftMap[id].flag + '" height="20">'
+            flag = '<BR><img src="' + spacecraftMap[id].flag + '" height="20">'
 
         }
-        newRow = [id.toUpperCase() + flag, spacecraftMap[id].title, updown, spacecraftMap[id].location, spacecraftMap[id].mission, uprange]
+        const col1 = id.toUpperCase() + flag
+        const col2 = spacecraftMap[id].title + '<BR><font color="#afafaf">' + spacecraftMap[id].mission + '</font>'
+        const col3 = updown
+        const col4 = uprange
+        newRow = [col1,col2,col3,col4]
     } else {
         newRow = undefined
     }

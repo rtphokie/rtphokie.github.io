@@ -11,6 +11,7 @@ function countDown(seconds) {
             timeLeft--;
         }
     }
+
     // Update countdown every second
     setInterval(startCountdown, 1000);
 }
@@ -81,10 +82,20 @@ function processUpDown(obj, arrowchar) {
         if (s.length > 0) {
             s += '<br>'
         }
-        s += '<font color="#808080">' + dataDateDisplay + '&nbsp;' + units + '&nbsp;(' + band + ')</font>'
+        RfBandColors = {X: '#DAF7A6', S: '#FF1493', Ka: 'yellow'}
+
+        if (band in RfBandColors) {
+            console.log(band)
+            const thisone = '<font color=""' + RfBandColors[band] + '">' + dataDateDisplay + '&nbsp;' + units + '&nbsp;' + arrowchar + '</font>'
+            s += thisone
+            console.log(thisone)
+        } else {
+            s += '<font color="#808080">' + dataDateDisplay + '&nbsp;' + units + '&nbsp;(' + band + ')</font>'
+        }
     }
     return s
 }
+
 
 function processRange(uprange_km, rtlt_sec) {
     uprange = uprange_km * 0.621371
@@ -116,3 +127,23 @@ function processRange(uprange_km, rtlt_sec) {
     uprange += '</font>'
     return uprange
 }
+
+function replaceTableRows(tableId, newData) {
+    const table = document.getElementById(tableId);
+    const tbody = table.querySelector("tbody");
+
+    // Clear existing rows
+    tbody.innerHTML = "";
+
+    // Add new rows
+    newData.forEach(rowData => {
+        var cnt = 0
+        const row = tbody.insertRow();
+        rowData.forEach(cellData => {
+            cnt++
+            const cell = row.insertCell();
+            cell.innerHTML = cellData;
+        });
+    });
+}
+
