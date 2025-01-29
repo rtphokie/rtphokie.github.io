@@ -65,7 +65,6 @@ function processSignals(signalData, seconds) {
 
 function processTarget(target, seen, upload, download, timestamp) {
     const id = target.getAttribute('name').toLowerCase();
-    console.log(id)
 
     // accumulate data across all bands
     if (id in download) {
