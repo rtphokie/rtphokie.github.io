@@ -12,7 +12,7 @@ const spacecraftList =[
  {id: 'atot', title: 'Advanced Tracking and Observational Techniques', mission: '', flag: null, launchdate: '', note: ''},
  {id: 'bepi', title: 'BepiColombo', mission: 'Mercury\'s magnetosphere & surface composition', flag: flags.esa, launchdate: '2018-10-20', note: 'BepiColombo is curently on its way to Mercury, named for the Italian scientists for his contributions to the understanding of Mercury\'s orbit'},
  {id: 'bios', title: 'BioSentinel', mission: 'radiation impact on DNA', flag: null, launchdate: '2022-11-16', note: 'BioSentinel uses yeast cells in testing how deep-space radiation will affect humans'},
- {id: 'caps', title: 'CAPSTONE', mission: 'navigation and positioning between the Earth and Moon', flag: null, launchdate: '2022-06-28', note: 'CAPSTONE is a cubesat launched from Wallops Island, VA to test navigation techniques for the Artemis program'},
+ {id: 'caps', title: 'CAPSTONE', mission: 'autonomous navigation between the Earth and Moon', flag: null, launchdate: '2022-06-28', note: 'CAPSTONE is a cubesat launched from Wallops Island, VA to test navigation techniques for the Artemis program'},
  {id: 'cass', title: 'Testing', mission: 'maintenance', flag: null, launchdate: '', note: ''},
  {id: 'ch2', title: 'Chandrayaan-2', mission: 'study the Moon\'s surface, composition, and exosphere', flag: flags.isro, launchdate: '2019-07-22', note: 'Chandrayaan-2 was India\'s second lunar probe'},
  {id: 'ch2l', title: 'Chandrayaan-2 Lander', mission: 'study the Moon\'s south pole', flag: flags.isro, launchdate: '2019-07-22', note: 'Chandrayaan-2 was India\'s second lunar probe'},
