@@ -79,18 +79,19 @@ function processTarget(target, seen, upload, download, timestamp) {
         // accumulated total
         if (spacecraftMap[id].total_down > 0) {
             [total_down_human, total_down_units] = dataRateHuman(spacecraftMap[id].total_down)
-            updown += '<br>' + total_down_human + '&nbsp;' + total_down_units;
+            updown += '<br><font color="#505050">' + total_down_human + '&nbsp;' + total_down_units;
             if (spacecraftMap[id].first_seen != null) {
                 const elapsed = (Date.now() - spacecraftMap[id].first_seen) / 1000
                 var elapsed_str = ''
                 if (elapsed > 3660) {
-                    elapsed_str = (elapsed / 60).toFixed(1) + '&nbsp;min'
+                    hours = (elapsed / 3660).toFixed(2)
+                    elapsed_str = (elapsed / 3660).toFixed(2) + '&nbsp;hours'
                 } else if (elapsed > 60) {
                     elapsed_str = (elapsed / 60).toFixed(1) + '&nbsp;min'
                 } else {
                     elapsed_str = Math.round(elapsed) + '&nbsp;sec'
                 }
-                updown += '&nbsp;in&nbsp;' + elapsed_str
+                updown += '&nbsp;in&nbsp;' + elapsed_str+'</font>'
             }
         }
 
