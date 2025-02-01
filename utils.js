@@ -85,12 +85,12 @@ function processUpDown(obj, arrowchar) {
         if (s.length > 0) {
             s += '<br>'
         }
-        RfBandColors = {X: '#b7d7e8', S: '#80ced6', Ka: '#f2ae72'}
+        RfBandColors = {X: '#b7d7e8', S: '#f2ae72', Ka: '#80ced6'}
 
         if (band in RfBandColors) {
-            s += '<span style="color: ' + RfBandColors[band] + '">' + band + ':&nbsp;' + dataDateDisplay + '&nbsp;' + units + '&nbsp;' + arrowchar + '</span>'
+            s += '<span style="text-align: center; color: ' + RfBandColors[band] + '">' + band + ':&nbsp;' + dataDateDisplay + '&nbsp;' + units + '&nbsp;' + arrowchar + '</span>'
         } else {
-            s += dataDateDisplay + '&nbsp;' + units + '&nbsp;(' + band + ')'
+            s += '<span style="text-align: center;' + dataDateDisplay + '&nbsp;' + units + '&nbsp;' + arrowchar + '</span>'
         }
     }
     if (blink) {

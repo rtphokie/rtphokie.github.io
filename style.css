@@ -24,8 +24,8 @@ tr:nth-child(even) {
 
 .dashboard {
     display: grid;
-    grid-template-columns: 600px 1fr;
-    grid-template-rows: 50px 920px 30px;
+    grid-template-columns: 670px 1fr;
+    grid-template-rows: 50px 930px 30px;
     grid-template-areas:
     "header header"
     "sidebar main-content"
@@ -39,7 +39,7 @@ tr:nth-child(even) {
     grid-area: header;
     background-color: #010101;
     padding: 0px;
-    font-size: 20px;
+    font-size: 22px;
     text-align: top;
     margin: 0
 }
@@ -49,7 +49,7 @@ tr:nth-child(even) {
     background-color: #030303;
     color: white;
     padding: 5px;
-    font-size: 12px;
+    font-size: 14px;
 
 }
 

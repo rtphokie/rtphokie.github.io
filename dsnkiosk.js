@@ -71,9 +71,9 @@ function processTarget(target, seen, upload, download, timestamp) {
         }
         if (updown.length <= 5) {
             if (spacecraftMap[id].total_down > 0) {
-                updown += '<font color="#afafaf">teardown</font>'
+                updown += '<div style="color: #afafaf; text-align: center;">teardown</div>'
             } else {
-                updown += '<div style="color: #afafaf; text-align: left;">startup</div>'
+                updown += '<div style="color: #afafaf; text-align: center;">startup</div>'
             }
         }
         // accumulated total
@@ -91,7 +91,7 @@ function processTarget(target, seen, upload, download, timestamp) {
                 } else {
                     elapsed_str = Math.round(elapsed) + '&nbsp;sec'
                 }
-                updown += '&nbsp;in&nbsp;' + elapsed_str+'</font>'
+                updown += '&nbsp;in&nbsp;' + elapsed_str + '</font>'
             }
         }
 
