@@ -85,12 +85,12 @@ function processUpDown(obj, arrowchar) {
         if (s.length > 0) {
             s += '<br>'
         }
-        RfBandColors = {X: '#b7d7e8', S: '#80ced6', Ka: '#f2ae72'}
+        RfBandColors = {X: '#b7d7e8', S: '#f2ae72', Ka: '#80ced6'}
 
         if (band in RfBandColors) {
-            s += '<span style="color: ' + RfBandColors[band] + '">' + band + ':&nbsp;' + dataDateDisplay + '&nbsp;' + units + '&nbsp;' + arrowchar + '</span>'
+            s += '<span style="text-align: center; color: ' + RfBandColors[band] + '">' + band + ':&nbsp;' + dataDateDisplay + '&nbsp;' + units + '&nbsp;' + arrowchar + '</span>'
         } else {
-            s += dataDateDisplay + '&nbsp;' + units + '&nbsp;(' + band + ')'
+            s += '<span style="text-align: center;' + dataDateDisplay + '&nbsp;' + units + '&nbsp;' + arrowchar + '</span>'
         }
     }
     if (blink) {
@@ -131,6 +131,17 @@ function processRange(uprange_km, rtlt_sec) {
     }
     if (blink) {
         uprange = '<span class="blink_me" style="color: yellow">' + uprange + '</span>'
+    } else if  (rtlt_min > 20) {
+        uprange = '<span style="color: orange">' + uprange + '</span>'
+    } else if  (rtlt_min > 10) {
+        uprange = '<span style="color: #FFCBA4">' + uprange + '</span>'
+    } else if  (rtlt_min > 4) {
+        uprange = '<span style="color: #FA8072">' + uprange + '</span>'
+    } else if  (rtlt_min > 1) {
+        uprange = '<span style="color: #C0C0C0">' + uprange + '</span>'
+    } else {
+        uprange = '<span style="color: #ADD8E6">' + uprange + '</span>'
+
     }
     return uprange
 }
