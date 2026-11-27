@@ -47,7 +47,30 @@ label.chk { display:inline-flex; gap:6px; align-items:center; font-size:13px; co
 .museum input { margin-top:3px; accent-color: var(--good); }
 .museum .nm { font-weight:600; }
 .museum .pl { color:var(--muted); font-size:12px; }
-.museum .ct { margin-left:auto; color:var(--muted); font-size:12px; white-space:nowrap; font-variant-numeric: tabular-nums; }
+.museum .ct { color:var(--muted); font-size:12px; white-space:nowrap; font-variant-numeric: tabular-nums; }
+.museum .ct { background:none; border:0; padding:2px 4px; margin:-2px -4px -2px auto; font:inherit; font-size:12px;
+  color:var(--muted); text-align:right; cursor:pointer; border-radius:6px; }
+.museum .ct:hover, .museum .ct[aria-expanded=true] { color:var(--accent); background:var(--panel2); }
+.museum .ct:empty { display:none; }
+#mtip { position:fixed; z-index:50; width:min(380px, calc(100vw - 16px)); max-height:min(70vh, 520px); overflow:auto;
+  background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:10px 12px 8px;
+  box-shadow:0 8px 28px rgba(0,0,0,.35); font-size:12.5px; line-height:1.35; }
+#mtip h4 { margin:0; font-size:14px; }
+#mtip .tsum { color:var(--muted); margin:2px 0 6px; }
+#mtip .tpg { font-size:11px; text-transform:uppercase; letter-spacing:.05em; color:var(--muted); margin:8px 0 2px;
+  display:flex; justify-content:space-between; }
+#mtip ul { list-style:none; margin:0; padding:0; }
+#mtip li { display:flex; gap:6px; align-items:baseline; padding:2px 0; }
+#mtip .dot { flex:none; width:8px; height:8px; border-radius:50%; background:var(--tc); transform:translateY(-1px); }
+#mtip .w { flex:1; }
+#mtip .s { color:var(--muted); font-size:11.5px; white-space:nowrap; }
+#mtip li.seen .w { color:var(--good); }
+#mtip .ck { color:var(--good); width:12px; flex:none; text-align:right; }
+#mtip .tkey { display:flex; flex-wrap:wrap; gap:4px 10px; margin-top:8px; padding-top:6px; border-top:1px solid var(--line);
+  color:var(--muted); font-size:11px; }
+#mtip .tkey span { display:inline-flex; gap:4px; align-items:center; }
+/* Spacecraft names: bold = space-flown, italic = unflown flight hardware */
+.t-flown { font-weight:700; } .t-spare { font-style:italic; }
 .tag { font-size:10px; padding:1px 5px; border-radius:4px; border:1px solid var(--line); color:var(--muted); margin-left:4px; }
 .progs { display:grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); gap:12px; }
 .prog { background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:14px; }
@@ -124,7 +147,7 @@ footer { max-width:1200px; margin:0 auto; padding:16px; color:var(--muted); font
     <div class="toolbar">
       <input type="search" id="mSearch" placeholder="Search museums, cities, states…">
       <label class="chk"><input type="checkbox" id="mOnlyVisited"> Visited only</label>
-      <label class="chk lunar-opt" title="Adds NASA's public lunar sample displays (curator.jsc.nasa.gov) to the museum list and report"><input type="checkbox" id="optLunar"> 🌕 Also track lunar samples</label>
+      <label class="chk lunar-opt" title="Adds NASA's public lunar sample displays (curator.jsc.nasa.gov) to the museum list and report"><input type="checkbox" id="optLunar"> Also track lunar samples</label>
     </div>
     <div id="museumList"></div>
     <section class="sources">
@@ -182,6 +205,7 @@ const itemLabel = it => {
   const parts = [it.ident, it.name].filter(x => x && x !== '-' && x !== 'Not used');
   return parts.join(' · ') || it.section;
 };
+const tierName = (it, text = itemLabel(it)) => `<span class="t-${esc(it.tier)}">${esc(text)}</span>`;
 const mname = m => M[m]?.name || m;
 const region = m => {
   const p = (M[m]?.place || '').split(',').map(s => s.trim()).filter(Boolean);
@@ -217,7 +241,7 @@ function renderStats() {
     <div class="stat"><b>${progsDone} / ${D.programs.length}</b><span>programs 100% complete</span></div>` +
     TIERS.map(t => { const tp = pool.filter(it => it.tier === t.key); const ts = tp.filter(isSeen).length;
       return `<div class="stat tier-${t.key}"><b>${ts} / ${tp.length}</b><span><span class="dot" style="display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--tc);margin-right:5px"></span>${esc(t.label)}</span></div>`; }).join('') +
-    (lunarOn() ? `<div class="stat tier-lunar"><b>${lunar.filter(isSeen).length} / ${lunar.length}</b><span>🌕 lunar samples seen</span></div>` : '');
+    (lunarOn() ? `<div class="stat tier-lunar"><b>${lunar.filter(isSeen).length} / ${lunar.length}</b><span>lunar samples seen</span></div>` : '');
 }
 
 const TIERS = [
@@ -232,7 +256,7 @@ function itemLi(it) {
     ? it.museums.map(m => M[m]?.url ? `<a href="${esc(M[m].url)}" target="_blank">${esc(mname(m))}</a>` : esc(mname(m))).join(', ')
       + (M[it.museums[0]]?.place ? ` — ${esc(M[it.museums[0]].place)}` : '')
     : esc(it.location || 'Unknown');
-  const what = it.url ? `<a href="${esc(it.url)}" target="_blank">${esc(itemLabel(it))}</a>` : esc(itemLabel(it));
+  const what = it.url ? `<a href="${esc(it.url)}" target="_blank">${tierName(it)}</a>` : tierName(it);
   return `<li class="${seenNow ? 'seen' : ''} ${na ? 'na' : ''}">
     <input type="checkbox" data-item="${esc(it.id)}" ${seenNow ? 'checked' : ''} title="Mark seen / unseen manually">
     <span class="what">${what}${ov ? '<span class="ov" title="Manually set — right-click checkbox to clear">manual</span>' : ''}
@@ -259,7 +283,7 @@ function renderReport() {
         return `<li class="sech">${esc(s)} <span class="n">${sd.filter(isSeen).length}/${sd.length}</span></li>` + ss.map(itemLi).join('');
       }).join('');
       return `<details class="sec tier-${t.key}" data-key="${esc(key)}" ${openSecs.has(key) ? 'open' : ''}>
-        <summary title="${esc(t.note)}"><div class="row"><span><span class="dot"></span>${esc(t.label)}</span>
+        <summary title="${esc(t.note)}"><div class="row"><span><span class="dot"></span><span class="t-${t.key}">${esc(t.label)}</span></span>
           <span class="n">${tDisp.length ? `${tSeen}/${tDisp.length}` : 'none on display'}${tAll.length > tDisp.length ? ` <span title="lost, flown, scrapped, active or private">(+${tAll.length - tDisp.length})</span>` : ''}</span></div>
           ${pctBar(tSeen, tDisp.length, 'sm')}</summary>
         <ul class="items">${body || '<li class="muted">None on public display.</li>'}</ul></details>`;
@@ -290,7 +314,7 @@ function lunarCard() {
         ${pctBar(ss, mi.length, 'sm')}</summary>
       <ul class="items">${lis}</ul></details>`;
   }).join('');
-  return `<div class="prog lunar-card"><h2><span>🌕 Lunar Samples</span><span class="pct">${pct}%</span></h2>
+  return `<div class="prog lunar-card"><h2><span>Lunar Samples</span><span class="pct">${pct}%</span></h2>
     ${pctBar(seen, lunar.length)}
     <div class="sub">${seen} of ${lunar.length} lunar sample displays seen — NASA loans, Ambassador of Exploration awards and Apollo 11 / 17 goodwill displays</div>${rows}</div>`;
 }
@@ -312,13 +336,116 @@ function renderMuseums() {
       const its = (itemsByMuseum[m] || []).filter(counted);
       const lun = lunarOn() ? (lunarByMuseum[m] || []) : [];
       const on = !!state.visited[m];
-      return `<label class="museum ${on ? 'on' : ''}" title="${esc([...its.map(itemLabel), ...lun.map(it => 'Lunar ' + it.section + ' ' + it.ident)].join('\n'))}">
+      return `<label class="museum ${on ? 'on' : ''}" data-m="${esc(m)}">
         <input type="checkbox" data-museum="${esc(m)}" ${on ? 'checked' : ''}>
         <span><span class="nm">${esc(mname(m))}</span>${M[m].unlisted ? '<span class="tag">unlisted</span>' : ''}
           <span class="pl" style="display:block">${esc(M[m].place)}</span></span>
-        <span class="ct">${its.length ? `${its.length} item${its.length === 1 ? '' : 's'}` : ''}${its.length && lun.length ? '<br>' : ''}${lun.length ? `🌕 ${lun.length} sample${lun.length === 1 ? '' : 's'}` : ''}</span></label>`;
+        <button type="button" class="ct" data-tip="${esc(m)}" aria-expanded="false" aria-controls="mtip" title="Show what's here">${its.length ? `${its.length} item${its.length === 1 ? '' : 's'}` : ''}${its.length && lun.length ? '<br>' : ''}${lun.length ? `${lun.length} lunar sample${lun.length === 1 ? '' : 's'}` : ''}</button></label>`;
     }).join('') + '</div></div>').join('') || '<p class="muted">No museums match.</p>';
+  hideTip(true);
 }
+
+// ---- Museum hover card: what's at this museum, grouped by program ----
+const TIER_ORDER = { flown: 0, spare: 1, other: 2, lunar: 3 };
+function museumTipHtml(m) {
+  const its = (itemsByMuseum[m] || []).filter(counted);
+  const lun = lunarOn() ? (lunarByMuseum[m] || []) : [];
+  const all = [...its, ...lun];
+  const seen = all.filter(isSeen).length;
+  const flown = its.filter(it => it.tier === 'flown').length;
+  const sum = [
+    its.length && `${its.length} item${its.length === 1 ? '' : 's'}`,
+    flown && `${flown} space-flown`,
+    lun.length && `${lun.length} lunar sample${lun.length === 1 ? '' : 's'}`,
+    all.length && (seen === all.length ? 'all seen ✓' : `${seen} seen`),
+  ].filter(Boolean).join(' · ') || 'No tracked items here';
+
+  const li = (it, text, sub) => `<li class="tier-${it.tier} ${isSeen(it) ? 'seen' : ''}"><span class="dot"></span>` +
+    `<span class="w">${tierName(it, text)}</span>${sub ? `<span class="s">${esc(sub)}</span>` : ''}` +
+    `<span class="ck">${isSeen(it) ? '✓' : ''}</span></li>`;
+  const byProg = {};
+  for (const it of its) (byProg[it.program] ||= []).push(it);
+  const groups = D.programs.filter(p => byProg[p.slug]).map(p => {
+    const list = byProg[p.slug].sort((a, b) => TIER_ORDER[a.tier] - TIER_ORDER[b.tier] || itemLabel(a).localeCompare(itemLabel(b)));
+    return `<div class="tpg"><span>${esc(p.label)}</span><span>${list.filter(isSeen).length}/${list.length}</span></div><ul>` +
+      list.map(it => { const l = itemLabel(it); return li(it, l, l === it.section ? '' : it.section); }).join('') + '</ul>';
+  });
+  if (lun.length) groups.push(`<div class="tpg"><span>Lunar samples</span><span>${lun.filter(isSeen).length}/${lun.length}</span></div><ul>` +
+    lun.map(it => li(it, `${it.section} · ${it.ident}`, it.name)).join('') + '</ul>');
+
+  const tiersHere = new Set(all.map(it => it.tier));
+  const key = [...TIERS, { key: 'lunar', label: 'Lunar sample' }].filter(t => tiersHere.has(t.key))
+    .map(t => `<span class="tier-${t.key}"><span class="dot"></span><span class="t-${t.key}">${esc(t.label)}</span></span>`).join('');
+  return `<h4>${esc(mname(m))}</h4><div class="tsum">${esc(M[m].place)}${M[m].place ? ' — ' : ''}${esc(sum)}</div>` +
+    groups.join('') + (key ? `<div class="tkey">${key}</div>` : '');
+}
+
+const tip = Object.assign(document.createElement('div'), { id: 'mtip', className: 'hidden' });
+tip.setAttribute('role', 'tooltip');
+document.body.appendChild(tip);
+let tipFor = null, tipPinned = false, showTimer = 0, hideTimer = 0;
+function showTip(card, pinned = false) {
+  clearTimeout(hideTimer); clearTimeout(showTimer);
+  const m = card.dataset.m;
+  if (tipFor !== m || tip.classList.contains('hidden')) { tip.innerHTML = museumTipHtml(m); tip.scrollTop = 0; }
+  tipFor = m; tipPinned = pinned;
+  document.querySelectorAll('#museumList .ct[aria-expanded=true]').forEach(b => b.setAttribute('aria-expanded', 'false'));
+  if (pinned) card.querySelector('.ct')?.setAttribute('aria-expanded', 'true');
+  tip.style.maxHeight = '';
+  tip.classList.remove('hidden');
+  // Place below, above, then beside the card, so it never covers the card itself.
+  const r = card.getBoundingClientRect(), t = tip.getBoundingClientRect(), pad = 8, gap = 6;
+  const W = window.innerWidth, H = window.innerHeight;
+  const clampX = x => Math.max(pad, Math.min(x, W - t.width - pad));
+  const clampY = y => Math.max(pad, Math.min(y, H - t.height - pad));
+  let top, left;
+  if (H - r.bottom >= t.height + gap + pad) { top = r.bottom + gap; left = clampX(r.left); }
+  else if (r.top >= t.height + gap + pad) { top = r.top - t.height - gap; left = clampX(r.left); }
+  else if (W - r.right >= t.width + gap + pad) { left = r.right + gap; top = clampY(r.top); }
+  else if (r.left >= t.width + gap + pad) { left = r.left - t.width - gap; top = clampY(r.top); }
+  else { // narrow screens: whichever side has more room
+    left = clampX(r.left);
+    const room = Math.max(H - r.bottom, r.top) - gap - pad;
+    tip.style.maxHeight = `${Math.max(160, room)}px`;
+    const h = Math.min(t.height, Math.max(160, room));
+    top = H - r.bottom >= r.top ? r.bottom + gap : Math.max(pad, r.top - h - gap);
+  }
+  Object.assign(tip.style, { top: `${top}px`, left: `${left}px` });
+}
+function hideTip(now = false) {
+  clearTimeout(showTimer); clearTimeout(hideTimer);
+  const go = () => {
+    tip.classList.add('hidden'); tipFor = null; tipPinned = false;
+    document.querySelectorAll('#museumList .ct[aria-expanded=true]').forEach(b => b.setAttribute('aria-expanded', 'false'));
+  };
+  if (now) go(); else hideTimer = setTimeout(go, 180);
+}
+const ml = $('museumList');
+ml.addEventListener('mouseover', e => {
+  const card = e.target.closest('.museum');
+  if (!card || tipPinned || matchMedia('(hover: none)').matches) return;
+  clearTimeout(hideTimer); clearTimeout(showTimer);
+  showTimer = setTimeout(() => showTip(card), tipFor ? 0 : 250);
+});
+ml.addEventListener('mouseout', e => {
+  const card = e.target.closest('.museum');
+  if (!card || card.contains(e.relatedTarget) || tip.contains(e.relatedTarget) || tipPinned) return;
+  hideTip();
+});
+tip.addEventListener('mouseenter', () => clearTimeout(hideTimer));
+tip.addEventListener('mouseleave', e => { if (!tipPinned && !e.relatedTarget?.closest?.('.museum')) hideTip(); });
+ml.addEventListener('click', e => {
+  const btn = e.target.closest('.ct');
+  if (!btn) return;
+  e.preventDefault(); // the count opens the card; it doesn't toggle "visited"
+  const card = btn.closest('.museum');
+  if (tipPinned && tipFor === card.dataset.m) hideTip(true); else showTip(card, true);
+});
+document.addEventListener('click', e => {
+  if (tipPinned && !tip.contains(e.target) && !e.target.closest('#museumList .ct')) hideTip(true);
+});
+document.addEventListener('keydown', e => { if (e.key === 'Escape' && !tip.classList.contains('hidden')) hideTip(true); });
+window.addEventListener('scroll', () => { if (!tip.classList.contains('hidden')) hideTip(true); }, { passive: true });
 
 function renderNext() {
   const rows = museumKeys().filter(m => !state.visited[m]).map(m => {
@@ -328,7 +455,7 @@ function renderNext() {
   $('nextBody').innerHTML = rows.map(r => `<tr>
     <td>${M[r.m].url ? `<a href="${esc(M[r.m].url)}" target="_blank">${esc(mname(r.m))}</a>` : esc(mname(r.m))}
       <div class="muted" style="font-size:12px">${esc(M[r.m].place)}</div></td>
-    <td style="font-size:13px">${r.need.map(it => it.program === 'lunar' ? `🌕 ${esc(it.section)} sample ${esc(it.ident)}` : `${esc(progLabel[it.program])}: ${esc(itemLabel(it))}`).join('<br>')}</td>
+    <td style="font-size:13px">${r.need.map(it => it.program === 'lunar' ? `Lunar sample: ${esc(it.section)} · ${esc(it.ident)}` : `${esc(progLabel[it.program])}: ${tierName(it)}`).join('<br>')}</td>
     <td class="num">${r.need.length}</td></tr>`).join('') || '<tr><td colspan="3" class="muted">Nothing left — you\'ve seen it all! 🎉</td></tr>';
 }
 
