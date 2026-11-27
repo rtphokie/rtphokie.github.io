@@ -69,7 +69,8 @@ label.chk { display:inline-flex; gap:6px; align-items:center; font-size:13px; co
 .items .what { flex:1; }
 .items .where { color:var(--muted); font-size:12px; display:block; }
 .items input { accent-color: var(--good); margin-top:3px; }
-.tier-flown { --tc: #f0883e; } .tier-spare { --tc: #a371f7; } .tier-other { --tc: #8b96a3; }
+.tier-flown { --tc: #f0883e; } .tier-spare { --tc: #a371f7; } .tier-other { --tc: #8b96a3; } .tier-lunar { --tc: #d4c77a; }
+.lunar-opt { color: var(--text); padding:4px 10px; border:1px dashed var(--line); border-radius:8px; }
 .sec .dot { display:inline-block; width:8px; height:8px; border-radius:50%; background:var(--tc); margin-right:6px; }
 .sec .bar.sm > i { background: var(--tc); }
 .sec .bar.sm.done > i { background: var(--good); }
@@ -119,6 +120,7 @@ footer { max-width:1200px; margin:0 auto; padding:16px; color:var(--muted); font
     <div class="toolbar">
       <input type="search" id="mSearch" placeholder="Search museums, cities, states…">
       <label class="chk"><input type="checkbox" id="mOnlyVisited"> Visited only</label>
+      <label class="chk lunar-opt" title="Adds NASA's public lunar sample displays (curator.jsc.nasa.gov) to the museum list and report"><input type="checkbox" id="optLunar"> 🌕 Also track lunar samples</label>
     </div>
     <div id="museumList"></div>
   </section>
@@ -155,8 +157,13 @@ const save = () => {
 const M = D.museums;
 const items = D.items;
 const progLabel = Object.fromEntries(D.programs.map(p => [p.slug, p.label]));
-const itemsByMuseum = {};
+const lunar = D.lunar || [];
+const lunarOn = () => !!state.opts.lunar;
+const itemsByMuseum = {}, lunarByMuseum = {};
 for (const it of items) for (const m of it.museums) (itemsByMuseum[m] ||= []).push(it);
+for (const it of lunar) for (const m of it.museums) (lunarByMuseum[m] ||= []).push(it);
+const museumOn = m => lunarOn() || !M[m].lunarOnly;
+const museumKeys = () => Object.keys(M).filter(museumOn);
 
 const displayable = it => it.museums.length > 0;
 const autoSeen = it => it.museums.some(m => state.visited[m]);
@@ -175,6 +182,7 @@ const region = m => {
 $('scraped').textContent = D.scraped;
 $('optModels').checked = state.opts.models;
 $('optNA').checked = state.opts.na;
+$('optLunar').checked = lunarOn();
 
 function pctBar(seen, total, cls = '') {
   const p = total ? Math.round(100 * seen / total) : 0;
@@ -184,7 +192,8 @@ function pctBar(seen, total, cls = '') {
 function renderStats() {
   const pool = items.filter(it => counted(it) && displayable(it));
   const seen = pool.filter(isSeen).length;
-  const visited = Object.keys(state.visited).filter(k => state.visited[k]).length;
+  const mk = museumKeys();
+  const visited = mk.filter(k => state.visited[k]).length;
   const progsDone = D.programs.filter(p => {
     const ps = pool.filter(it => it.program === p.slug);
     return ps.length && ps.every(isSeen);
@@ -192,10 +201,11 @@ function renderStats() {
   $('stats').innerHTML = `
     <div class="stat"><b>${seen} / ${pool.length}</b><span>spacecraft seen (on display)</span></div>
     <div class="stat"><b>${pool.length ? Math.round(100 * seen / pool.length) : 0}%</b><span>overall complete</span></div>
-    <div class="stat"><b>${visited} / ${Object.keys(M).length}</b><span>museums visited</span></div>
+    <div class="stat"><b>${visited} / ${mk.length}</b><span>museums visited</span></div>
     <div class="stat"><b>${progsDone} / ${D.programs.length}</b><span>programs 100% complete</span></div>` +
     TIERS.map(t => { const tp = pool.filter(it => it.tier === t.key); const ts = tp.filter(isSeen).length;
-      return `<div class="stat tier-${t.key}"><b>${ts} / ${tp.length}</b><span><span class="dot" style="display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--tc);margin-right:5px"></span>${esc(t.label)}</span></div>`; }).join('');
+      return `<div class="stat tier-${t.key}"><b>${ts} / ${tp.length}</b><span><span class="dot" style="display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--tc);margin-right:5px"></span>${esc(t.label)}</span></div>`; }).join('') +
+    (lunarOn() ? `<div class="stat tier-lunar"><b>${lunar.filter(isSeen).length} / ${lunar.length}</b><span>🌕 lunar samples seen</span></div>` : '');
 }
 
 const TIERS = [
@@ -247,16 +257,36 @@ function renderReport() {
       <div class="sub">${seen} of ${disp.length} on display seen${all.length > disp.length ? ` · ${all.length - disp.length} lost, scrapped, active or private` : ''}</div>
       ${tierHtml}</div>`;
   }).join('');
-  $('tab-report').innerHTML = `<div class="progs">${html}</div>`;
+  $('tab-report').innerHTML = `<div class="progs">${html}${lunarOn() ? lunarCard() : ''}</div>`;
+}
+
+function lunarCard() {
+  const seen = lunar.filter(isSeen).length;
+  const pct = lunar.length ? Math.round(100 * seen / lunar.length) : 0;
+  const missions = [...new Set(lunar.map(it => it.section))].sort((a, b) => a.localeCompare(b, undefined, { numeric: true }));
+  const rows = missions.map(ms => {
+    const mi = lunar.filter(it => it.section === ms);
+    const ss = mi.filter(isSeen).length;
+    const key = 'lunar|' + ms;
+    const lis = mi.slice().sort((a, b) => mname(a.museums[0]).localeCompare(mname(b.museums[0]))).map(itemLi).join('');
+    return `<details class="sec tier-lunar" data-key="${esc(key)}" ${openSecs.has(key) ? 'open' : ''}>
+      <summary><div class="row"><span><span class="dot"></span>${esc(ms)}</span><span class="n">${ss}/${mi.length}</span></div>
+        ${pctBar(ss, mi.length, 'sm')}</summary>
+      <ul class="items">${lis}</ul></details>`;
+  }).join('');
+  return `<div class="prog lunar-card"><h2><span>🌕 Lunar Samples</span><span class="pct">${pct}%</span></h2>
+    ${pctBar(seen, lunar.length)}
+    <div class="sub">${seen} of ${lunar.length} public display &amp; Ambassador of Exploration samples seen ·
+      <a href="${esc(D.lunarSource)}" target="_blank">NASA list</a></div>${rows}</div>`;
 }
 
 function renderMuseums() {
   const q = $('mSearch').value.trim().toLowerCase();
   const only = $('mOnlyVisited').checked;
   const groups = {};
-  for (const m of Object.keys(M)) {
+  for (const m of museumKeys()) {
     const mm = M[m];
-    const hay = `${mm.name} ${mm.place} ${(mm.aliases || []).join(' ')} ${(itemsByMuseum[m] || []).map(itemLabel).join(' ')}`.toLowerCase();
+    const hay = `${mm.name} ${mm.place} ${(mm.aliases || []).join(' ')} ${(itemsByMuseum[m] || []).map(itemLabel).join(' ')} ${lunarOn() ? (lunarByMuseum[m] || []).map(it => it.section + ' ' + it.ident).join(' ') : ''}`.toLowerCase();
     if (q && !hay.includes(q)) continue;
     if (only && !state.visited[m]) continue;
     (groups[region(m)] ||= []).push(m);
@@ -265,24 +295,25 @@ function renderMuseums() {
   $('museumList').innerHTML = keys.map(g => `<div class="group"><h3>${esc(g)} <span class="muted">(${groups[g].length})</span></h3><div class="mgrid">` +
     groups[g].sort((a, b) => mname(a).localeCompare(mname(b))).map(m => {
       const its = (itemsByMuseum[m] || []).filter(counted);
+      const lun = lunarOn() ? (lunarByMuseum[m] || []) : [];
       const on = !!state.visited[m];
-      return `<label class="museum ${on ? 'on' : ''}" title="${esc(its.map(itemLabel).join('\n'))}">
+      return `<label class="museum ${on ? 'on' : ''}" title="${esc([...its.map(itemLabel), ...lun.map(it => 'Lunar ' + it.section + ' ' + it.ident)].join('\n'))}">
         <input type="checkbox" data-museum="${esc(m)}" ${on ? 'checked' : ''}>
         <span><span class="nm">${esc(mname(m))}</span>${M[m].unlisted ? '<span class="tag">unlisted</span>' : ''}
           <span class="pl" style="display:block">${esc(M[m].place)}</span></span>
-        <span class="ct">${its.length} item${its.length === 1 ? '' : 's'}</span></label>`;
+        <span class="ct">${its.length ? `${its.length} item${its.length === 1 ? '' : 's'}` : ''}${its.length && lun.length ? '<br>' : ''}${lun.length ? `🌕 ${lun.length} sample${lun.length === 1 ? '' : 's'}` : ''}</span></label>`;
     }).join('') + '</div></div>').join('') || '<p class="muted">No museums match.</p>';
 }
 
 function renderNext() {
-  const rows = Object.keys(M).filter(m => !state.visited[m]).map(m => {
-    const need = (itemsByMuseum[m] || []).filter(it => counted(it) && !isSeen(it));
+  const rows = museumKeys().filter(m => !state.visited[m]).map(m => {
+    const need = [...(itemsByMuseum[m] || []).filter(counted), ...(lunarOn() ? lunarByMuseum[m] || [] : [])].filter(it => !isSeen(it));
     return { m, need };
   }).filter(r => r.need.length).sort((a, b) => b.need.length - a.need.length || mname(a.m).localeCompare(mname(b.m)));
   $('nextBody').innerHTML = rows.map(r => `<tr>
     <td>${M[r.m].url ? `<a href="${esc(M[r.m].url)}" target="_blank">${esc(mname(r.m))}</a>` : esc(mname(r.m))}
       <div class="muted" style="font-size:12px">${esc(M[r.m].place)}</div></td>
-    <td style="font-size:13px">${r.need.map(it => `${esc(progLabel[it.program])}: ${esc(itemLabel(it))}`).join('<br>')}</td>
+    <td style="font-size:13px">${r.need.map(it => it.program === 'lunar' ? `🌕 ${esc(it.section)} sample ${esc(it.ident)}` : `${esc(progLabel[it.program])}: ${esc(itemLabel(it))}`).join('<br>')}</td>
     <td class="num">${r.need.length}</td></tr>`).join('') || '<tr><td colspan="3" class="muted">Nothing left — you\'ve seen it all! 🎉</td></tr>';
 }
 
@@ -299,11 +330,12 @@ document.addEventListener('change', e => {
   const t = e.target;
   if (t.dataset.museum) { if (t.checked) state.visited[t.dataset.museum] = true; else delete state.visited[t.dataset.museum]; }
   else if (t.dataset.item) {
-    const it = items.find(i => i.id === t.dataset.item);
+    const it = items.find(i => i.id === t.dataset.item) || lunar.find(i => i.id === t.dataset.item);
     if (t.checked === autoSeen(it)) delete state.overrides[it.id]; else state.overrides[it.id] = t.checked;
   }
   else if (t.id === 'optModels') state.opts.models = t.checked;
   else if (t.id === 'optNA') state.opts.na = t.checked;
+  else if (t.id === 'optLunar') state.opts.lunar = t.checked;
   else return;
   save(); renderAll();
 });
