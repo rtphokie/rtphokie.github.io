@@ -788,6 +788,7 @@ window.SPACECRAFT_DATA = {
    "section": "X-15",
    "ident": "X-15-1",
    "name": "56-6670",
+   "tier": "flown",
    "location": "National Air and Space Museum, Washington D.C.",
    "museums": [
     "national-air-and-space-museum"
@@ -800,6 +801,7 @@ window.SPACECRAFT_DATA = {
    "section": "X-15",
    "ident": "X-15-2A",
    "name": "56-6671",
+   "tier": "flown",
    "location": "National Museum of the U.S. Air Force, Wright-Patterson Air Force Base, Dayton, Ohio",
    "museums": [
     "national-museum-usaf"
@@ -812,6 +814,7 @@ window.SPACECRAFT_DATA = {
    "section": "X-15",
    "ident": "X-15-3",
    "name": "56-6672",
+   "tier": "flown",
    "location": "Destroyed",
    "museums": [],
    "url": "https://www.american-spacecraft.org/x-15/x-15-3.html"
@@ -822,6 +825,7 @@ window.SPACECRAFT_DATA = {
    "section": "Launch Vehicles",
    "ident": "NB-52A",
    "name": "52-003",
+   "tier": "other",
    "location": "Pima Air & Space Museum, Tuscon, Arizona",
    "museums": [
     "pima-air-museum"
@@ -834,6 +838,7 @@ window.SPACECRAFT_DATA = {
    "section": "Launch Vehicles",
    "ident": "NB-52B",
    "name": "52-008",
+   "tier": "other",
    "location": "Neil Armstrong Flight Research Center, Edwards Air Force Base, California",
    "museums": [
     "nasa-armstrong"
@@ -846,6 +851,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "Model",
    "name": "Markings for 56-6672",
+   "tier": "other",
    "location": "Neil Armstrong Flight Research Center, Edwards Air Force Base, California",
    "museums": [
     "nasa-armstrong"
@@ -858,6 +864,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "Model",
    "name": "Markings for 56-6671",
+   "tier": "other",
    "location": "Pima Air & Space Museum, Tuscon, Arizona",
    "museums": [
     "pima-air-museum"
@@ -870,6 +877,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "Model",
    "name": "Markings for 56-6670",
+   "tier": "other",
    "location": "Pima Air & Space Museum, Tuscon, Arizona",
    "museums": [
     "pima-air-museum"
@@ -882,6 +890,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "Model",
    "name": "Markings for 56-6671",
+   "tier": "other",
    "location": "Evergreen Aviation Museum, McMinnville, Oregon",
    "museums": [
     "evergreen-aviation-museum"
@@ -894,6 +903,7 @@ window.SPACECRAFT_DATA = {
    "section": "Capsules",
    "ident": "1",
    "name": "Beach Abort",
+   "tier": "spare",
    "location": "New York Hall of Science, Corona Park, New York",
    "museums": [
     "new-york-hall-of-science"
@@ -906,6 +916,7 @@ window.SPACECRAFT_DATA = {
    "section": "Capsules",
    "ident": "2",
    "name": "MR-1 / MR-1A",
+   "tier": "flown",
    "location": "Cradle of Aviation Museum,, Long Island, New York",
    "museums": [
     "nasa-ames"
@@ -918,6 +929,7 @@ window.SPACECRAFT_DATA = {
    "section": "Capsules",
    "ident": "3",
    "name": "LJ-5 (Little Joe 5)",
+   "tier": "spare",
    "location": "Destroyed during launch",
    "museums": [],
    "url": null
@@ -928,6 +940,7 @@ window.SPACECRAFT_DATA = {
    "section": "Capsules",
    "ident": "4",
    "name": "MA-1",
+   "tier": "spare",
    "location": "Kansas Cosmosphere and Space Center, Hutchinson, Kansas",
    "museums": [
     "cosmosphere"
@@ -940,6 +953,7 @@ window.SPACECRAFT_DATA = {
    "section": "Capsules",
    "ident": "5",
    "name": "MR-2",
+   "tier": "flown",
    "location": "California Science Center, Los Angeles, California",
    "museums": [
     "california-science-center"
@@ -952,6 +966,7 @@ window.SPACECRAFT_DATA = {
    "section": "Capsules",
    "ident": "6",
    "name": "MA-2",
+   "tier": "flown",
    "location": "Houston Museum of Natural Science, Houston, Texas",
    "museums": [
     "houston-museum-of-natural-science"
@@ -964,6 +979,7 @@ window.SPACECRAFT_DATA = {
    "section": "Capsules",
    "ident": "7",
    "name": "MR-3 Freedom 7 — (Shepard)",
+   "tier": "flown",
    "location": "Udvar-Hazy Center, National Air and Space Museum, Chantilly, Virginia",
    "museums": [
     "udvar-hazy"
@@ -976,6 +992,7 @@ window.SPACECRAFT_DATA = {
    "section": "Capsules",
    "ident": "8",
    "name": "MA-3 / MA-4",
+   "tier": "flown",
    "location": "Dismantled",
    "museums": [],
    "url": null
@@ -986,6 +1003,7 @@ window.SPACECRAFT_DATA = {
    "section": "Capsules",
    "ident": "9",
    "name": "MA-5",
+   "tier": "flown",
    "location": "North Carolina Museum of Life and Science, Durham North Carolina",
    "museums": [
     "north-carolina-museum-of-life-and-sciences"
@@ -998,6 +1016,7 @@ window.SPACECRAFT_DATA = {
    "section": "Capsules",
    "ident": "10",
    "name": "Unflown",
+   "tier": "spare",
    "location": "Evergreen Aviation Museum, McMinnville, Oregon",
    "museums": [
     "evergreen-aviation-museum"
@@ -1010,6 +1029,7 @@ window.SPACECRAFT_DATA = {
    "section": "Capsules",
    "ident": "11",
    "name": "MR-4 Liberty Bell 7 — (Grissom)",
+   "tier": "flown",
    "location": "Kansas Cosmosphere and Space Center, Hutchinson, Kansas",
    "museums": [
     "cosmosphere"
@@ -1022,6 +1042,7 @@ window.SPACECRAFT_DATA = {
    "section": "Capsules",
    "ident": "12B",
    "name": "Unflown",
+   "tier": "spare",
    "location": "Kennedy Space Complex Visitors Center, Merritt Island, Florida",
    "museums": [
     "kennedy-space-center"
@@ -1034,6 +1055,7 @@ window.SPACECRAFT_DATA = {
    "section": "Capsules",
    "ident": "13",
    "name": "MA-6 Friendship 7 — (Glenn)",
+   "tier": "flown",
    "location": "National Air and Space Museum, Washington D.C.",
    "museums": [
     "national-air-and-space-museum"
@@ -1046,6 +1068,7 @@ window.SPACECRAFT_DATA = {
    "section": "Capsules",
    "ident": "14",
    "name": "LJ-5A / LJ-5B",
+   "tier": "spare",
    "location": "Virginia Air and Space Center, Hampton, Virginia",
    "museums": [
     "virginia-air-space"
@@ -1058,6 +1081,7 @@ window.SPACECRAFT_DATA = {
    "section": "Capsules",
    "ident": "15B",
    "name": "Freedom 7 II Unflown",
+   "tier": "spare",
    "location": "Udvar-Hazy Center, National Air and Space Museum, Chantilly, Virginia",
    "museums": [
     "udvar-hazy"
@@ -1070,6 +1094,7 @@ window.SPACECRAFT_DATA = {
    "section": "Capsules",
    "ident": "16",
    "name": "MA-8 Sigma 7 — (Schirra)",
+   "tier": "flown",
    "location": "Kennedy Space Complex Visitors Center, Merritt Island, Florida",
    "museums": [
     "kennedy-space-center"
@@ -1082,6 +1107,7 @@ window.SPACECRAFT_DATA = {
    "section": "Capsules",
    "ident": "17",
    "name": "Unflown",
+   "tier": "spare",
    "location": "National Museum of the U.S. Air Force, Wright-Patterson Air Force Base, Dayton, Ohio",
    "museums": [
     "national-museum-usaf"
@@ -1094,6 +1120,7 @@ window.SPACECRAFT_DATA = {
    "section": "Capsules",
    "ident": "18",
    "name": "MA-7 Aurora 7 — (Carpenter)",
+   "tier": "flown",
    "location": "Museum of Science and Industry, Chicago, Illnois",
    "museums": [
     "museum-of-science-chicago"
@@ -1106,6 +1133,7 @@ window.SPACECRAFT_DATA = {
    "section": "Capsules",
    "ident": "19",
    "name": "Unflown",
+   "tier": "spare",
    "location": "St. Louis Science Center, St. Louis, Missouri",
    "museums": [
     "st-louis-science-center"
@@ -1118,6 +1146,7 @@ window.SPACECRAFT_DATA = {
    "section": "Capsules",
    "ident": "20",
    "name": "MA-9 Faith 7 — (Cooper)",
+   "tier": "flown",
    "location": "Space Center Houston, Houston, Texas",
    "museums": [
     "space-center-houston"
@@ -1130,6 +1159,7 @@ window.SPACECRAFT_DATA = {
    "section": "Boilerplates",
    "ident": "BP",
    "name": "LJ-1 (Little Joe 1)",
+   "tier": "other",
    "location": "Not Recovered after MR-BD",
    "museums": [],
    "url": null
@@ -1140,6 +1170,7 @@ window.SPACECRAFT_DATA = {
    "section": "Boilerplates",
    "ident": "BP",
    "name": "BJ-1 (Big Joe 1)",
+   "tier": "other",
    "location": "Udvar-Hazy Center, National Air and Space Museum, Chantilly, Virginia",
    "museums": [
     "udvar-hazy"
@@ -1152,6 +1183,7 @@ window.SPACECRAFT_DATA = {
    "section": "Boilerplates",
    "ident": "BP",
    "name": "(Little Joe 6)",
+   "tier": "other",
    "location": "Intentionally destroyed during test",
    "museums": [],
    "url": null
@@ -1162,6 +1194,7 @@ window.SPACECRAFT_DATA = {
    "section": "Boilerplates",
    "ident": "BP",
    "name": "LJ-2 (Little Joe 2)",
+   "tier": "other",
    "location": "Air Power Park, Hampton, Virginia",
    "museums": [
     "airpower"
@@ -1174,6 +1207,7 @@ window.SPACECRAFT_DATA = {
    "section": "Boilerplates",
    "ident": "BP",
    "name": "LJ-1B (Little Joe 1B)",
+   "tier": "other",
    "location": "Unknown",
    "museums": [],
    "url": null
@@ -1184,6 +1218,7 @@ window.SPACECRAFT_DATA = {
    "section": "Boilerplates",
    "ident": "BP",
    "name": "-",
+   "tier": "other",
    "location": "Air Power Park, Hampton, Virginia",
    "museums": [
     "airpower"
@@ -1196,6 +1231,7 @@ window.SPACECRAFT_DATA = {
    "section": "Boilerplates",
    "ident": "BP",
    "name": "-",
+   "tier": "other",
    "location": "Army National Guard Annex, Pasadena, Texas",
    "museums": [
     "x-army-national-guard-annex-pasadena-texas"
@@ -1208,6 +1244,7 @@ window.SPACECRAFT_DATA = {
    "section": "Boilerplates",
    "ident": "BP",
    "name": "-",
+   "tier": "other",
    "location": "Kansas Cosmosphere and Space Center, Hutchinson, Kansas",
    "museums": [
     "cosmosphere"
@@ -1220,6 +1257,7 @@ window.SPACECRAFT_DATA = {
    "section": "Boilerplates",
    "ident": "BP",
    "name": "Adios MF",
+   "tier": "other",
    "location": "Science Museum Oklahoma, Oklahoma City, Oklahoma",
    "museums": [
     "science-museum-oklahoma"
@@ -1232,6 +1270,7 @@ window.SPACECRAFT_DATA = {
    "section": "Boilerplates",
    "ident": "BP",
    "name": "-",
+   "tier": "other",
    "location": "Strategic Air Command Museum, Ashland, Nebraska",
    "museums": [
     "strategic-air-command-museum"
@@ -1244,6 +1283,7 @@ window.SPACECRAFT_DATA = {
    "section": "Boilerplates",
    "ident": "BP",
    "name": "-",
+   "tier": "other",
    "location": "Sands Space History Center, Cape Canaveral Air Station, Florida",
    "museums": [
     "sands-space-history-center"
@@ -1256,6 +1296,7 @@ window.SPACECRAFT_DATA = {
    "section": "Boilerplates",
    "ident": "BP",
    "name": "-",
+   "tier": "other",
    "location": "Roosevelt Middle School, Cocoa Beach, Florida",
    "museums": [
     "roosevelt-middle-school"
@@ -1268,6 +1309,7 @@ window.SPACECRAFT_DATA = {
    "section": "Boilerplates",
    "ident": "BP",
    "name": "-",
+   "tier": "other",
    "location": "Wallops Flight Facility Visitors Center, Wallops Island, Virginia",
    "museums": [
     "nasa-wallops"
@@ -1280,6 +1322,7 @@ window.SPACECRAFT_DATA = {
    "section": "Trainers",
    "ident": "-",
    "name": "Trainer",
+   "tier": "other",
    "location": "US Space & Rocket Center, Huntsville, Alabama",
    "museums": [
     "us-space-rocket-center"
@@ -1292,6 +1335,7 @@ window.SPACECRAFT_DATA = {
    "section": "Trainers",
    "ident": "Procedures Trainer",
    "name": "Trainer",
+   "tier": "other",
    "location": "Pima Air & Space Museum, Tuscon, Arizona",
    "museums": [
     "pima-air-museum"
@@ -1304,6 +1348,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "-",
    "name": "Sit-in Model",
+   "tier": "other",
    "location": "Air Zoo, Portage, Michigan",
    "museums": [
     "air-zoo"
@@ -1316,6 +1361,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "-",
    "name": "Model",
+   "tier": "other",
    "location": "Astronaut Memorial Planetarium, Cocoa, Florida",
    "museums": [
     "astronaut-memorial-planetarium"
@@ -1328,6 +1374,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "-",
    "name": "Model",
+   "tier": "other",
    "location": "Boeing Prologue Room, St. Louis, Missouri",
    "museums": [
     "boeing-prologue-room"
@@ -1340,6 +1387,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "-",
    "name": "Sit-in Model",
+   "tier": "other",
    "location": "Center of Science and Industry, Columbus, Ohio",
    "museums": [
     "center-of-science-and-industry"
@@ -1352,6 +1400,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "-",
    "name": "Model",
+   "tier": "other",
    "location": "Cradle of Aviation Museum, Long Island, New York",
    "museums": [
     "cradle-of-aviation-museum"
@@ -1364,6 +1413,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "-",
    "name": "Model",
+   "tier": "other",
    "location": "Grand Turk, Turk and Caicos Islands",
    "museums": [
     "x-grand-turk-turk-and-caicos-islands"
@@ -1376,6 +1426,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "-",
    "name": "Model",
+   "tier": "other",
    "location": "JAGS McCartney International Airport, Turk and Caicos Islands",
    "museums": [
     "x-jags-mccartney-international-airport-turk-and-caicos-islands"
@@ -1388,6 +1439,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "",
    "name": "Model",
+   "tier": "other",
    "location": "Intrepid Sea, Air & Space Museum, New York, New York",
    "museums": [
     "uss-intrepid"
@@ -1400,6 +1452,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "-",
    "name": "Model",
+   "tier": "other",
    "location": "Kansas Cosmosphere and Space Center, Hutchinson, Kansas",
    "museums": [
     "cosmosphere"
@@ -1412,6 +1465,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "-",
    "name": "Sit-in Model",
+   "tier": "other",
    "location": "Kennedy Space Complex Visitors Center, Merritt Island, Florida",
    "museums": [
     "kennedy-space-center"
@@ -1424,6 +1478,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "-",
    "name": "Model",
+   "tier": "other",
    "location": "Museum of Science, Boston, Massachusetts",
    "museums": [
     "museum-of-science-boston"
@@ -1436,6 +1491,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "-",
    "name": "Model",
+   "tier": "other",
    "location": "Museum of Flight, Seattle, Washington",
    "museums": [
     "museum-of-flight"
@@ -1448,6 +1504,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "-",
    "name": "Model",
+   "tier": "other",
    "location": "National Museum of the U.S. Air Force, Wright-Patterson Air Force Base, Dayton, Ohio",
    "museums": [
     "national-museum-usaf"
@@ -1460,6 +1517,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "-",
    "name": "Sit-in Model",
+   "tier": "other",
    "location": "New York Hall of Science, Corona Park,New York",
    "museums": [
     "new-york-hall-of-science"
@@ -1472,6 +1530,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "-",
    "name": "Model",
+   "tier": "other",
    "location": "Science Museum Oklahoma, Oklahoma City, Oklahoma",
    "museums": [
     "science-museum-oklahoma"
@@ -1484,6 +1543,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "",
    "name": "Model",
+   "tier": "other",
    "location": "Science Museum Oklahoma, Oklahoma City, Oklahoma",
    "museums": [
     "science-museum-oklahoma"
@@ -1496,6 +1556,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "-",
    "name": "Model",
+   "tier": "other",
    "location": "National Museum of Naval Aviation, Pensacola, Florida",
    "museums": [
     "national-museum-of-naval-aviation"
@@ -1508,6 +1569,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "-",
    "name": "Model",
+   "tier": "other",
    "location": "San Diego Air & Space Museum, San Diego, California",
    "museums": [
     "san-diego-air-space"
@@ -1520,6 +1582,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "-",
    "name": "Model",
+   "tier": "other",
    "location": "New Mexico Museum of Space History, Alamagordo, New Mexico",
    "museums": [
     "new-mexico-museum-space-history"
@@ -1532,6 +1595,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "-",
    "name": "Model",
+   "tier": "other",
    "location": "Tellus Science Museum, Cartersville, Georgia",
    "museums": [
     "tellus"
@@ -1544,6 +1608,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "-",
    "name": "Model",
+   "tier": "other",
    "location": "McAuliffe-Shepard Discovery Center, Concord, New Hampshire",
    "museums": [
     "mcauliffe-shepard-center"
@@ -1556,6 +1621,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "-",
    "name": "Model",
+   "tier": "other",
    "location": "Monroe Museum of Science, Monroe, North Carolina",
    "museums": [
     "monroe-science-center"
@@ -1568,6 +1634,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "-",
    "name": "Model",
+   "tier": "other",
    "location": "Powerhouse - Castle Hill, Sydney, Australia",
    "museums": [
     "sydney-castle-hill"
@@ -1580,6 +1647,7 @@ window.SPACECRAFT_DATA = {
    "section": "Capsules",
    "ident": "Unknown",
    "name": "Gemini 1",
+   "tier": "flown",
    "location": "Destroyed",
    "museums": [],
    "url": null
@@ -1590,6 +1658,7 @@ window.SPACECRAFT_DATA = {
    "section": "Capsules",
    "ident": "2302",
    "name": "Gemini 2",
+   "tier": "flown",
    "location": "Cape Canaveral Space Force Museum, Cape Canaveral Space Force Station, Florida",
    "museums": [
     "cape-canaveral-space-force-museum"
@@ -1602,6 +1671,7 @@ window.SPACECRAFT_DATA = {
    "section": "Capsules",
    "ident": "2303",
    "name": "Gemini 3 Molly Brown — (Grissom, Young)",
+   "tier": "flown",
    "location": "Grissom Memorial, Spring Mill State Park, Mitchell, Indiana",
    "museums": [
     "grissom-memorial"
@@ -1614,6 +1684,7 @@ window.SPACECRAFT_DATA = {
    "section": "Capsules",
    "ident": "1795",
    "name": "Gemini IV — (McDivitt, White)",
+   "tier": "flown",
    "location": "National Air and Space Museum, Washington D.C.",
    "museums": [
     "national-air-and-space-museum"
@@ -1626,6 +1697,7 @@ window.SPACECRAFT_DATA = {
    "section": "Capsules",
    "ident": "2326",
    "name": "Gemini V [Conestoga] — (Cooper, Conrad)",
+   "tier": "flown",
    "location": "Space Center Houston, Houston, Texas",
    "museums": [
     "space-center-houston"
@@ -1638,6 +1710,7 @@ window.SPACECRAFT_DATA = {
    "section": "Capsules",
    "ident": "1858",
    "name": "Gemini VI-A — (Schirra, Stafford)",
+   "tier": "flown",
    "location": "Stafford Air & Space Center, Weatherford, Oklahoma",
    "museums": [
     "stafford-air-and-space-center"
@@ -1650,6 +1723,7 @@ window.SPACECRAFT_DATA = {
    "section": "Capsules",
    "ident": "1853",
    "name": "Gemini VII — (Borman, Lovell)",
+   "tier": "flown",
    "location": "National Air and Space Museum, Washington D.C.",
    "museums": [
     "national-air-and-space-museum"
@@ -1662,6 +1736,7 @@ window.SPACECRAFT_DATA = {
    "section": "Capsules",
    "ident": "2641",
    "name": "Gemini VIII — (Armstrong, Scott)",
+   "tier": "flown",
    "location": "Neil Armstrong Air and Space Museum, Wapakoneta, Ohio",
    "museums": [
     "wapakoneta"
@@ -1674,6 +1749,7 @@ window.SPACECRAFT_DATA = {
    "section": "Capsules",
    "ident": "2327",
    "name": "Gemini IX-A — (Stafford, Cernan)",
+   "tier": "flown",
    "location": "Kennedy Space Complex Visitors Center, Merritt Island, Florida",
    "museums": [
     "kennedy-space-center"
@@ -1686,6 +1762,7 @@ window.SPACECRAFT_DATA = {
    "section": "Capsules",
    "ident": "1857",
    "name": "Gemini X — (Young, Collins)",
+   "tier": "flown",
    "location": "Kansas Cosmosphere and Space Center, Hutchinson, Kansas",
    "museums": [
     "cosmosphere"
@@ -1698,6 +1775,7 @@ window.SPACECRAFT_DATA = {
    "section": "Capsules",
    "ident": "1848",
    "name": "Gemini XI — (Conrad, Gordon)",
+   "tier": "flown",
    "location": "California Science Center, Los Angeles, California",
    "museums": [
     "california-science-center"
@@ -1710,6 +1788,7 @@ window.SPACECRAFT_DATA = {
    "section": "Capsules",
    "ident": "1853",
    "name": "Gemini XII — (Lovell, Aldrin)",
+   "tier": "flown",
    "location": "Adler Planetarium, Chicago, Illinois",
    "museums": [
     "adler-planetarium"
@@ -1722,6 +1801,7 @@ window.SPACECRAFT_DATA = {
    "section": "Boilerplates",
    "ident": "BP-1",
    "name": "-",
+   "tier": "other",
    "location": "Unknown",
    "museums": [],
    "url": null
@@ -1732,6 +1812,7 @@ window.SPACECRAFT_DATA = {
    "section": "Boilerplates",
    "ident": "BP-2",
    "name": "-",
+   "tier": "other",
    "location": "Unknown",
    "museums": [],
    "url": null
@@ -1742,6 +1823,7 @@ window.SPACECRAFT_DATA = {
    "section": "Boilerplates",
    "ident": "BP-3",
    "name": "-",
+   "tier": "other",
    "location": "Unknown",
    "museums": [],
    "url": null
@@ -1752,6 +1834,7 @@ window.SPACECRAFT_DATA = {
    "section": "Boilerplates",
    "ident": "BP-3A",
    "name": "-",
+   "tier": "other",
    "location": "Unknown",
    "museums": [],
    "url": null
@@ -1762,6 +1845,7 @@ window.SPACECRAFT_DATA = {
    "section": "Boilerplates",
    "ident": "BP-4",
    "name": "-",
+   "tier": "other",
    "location": "Unknown",
    "museums": [],
    "url": null
@@ -1772,6 +1856,7 @@ window.SPACECRAFT_DATA = {
    "section": "Boilerplates",
    "ident": "BP-5",
    "name": "-",
+   "tier": "other",
    "location": "Unknown",
    "museums": [],
    "url": null
@@ -1782,6 +1867,7 @@ window.SPACECRAFT_DATA = {
    "section": "Boilerplates",
    "ident": "BP-201",
    "name": "-",
+   "tier": "other",
    "location": "Unknown",
    "museums": [],
    "url": null
@@ -1792,6 +1878,7 @@ window.SPACECRAFT_DATA = {
    "section": "Boilerplates",
    "ident": "FA-1A",
    "name": "-",
+   "tier": "other",
    "location": "Unknown",
    "museums": [],
    "url": null
@@ -1802,6 +1889,7 @@ window.SPACECRAFT_DATA = {
    "section": "Trainers",
    "ident": "2411",
    "name": "Gemini 3A",
+   "tier": "other",
    "location": "St. Louis Science Center, St. Louis, Missouri",
    "museums": [
     "st-louis-science-center"
@@ -1814,6 +1902,7 @@ window.SPACECRAFT_DATA = {
    "section": "Trainers",
    "ident": "2411",
    "name": "Gemini MOL-B",
+   "tier": "other",
    "location": "National Museum of the U.S. Air Force, Wright-Patterson Air Force Base, Dayton, Ohio",
    "museums": [
     "national-museum-usaf"
@@ -1826,6 +1915,7 @@ window.SPACECRAFT_DATA = {
    "section": "Trainers",
    "ident": "5143",
    "name": "Gemini Trainer",
+   "tier": "other",
    "location": "US Space & Rocket Center, Huntsville, Alabama",
    "museums": [
     "us-space-rocket-center"
@@ -1838,6 +1928,7 @@ window.SPACECRAFT_DATA = {
    "section": "Trainers",
    "ident": "-",
    "name": "Gemini Trainer",
+   "tier": "other",
    "location": "US Space & Rocket Center, Huntsville, Alabama",
    "museums": [
     "us-space-rocket-center"
@@ -1850,6 +1941,7 @@ window.SPACECRAFT_DATA = {
    "section": "Trainers",
    "ident": "-",
    "name": "Gemini Trainer",
+   "tier": "other",
    "location": "Goddard Space Flight Center, NASA, Greenbelt, Maryland",
    "museums": [
     "nasa-goddard"
@@ -1862,6 +1954,7 @@ window.SPACECRAFT_DATA = {
    "section": "Trainers",
    "ident": "-",
    "name": "Gemini Trainer",
+   "tier": "other",
    "location": "Kentucky Science Center, Louisville, Kentucky",
    "museums": [
     "kentucky-science-center"
@@ -1874,6 +1967,7 @@ window.SPACECRAFT_DATA = {
    "section": "Trainers",
    "ident": "6165",
    "name": "-",
+   "tier": "other",
    "location": "National Air and Space Museum, Washington D.C.",
    "museums": [
     "national-air-and-space-museum"
@@ -1886,6 +1980,7 @@ window.SPACECRAFT_DATA = {
    "section": "Trainers",
    "ident": "-",
    "name": "El Kabong",
+   "tier": "other",
    "location": "Air Zoo, Portage, Michigan",
    "museums": [
     "air-zoo"
@@ -1898,6 +1993,7 @@ window.SPACECRAFT_DATA = {
    "section": "Trainers",
    "ident": "-",
    "name": "Trainer",
+   "tier": "other",
    "location": "Virginia Air & Space Center, Hampton, Virginia",
    "museums": [
     "virginia-air-space"
@@ -1910,6 +2006,7 @@ window.SPACECRAFT_DATA = {
    "section": "Trainers",
    "ident": "BP",
    "name": "MSC 312",
+   "tier": "other",
    "location": "Private Residence, Holden, MA",
    "museums": [],
    "url": "https://www.american-spacecraft.org/gemini/gemini-msc-312.html"
@@ -1920,6 +2017,7 @@ window.SPACECRAFT_DATA = {
    "section": "Trainers",
    "ident": "BP",
    "name": "MSC 313",
+   "tier": "other",
    "location": "Private Residence, San Jose, California",
    "museums": [],
    "url": "https://www.american-spacecraft.org/gemini/gemini-msc-313.html"
@@ -1930,6 +2028,7 @@ window.SPACECRAFT_DATA = {
    "section": "Trainers",
    "ident": "6873",
    "name": "TTV-1",
+   "tier": "other",
    "location": "Udvar-Hazy Center, National Air and Space Museum, Chantilly, Virginia",
    "museums": [
     "udvar-hazy"
@@ -1942,6 +2041,7 @@ window.SPACECRAFT_DATA = {
    "section": "Trainers",
    "ident": "-",
    "name": "TTV-2",
+   "tier": "other",
    "location": "National Space Centre, Leicester, England",
    "museums": [
     "national-space-centre"
@@ -1954,6 +2054,7 @@ window.SPACECRAFT_DATA = {
    "section": "Trainers",
    "ident": "BP",
    "name": "-",
+   "tier": "other",
    "location": "Cape Canaveral Space Force Museum, Cape Canaveral Space Force Station, Florida",
    "museums": [
     "us-space-rocket-center"
@@ -1966,6 +2067,7 @@ window.SPACECRAFT_DATA = {
    "section": "Trainers",
    "ident": "-",
    "name": "Trainer",
+   "tier": "other",
    "location": "Unknown",
    "museums": [],
    "url": null
@@ -1976,6 +2078,7 @@ window.SPACECRAFT_DATA = {
    "section": "Trainers",
    "ident": "BP",
    "name": "MSC-307",
+   "tier": "other",
    "location": "USS Hornet Museum, Alameda, California",
    "museums": [
     "uss-hornet"
@@ -1988,6 +2091,7 @@ window.SPACECRAFT_DATA = {
    "section": "Trainers",
    "ident": "BP",
    "name": "MSC 326",
+   "tier": "other",
    "location": "University of California, Davis, California",
    "museums": [
     "x-university-of-california-davis-california"
@@ -2000,6 +2104,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "-",
    "name": "Gemini Model",
+   "tier": "other",
    "location": "Intrepid Sea, Air & Space Museum, New York, New York",
    "museums": [
     "uss-intrepid"
@@ -2012,6 +2117,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "-",
    "name": "Gemini Model",
+   "tier": "other",
    "location": "Air Zoo, Portage, Michigan",
    "museums": [
     "air-zoo"
@@ -2024,6 +2130,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "-",
    "name": "Gemini Model",
+   "tier": "other",
    "location": "The Discovery Center, Fresno, California",
    "museums": [
     "discovery-center-fresno"
@@ -2036,6 +2143,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "-",
    "name": "Gemini Model",
+   "tier": "other",
    "location": "Evergreen Aviation Museum, McMinnville, Oregon",
    "museums": [
     "evergreen-aviation-museum"
@@ -2048,6 +2156,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "-",
    "name": "Gemini Sit-in Model",
+   "tier": "other",
    "location": "Kennedy Space Complex Visitors Center, Merritt Island, Florida",
    "museums": [
     "kennedy-space-center"
@@ -2060,6 +2169,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "-",
    "name": "Gemini Model",
+   "tier": "other",
    "location": "Science Museum Oklahoma, Oklahoma City, Oklahoma",
    "museums": [
     "science-museum-oklahoma"
@@ -2072,6 +2182,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "-",
    "name": "Gemini Model",
+   "tier": "other",
    "location": "Boeing Prologue Room, St. Louis, Missouri",
    "museums": [
     "boeing-prologue-room"
@@ -2084,6 +2195,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "-",
    "name": "Gemini Model",
+   "tier": "other",
    "location": "Museum of Science & Industry, Chicago, Illinois",
    "museums": [
     "museum-of-science-chicago"
@@ -2096,6 +2208,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "-",
    "name": "Gemini Sit-in Model",
+   "tier": "other",
    "location": "Neil Armstrong Air and Space Museum, Wapakoneta, Ohio",
    "museums": [
     "wapakoneta"
@@ -2108,6 +2221,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "-",
    "name": "Gemini Mockup",
+   "tier": "other",
    "location": "Oregon Museum of Science and Industry, Portland, Oregon",
    "museums": [
     "oregon-museum-of-science-and-industry"
@@ -2120,6 +2234,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "-",
    "name": "Gemini Model",
+   "tier": "other",
    "location": "San Diego Air & Space Museum, San Diego, California",
    "museums": [
     "san-diego-air-space"
@@ -2132,6 +2247,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "-",
    "name": "Gemini Model",
+   "tier": "other",
    "location": "Stafford Air & Space Center, Weatherford, Oklahoma",
    "museums": [
     "stafford-air-and-space-center"
@@ -2144,6 +2260,7 @@ window.SPACECRAFT_DATA = {
    "section": "Block 1 Capsules",
    "ident": "002",
    "name": "LJ II A-004",
+   "tier": "spare",
    "location": "Cradle of Aviation Museum, Long Island, New York",
    "museums": [
     "cradle-of-aviation-museum"
@@ -2156,6 +2273,7 @@ window.SPACECRAFT_DATA = {
    "section": "Block 1 Capsules",
    "ident": "004",
    "name": "-",
+   "tier": "spare",
    "location": "Reported Scrapped (NASM)",
    "museums": [],
    "url": null
@@ -2166,6 +2284,7 @@ window.SPACECRAFT_DATA = {
    "section": "Block 1 Capsules",
    "ident": "006",
    "name": "-",
+   "tier": "spare",
    "location": "Reported Scrapped (NASM)",
    "museums": [],
    "url": null
@@ -2176,6 +2295,7 @@ window.SPACECRAFT_DATA = {
    "section": "Block 1 Capsules",
    "ident": "007",
    "name": "-",
+   "tier": "spare",
    "location": "Museum of Flight, Seattle, Washington",
    "museums": [
     "museum-of-flight"
@@ -2188,6 +2308,7 @@ window.SPACECRAFT_DATA = {
    "section": "Block 1 Capsules",
    "ident": "008",
    "name": "-",
+   "tier": "spare",
    "location": "Reported Scrapped (NASM)",
    "museums": [],
    "url": null
@@ -2198,6 +2319,7 @@ window.SPACECRAFT_DATA = {
    "section": "Block 1 Capsules",
    "ident": "009",
    "name": "AS-201",
+   "tier": "flown",
    "location": "Strategic Air Command Museum, Ashland, Nebraska",
    "museums": [
     "strategic-air-command-museum"
@@ -2210,6 +2332,7 @@ window.SPACECRAFT_DATA = {
    "section": "Block 1 Capsules",
    "ident": "011A",
    "name": "AS-202",
+   "tier": "flown",
    "location": "USS Hornet Museum, Alameda, California",
    "museums": [
     "uss-hornet"
@@ -2222,6 +2345,7 @@ window.SPACECRAFT_DATA = {
    "section": "Block 1 Capsules",
    "ident": "012",
    "name": "Apollo 1 AS-204 — (Grissom, White, Chaffee)",
+   "tier": "spare",
    "location": "NASA Langley Research Center, Hampton, Virginia",
    "museums": [
     "nasa-langley"
@@ -2234,6 +2358,7 @@ window.SPACECRAFT_DATA = {
    "section": "Block 1 Capsules",
    "ident": "014",
    "name": "-",
+   "tier": "spare",
    "location": "Reported Scrapped (NASM)",
    "museums": [],
    "url": null
@@ -2244,6 +2369,7 @@ window.SPACECRAFT_DATA = {
    "section": "Block 1 Capsules",
    "ident": "017",
    "name": "Apollo 4 AS-501",
+   "tier": "flown",
    "location": "Infinity Space Center, Pearlington, Mississippi",
    "museums": [
     "infinity-science-center"
@@ -2256,6 +2382,7 @@ window.SPACECRAFT_DATA = {
    "section": "Block 1 Capsules",
    "ident": "020",
    "name": "Apollo 6 AS-502",
+   "tier": "flown",
    "location": "Fernbank Science Center, Atlanta, Georgia",
    "museums": [
     "fernbank-science-center"
@@ -2268,6 +2395,7 @@ window.SPACECRAFT_DATA = {
    "section": "Block 2 Capsules",
    "ident": "098",
    "name": "-",
+   "tier": "spare",
    "location": "RKK Energia Museum, Moscow, Russia",
    "museums": [
     "rkk-energia-museum"
@@ -2280,6 +2408,7 @@ window.SPACECRAFT_DATA = {
    "section": "Block 2 Capsules",
    "ident": "099",
    "name": "-",
+   "tier": "spare",
    "location": "Reported Scrapped (NASM)",
    "museums": [],
    "url": null
@@ -2290,6 +2419,7 @@ window.SPACECRAFT_DATA = {
    "section": "Block 2 Capsules",
    "ident": "100",
    "name": "-",
+   "tier": "spare",
    "location": "At NASM?",
    "museums": [],
    "url": null
@@ -2300,6 +2430,7 @@ window.SPACECRAFT_DATA = {
    "section": "Block 2 Capsules",
    "ident": "101",
    "name": "Apollo 7 Phoenix (AS-205) — (Schirra, Cunningham, Eisele)",
+   "tier": "flown",
    "location": "Frontiers of Flight Museum, Dallas Love Field, Dallas, Texas",
    "museums": [
     "frontiers-of-flight-museum"
@@ -2312,6 +2443,7 @@ window.SPACECRAFT_DATA = {
    "section": "Block 2 Capsules",
    "ident": "102",
    "name": "Not used",
+   "tier": "spare",
    "location": "Reported Scrapped",
    "museums": [],
    "url": null
@@ -2322,6 +2454,7 @@ window.SPACECRAFT_DATA = {
    "section": "Block 2 Capsules",
    "ident": "103",
    "name": "Apollo 8 (AS-503) — (Borman, Lovell, Anders)",
+   "tier": "flown",
    "location": "Museum of Science & Industry, Chicago, Illinois",
    "museums": [
     "museum-of-science-chicago"
@@ -2334,6 +2467,7 @@ window.SPACECRAFT_DATA = {
    "section": "Block 2 Capsules",
    "ident": "104",
    "name": "Apollo 9 Gumdrop (AS-504) — (McDivitt, Scott, Schweickart)",
+   "tier": "flown",
    "location": "San Diego Air & Space Museum, San Diego, California",
    "museums": [
     "san-diego-air-space"
@@ -2346,6 +2480,7 @@ window.SPACECRAFT_DATA = {
    "section": "Block 2 Capsules",
    "ident": "105AV",
    "name": "Not used",
+   "tier": "spare",
    "location": "Stafford Air & Space Center, Weatherford, Oklahoma",
    "museums": [
     "stafford-air-and-space-center"
@@ -2358,6 +2493,7 @@ window.SPACECRAFT_DATA = {
    "section": "Block 2 Capsules",
    "ident": "106",
    "name": "Apollo 10 Charlie Brown (AS-505) — (Stafford, Young, Cernan)",
+   "tier": "flown",
    "location": "Science Museum, London, England",
    "museums": [
     "science-museum-london"
@@ -2370,6 +2506,7 @@ window.SPACECRAFT_DATA = {
    "section": "Block 2 Capsules",
    "ident": "107",
    "name": "Apollo 11 Columbia (AS-506) — (Armstrong, Aldrin, Collins)",
+   "tier": "flown",
    "location": "National Air and Space Museum, Washington D.C.",
    "museums": [
     "national-air-and-space-museum"
@@ -2382,6 +2519,7 @@ window.SPACECRAFT_DATA = {
    "section": "Block 2 Capsules",
    "ident": "108",
    "name": "Apollo 12 Yankee Clipper (AS-507) — (Conrad, Bean, Gordon)",
+   "tier": "flown",
    "location": "Virginia Air & Space Center, Hampton, Virginia",
    "museums": [
     "virginia-air-space"
@@ -2394,6 +2532,7 @@ window.SPACECRAFT_DATA = {
    "section": "Block 2 Capsules",
    "ident": "109",
    "name": "Apollo 13 Odyssey (AS-508) — (Lovell, Swigert, Haise)",
+   "tier": "flown",
    "location": "Kansas Cosmosphere and Space Center, Hutchinson, Kansas",
    "museums": [
     "cosmosphere"
@@ -2406,6 +2545,7 @@ window.SPACECRAFT_DATA = {
    "section": "Block 2 Capsules",
    "ident": "110",
    "name": "Apollo 14 Kitty Hawk (AS-509) — (Shepard, Mitchell, Roosa)",
+   "tier": "flown",
    "location": "Kennedy Space Complex Visitors Center, Merritt Island, Florida",
    "museums": [
     "kennedy-space-center"
@@ -2418,6 +2558,7 @@ window.SPACECRAFT_DATA = {
    "section": "Block 2 Capsules",
    "ident": "111",
    "name": "Apollo Soyuz Test Project — (Stafford, Brand, Slayton)",
+   "tier": "flown",
    "location": "California Science Center, Los Angeles, California",
    "museums": [
     "california-science-center"
@@ -2430,6 +2571,7 @@ window.SPACECRAFT_DATA = {
    "section": "Block 2 Capsules",
    "ident": "112",
    "name": "Apollo 15 Endeavour (AS-510) — (Scott, Worden, Irwin)",
+   "tier": "flown",
    "location": "National Museum of the U.S. Air Force, Wright-Patterson Air Force Base, Dayton, Ohio",
    "museums": [
     "national-museum-usaf"
@@ -2442,6 +2584,7 @@ window.SPACECRAFT_DATA = {
    "section": "Block 2 Capsules",
    "ident": "113",
    "name": "Apollo 16 Casper (AS-511) — (Young, Mattingly, Duke)",
+   "tier": "flown",
    "location": "US Space & Rocket Center, Huntsville, Alabama",
    "museums": [
     "us-space-rocket-center"
@@ -2454,6 +2597,7 @@ window.SPACECRAFT_DATA = {
    "section": "Block 2 Capsules",
    "ident": "114",
    "name": "Apollo 17 America (AS-512) — (Cernan, Evans, Schmitt)",
+   "tier": "flown",
    "location": "Space Center Houston, Houston, Texas",
    "museums": [
     "space-center-houston"
@@ -2466,6 +2610,7 @@ window.SPACECRAFT_DATA = {
    "section": "Block 2 Capsules",
    "ident": "115A",
    "name": "Unused",
+   "tier": "spare",
    "location": "Johnson Space Center, Houston, Texas",
    "museums": [
     "nasa-johnson"
@@ -2478,6 +2623,7 @@ window.SPACECRAFT_DATA = {
    "section": "Block 2 Capsules",
    "ident": "116",
    "name": "SKYLAB 1 SL-2 — (Conrad, Weitz, Kerwin)",
+   "tier": "flown",
    "location": "National Museum of Naval Aviation, Pensacola, Florida",
    "museums": [
     "national-museum-of-naval-aviation"
@@ -2490,6 +2636,7 @@ window.SPACECRAFT_DATA = {
    "section": "Block 2 Capsules",
    "ident": "117",
    "name": "SKYLAB 2 SL-3 — (Bean, Lousma, Garriott)",
+   "tier": "flown",
    "location": "Great Lakes Science Museum, Cleveland, Ohio",
    "museums": [
     "great-lakes-science-center"
@@ -2502,6 +2649,7 @@ window.SPACECRAFT_DATA = {
    "section": "Block 2 Capsules",
    "ident": "118",
    "name": "SKYLAB 3 SL-4 — (Carr, Pogue, Gibson)",
+   "tier": "flown",
    "location": "Stafford Air & Space Center, Weatherford, Oklahoma",
    "museums": [
     "stafford-air-and-space-center"
@@ -2514,6 +2662,7 @@ window.SPACECRAFT_DATA = {
    "section": "Block 2 Capsules",
    "ident": "119",
    "name": "Unused",
+   "tier": "spare",
    "location": "Kennedy Space Complex Visitors Center, Merritt Island, Florida",
    "museums": [
     "kennedy-space-center"
@@ -2526,6 +2675,7 @@ window.SPACECRAFT_DATA = {
    "section": "Boilerplates",
    "ident": "BP-1",
    "name": "-",
+   "tier": "other",
    "location": "Scrapped by JSC 11/71",
    "museums": [],
    "url": null
@@ -2536,6 +2686,7 @@ window.SPACECRAFT_DATA = {
    "section": "Boilerplates",
    "ident": "BP-2",
    "name": "-",
+   "tier": "other",
    "location": "Scrapped by JSC 11/71",
    "museums": [],
    "url": null
@@ -2546,6 +2697,7 @@ window.SPACECRAFT_DATA = {
    "section": "Boilerplates",
    "ident": "BP-3",
    "name": "-",
+   "tier": "other",
    "location": "Not recovered",
    "museums": [],
    "url": null
@@ -2556,6 +2708,7 @@ window.SPACECRAFT_DATA = {
    "section": "Boilerplates",
    "ident": "BP-6",
    "name": "PA-1",
+   "tier": "other",
    "location": "Scrapped by Rockwell 5/75",
    "museums": [],
    "url": null
@@ -2566,6 +2719,7 @@ window.SPACECRAFT_DATA = {
    "section": "Boilerplates",
    "ident": "BP-9",
    "name": "A-105 SA-10 Pegasus III",
+   "tier": "other",
    "location": "Not recovered",
    "museums": [],
    "url": null
@@ -2576,6 +2730,7 @@ window.SPACECRAFT_DATA = {
    "section": "Boilerplates",
    "ident": "BP-12",
    "name": "A-001 LJ II",
+   "tier": "other",
    "location": "Columbia Memorial Space Science Learning Center, Downey, California",
    "museums": [
     "columbia-memorial-science-center"
@@ -2588,6 +2743,7 @@ window.SPACECRAFT_DATA = {
    "section": "Boilerplates",
    "ident": "BP-13",
    "name": "A-101 SA-6",
+   "tier": "other",
    "location": "Not recovered",
    "museums": [],
    "url": null
@@ -2598,6 +2754,7 @@ window.SPACECRAFT_DATA = {
    "section": "Boilerplates",
    "ident": "BP-14",
    "name": "-",
+   "tier": "other",
    "location": "Unknown",
    "museums": [],
    "url": null
@@ -2608,6 +2765,7 @@ window.SPACECRAFT_DATA = {
    "section": "Boilerplates",
    "ident": "BP-15",
    "name": "A-102 SA-7",
+   "tier": "other",
    "location": "Not recovered",
    "museums": [],
    "url": null
@@ -2618,6 +2776,7 @@ window.SPACECRAFT_DATA = {
    "section": "Boilerplates",
    "ident": "BP-16",
    "name": "A-103 SA-9 Pegasus I",
+   "tier": "other",
    "location": "Not recovered",
    "museums": [],
    "url": null
@@ -2628,6 +2787,7 @@ window.SPACECRAFT_DATA = {
    "section": "Boilerplates",
    "ident": "BP-18",
    "name": "-",
+   "tier": "other",
    "location": "(See BP-30)",
    "museums": [],
    "url": "https://www.american-spacecraft.org/apollo/bp-30.html"
@@ -2638,6 +2798,7 @@ window.SPACECRAFT_DATA = {
    "section": "Boilerplates",
    "ident": "BP-19",
    "name": "-",
+   "tier": "other",
    "location": "Columbia Memorial Space Science Center, Downey, California",
    "museums": [
     "columbia-memorial-science-center"
@@ -2650,6 +2811,7 @@ window.SPACECRAFT_DATA = {
    "section": "Boilerplates",
    "ident": "BP-22",
    "name": "A-003 LJ II",
+   "tier": "other",
    "location": "Johnson Space Center, Houston, Texas",
    "museums": [
     "nasa-johnson"
@@ -2662,6 +2824,7 @@ window.SPACECRAFT_DATA = {
    "section": "Boilerplates",
    "ident": "BP-23",
    "name": "PA-2, A-002 LJ II",
+   "tier": "other",
    "location": "US Space & Rocket Center, Huntsville, Alabama",
    "museums": [
     "us-space-rocket-center"
@@ -2674,6 +2837,7 @@ window.SPACECRAFT_DATA = {
    "section": "Boilerplates",
    "ident": "BP-25",
    "name": "-",
+   "tier": "other",
    "location": "Unknown",
    "museums": [],
    "url": null
@@ -2684,6 +2848,7 @@ window.SPACECRAFT_DATA = {
    "section": "Boilerplates",
    "ident": "BP-26",
    "name": "A-104 SA-8 Pegasus II",
+   "tier": "other",
    "location": "Not recovered",
    "museums": [],
    "url": null
@@ -2694,6 +2859,7 @@ window.SPACECRAFT_DATA = {
    "section": "Boilerplates",
    "ident": "BP-27/CM-010",
    "name": "-",
+   "tier": "other",
    "location": "Marshall Space Flight Center, Huntsville, Alabama",
    "museums": [
     "nasa-marshall"
@@ -2706,6 +2872,7 @@ window.SPACECRAFT_DATA = {
    "section": "Boilerplates",
    "ident": "BP-28",
    "name": "-",
+   "tier": "other",
    "location": "Scrapped 11/71",
    "museums": [],
    "url": null
@@ -2716,6 +2883,7 @@ window.SPACECRAFT_DATA = {
    "section": "Boilerplates",
    "ident": "BP-29",
    "name": "-",
+   "tier": "other",
    "location": "Barringer Space Museum (Meteor Crater), Arizona",
    "museums": [
     "meteor-crater"
@@ -2728,6 +2896,7 @@ window.SPACECRAFT_DATA = {
    "section": "Boilerplates",
    "ident": "BP-30",
    "name": "Unused (Originally BP-18)",
+   "tier": "other",
    "location": "Kennedy Space Complex Visitors Center, Merritt Island, Florida",
    "museums": [
     "kennedy-space-center"
@@ -2740,6 +2909,7 @@ window.SPACECRAFT_DATA = {
    "section": "Boilerplates",
    "ident": "BP",
    "name": "CM",
+   "tier": "other",
    "location": "Private Residense, Holden, Massachusetts",
    "museums": [],
    "url": "https://www.american-spacecraft.org/apollo/bp-holden.html"
@@ -2750,6 +2920,7 @@ window.SPACECRAFT_DATA = {
    "section": "Boilerplates",
    "ident": "BP",
    "name": "CM",
+   "tier": "other",
    "location": "Formerly located at Dairy Queen, Franklin, Pennsylvania.",
    "museums": [
     "dairy-queen"
@@ -2762,6 +2933,7 @@ window.SPACECRAFT_DATA = {
    "section": "Boilerplates",
    "ident": "BP",
    "name": "CM",
+   "tier": "other",
    "location": "Garber Facility, National Air and Space Museum, Washington D.C.",
    "museums": [
     "garber-facility",
@@ -2775,6 +2947,7 @@ window.SPACECRAFT_DATA = {
    "section": "Boilerplates",
    "ident": "BP",
    "name": "CM",
+   "tier": "other",
    "location": "Goddard Space Flight Center, NASA, Greenbelt, Maryland",
    "museums": [
     "nasa-goddard"
@@ -2787,6 +2960,7 @@ window.SPACECRAFT_DATA = {
    "section": "Boilerplates",
    "ident": "BP",
    "name": "CM",
+   "tier": "other",
    "location": "Strategic Air Command Museum, Ashland, Nebraska",
    "museums": [
     "strategic-air-command-museum"
@@ -2799,6 +2973,7 @@ window.SPACECRAFT_DATA = {
    "section": "Boilerplates",
    "ident": "BP",
    "name": "CM",
+   "tier": "other",
    "location": "UDT-Seal Museum, Fort Pierce, Florida",
    "museums": [
     "udt-museum"
@@ -2811,6 +2986,7 @@ window.SPACECRAFT_DATA = {
    "section": "Boilerplates",
    "ident": "BP",
    "name": "CM",
+   "tier": "other",
    "location": "Apollo High School, St. Cloud City, Minnesota",
    "museums": [
     "x-apollo-high-school-st-cloud-city-minnesota"
@@ -2823,6 +2999,7 @@ window.SPACECRAFT_DATA = {
    "section": "Boilerplates",
    "ident": "BP",
    "name": "CM",
+   "tier": "other",
    "location": "Oyster River High School, Durham, New Hampshire",
    "museums": [
     "x-oyster-river-high-school-durham-new-hampshire"
@@ -2835,6 +3012,7 @@ window.SPACECRAFT_DATA = {
    "section": "Boilerplates",
    "ident": "BP",
    "name": "CM",
+   "tier": "other",
    "location": "Altoona Area Senior High School, Altoona, Pennsylvania",
    "museums": [
     "x-altoona-area-senior-high-school-altoona-pennsylvania"
@@ -2847,6 +3025,7 @@ window.SPACECRAFT_DATA = {
    "section": "Trainers",
    "ident": "M-3",
    "name": "-",
+   "tier": "other",
    "location": "Kennedy Space Complex Visitors Center, Merritt Island, Florida",
    "museums": [
     "kennedy-space-center"
@@ -2859,6 +3038,7 @@ window.SPACECRAFT_DATA = {
    "section": "Trainers",
    "ident": "M-11",
    "name": "S/C FVV",
+   "tier": "other",
    "location": "Kennedy Space Complex Visitors Center, Merritt Island, Florida",
    "museums": [
     "kennedy-space-center"
@@ -2871,6 +3051,7 @@ window.SPACECRAFT_DATA = {
    "section": "Trainers",
    "ident": "BP-1101A",
    "name": "-",
+   "tier": "other",
    "location": "Wings Over the Rockies Air and Space Museum, Denver, Colorado",
    "museums": [
     "wings-over-rockies"
@@ -2883,6 +3064,7 @@ window.SPACECRAFT_DATA = {
    "section": "Trainers",
    "ident": "BP-1102A",
    "name": "-",
+   "tier": "other",
    "location": "Udvar-Hazy Center, National Air and Space Museum, Chantilly, Virginia",
    "museums": [
     "udvar-hazy"
@@ -2895,6 +3077,7 @@ window.SPACECRAFT_DATA = {
    "section": "Trainers",
    "ident": "BP-1201",
    "name": "CM",
+   "tier": "other",
    "location": "New Mexico Museum of Space History, Alamogordo, New Mexico",
    "museums": [
     "new-mexico-museum-space-history"
@@ -2907,6 +3090,7 @@ window.SPACECRAFT_DATA = {
    "section": "Trainers",
    "ident": "BP-1202",
    "name": "CM",
+   "tier": "other",
    "location": "Cape Canaveral Space Force Museum, Cape Canaveral Space Force Station, Florida",
    "museums": [
     "cape-canaveral-space-force-museum"
@@ -2919,6 +3103,7 @@ window.SPACECRAFT_DATA = {
    "section": "Trainers",
    "ident": "BP-1203",
    "name": "CM",
+   "tier": "other",
    "location": "Salvaged",
    "museums": [],
    "url": null
@@ -2929,6 +3114,7 @@ window.SPACECRAFT_DATA = {
    "section": "Trainers",
    "ident": "BP-1204",
    "name": "CM",
+   "tier": "other",
    "location": "Paul E. Garber Facility - National Air and Space Museum, Suitland, Maryland",
    "museums": [
     "national-air-and-space-museum"
@@ -2941,6 +3127,7 @@ window.SPACECRAFT_DATA = {
    "section": "Trainers",
    "ident": "BP-1205",
    "name": "CM",
+   "tier": "other",
    "location": "New Mexico Museum of Space History, Alamogordo, New Mexico",
    "museums": [
     "new-mexico-museum-space-history"
@@ -2953,6 +3140,7 @@ window.SPACECRAFT_DATA = {
    "section": "Trainers",
    "ident": "BP-1206",
    "name": "CM",
+   "tier": "other",
    "location": "Patrick Air Force Base, Florida",
    "museums": [
     "x-patrick-air-force-base-florida"
@@ -2965,6 +3153,7 @@ window.SPACECRAFT_DATA = {
    "section": "Trainers",
    "ident": "BP-1207",
    "name": "CM",
+   "tier": "other",
    "location": "Discovery Center, Ocala, Florida",
    "museums": [
     "columbia-memorial-science-center"
@@ -2977,6 +3166,7 @@ window.SPACECRAFT_DATA = {
    "section": "Trainers",
    "ident": "BP-1208",
    "name": "CM",
+   "tier": "other",
    "location": "Salvaged",
    "museums": [],
    "url": null
@@ -2987,6 +3177,7 @@ window.SPACECRAFT_DATA = {
    "section": "Trainers",
    "ident": "BP-1209",
    "name": "CM",
+   "tier": "other",
    "location": "Salvaged",
    "museums": [],
    "url": null
@@ -2997,6 +3188,7 @@ window.SPACECRAFT_DATA = {
    "section": "Trainers",
    "ident": "BP-1210",
    "name": "CM-",
+   "tier": "other",
    "location": "Stafford Air & Space Center, Weatherford, Oklahoma",
    "museums": [
     "stafford-air-and-space-center"
@@ -3009,6 +3201,7 @@ window.SPACECRAFT_DATA = {
    "section": "Trainers",
    "ident": "BP-1213",
    "name": "CM",
+   "tier": "other",
    "location": "Salvaged",
    "museums": [],
    "url": null
@@ -3019,6 +3212,7 @@ window.SPACECRAFT_DATA = {
    "section": "Trainers",
    "ident": "BP-1214",
    "name": "CM",
+   "tier": "other",
    "location": "Salvaged",
    "museums": [],
    "url": null
@@ -3029,6 +3223,7 @@ window.SPACECRAFT_DATA = {
    "section": "Trainers",
    "ident": "BP-1216",
    "name": "CM",
+   "tier": "other",
    "location": "Salvaged",
    "museums": [],
    "url": null
@@ -3039,6 +3234,7 @@ window.SPACECRAFT_DATA = {
    "section": "Trainers",
    "ident": "BP-1217",
    "name": "CM",
+   "tier": "other",
    "location": "Salvaged",
    "museums": [],
    "url": null
@@ -3049,6 +3245,7 @@ window.SPACECRAFT_DATA = {
    "section": "Trainers",
    "ident": "BP-1220",
    "name": "CM-",
+   "tier": "other",
    "location": "North Carolina Museum of Life and Sciences, Durham, North Carolina",
    "museums": [
     "north-carolina-museum-of-life-and-sciences"
@@ -3061,6 +3258,7 @@ window.SPACECRAFT_DATA = {
    "section": "Trainers",
    "ident": "BP-1222",
    "name": "CM",
+   "tier": "other",
    "location": "Salvaged",
    "museums": [],
    "url": null
@@ -3071,6 +3269,7 @@ window.SPACECRAFT_DATA = {
    "section": "Trainers",
    "ident": "BP-1223",
    "name": "CM",
+   "tier": "other",
    "location": "Salvaged",
    "museums": [],
    "url": null
@@ -3081,6 +3280,7 @@ window.SPACECRAFT_DATA = {
    "section": "Trainers",
    "ident": "BP-1224",
    "name": "CM",
+   "tier": "other",
    "location": "Harris County Youth Village, Webster, Texas",
    "museums": [
     "harris-county-youth-village"
@@ -3093,6 +3293,7 @@ window.SPACECRAFT_DATA = {
    "section": "Trainers",
    "ident": "BP-1225",
    "name": "CM",
+   "tier": "other",
    "location": "UDT-Seal Museum, Fort Pierce, Florida",
    "museums": [
     "udt-museum"
@@ -3105,6 +3306,7 @@ window.SPACECRAFT_DATA = {
    "section": "Trainers",
    "ident": "BP-1226",
    "name": "CM",
+   "tier": "other",
    "location": "Salvaged",
    "museums": [],
    "url": null
@@ -3115,6 +3317,7 @@ window.SPACECRAFT_DATA = {
    "section": "Trainers",
    "ident": "BP-1227",
    "name": "CM",
+   "tier": "other",
    "location": "Grand Rapids Time Capsule, Grand Rapids, Michigan",
    "museums": [
     "public-museum-of-grand-rapids"
@@ -3127,6 +3330,7 @@ window.SPACECRAFT_DATA = {
    "section": "Trainers",
    "ident": "BP-1228",
    "name": "CM",
+   "tier": "other",
    "location": "National Museum of Naval Aviation, Pensacola, Florida",
    "museums": [
     "national-museum-of-naval-aviation"
@@ -3139,6 +3343,7 @@ window.SPACECRAFT_DATA = {
    "section": "Trainers",
    "ident": "BP-1229",
    "name": "CM",
+   "tier": "other",
    "location": "Salvaged",
    "museums": [],
    "url": null
@@ -3149,6 +3354,7 @@ window.SPACECRAFT_DATA = {
    "section": "Trainers",
    "ident": "BP-1302",
    "name": "CM",
+   "tier": "other",
    "location": "Salvaged",
    "museums": [],
    "url": null
@@ -3159,6 +3365,7 @@ window.SPACECRAFT_DATA = {
    "section": "Trainers",
    "ident": "KSC-E",
    "name": "Emergency Egress Trainer",
+   "tier": "other",
    "location": "Michigan Science Center, Detroit, Michigan",
    "museums": [
     "michigan-science-center"
@@ -3171,6 +3378,7 @@ window.SPACECRAFT_DATA = {
    "section": "Trainers",
    "ident": "BP-213",
    "name": "Apollo Practice Capsule",
+   "tier": "other",
    "location": "Cernan Earth and Space Center, Triton College, River Grove, Illinois",
    "museums": [
     "cernan-earth-and-space-center"
@@ -3183,6 +3391,7 @@ window.SPACECRAFT_DATA = {
    "section": "Trainers",
    "ident": "JSC #2",
    "name": "CM, SM",
+   "tier": "other",
    "location": "Kansas Cosmosphere and Space Center, Hutchinson, Kansas",
    "museums": [
     "cosmosphere"
@@ -3195,6 +3404,7 @@ window.SPACECRAFT_DATA = {
    "section": "Trainers",
    "ident": "JSC #4",
    "name": "CM",
+   "tier": "other",
    "location": "US Space & Rocket Center, Huntsville, Alabama",
    "museums": [
     "us-space-rocket-center"
@@ -3207,6 +3417,7 @@ window.SPACECRAFT_DATA = {
    "section": "Trainers",
    "ident": "BP-K",
    "name": "CM",
+   "tier": "other",
    "location": "Talon Park, Houston, Texas",
    "museums": [
     "talon-park"
@@ -3219,6 +3430,7 @@ window.SPACECRAFT_DATA = {
    "section": "Trainers",
    "ident": "BP",
    "name": "Apollo Practice Capsule",
+   "tier": "other",
    "location": "Apollo Middle School, Hollywood, Florida",
    "museums": [
     "apollo-middle-school"
@@ -3231,6 +3443,7 @@ window.SPACECRAFT_DATA = {
    "section": "Trainers",
    "ident": "BP",
    "name": "Skylab Trainer",
+   "tier": "other",
    "location": "Space Center Houston, Houston, Texas",
    "museums": [
     "space-center-houston"
@@ -3243,6 +3456,7 @@ window.SPACECRAFT_DATA = {
    "section": "Trainers",
    "ident": "1-G Trainer",
    "name": "CM",
+   "tier": "other",
    "location": "Science Museum Oklahoma, Oklahoma City, Oklahoma",
    "museums": [
     "science-museum-oklahoma"
@@ -3255,6 +3469,7 @@ window.SPACECRAFT_DATA = {
    "section": "Trainers",
    "ident": "1-G Trainer",
    "name": "CM",
+   "tier": "other",
    "location": "US Space & Rocket Center, Huntsville, Alabama",
    "museums": [
     "us-space-rocket-center"
@@ -3267,6 +3482,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "-",
    "name": "CM",
+   "tier": "other",
    "location": "Center of Science and Industry, Columbus, Ohio",
    "museums": [
     "center-of-science-and-industry"
@@ -3279,6 +3495,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "-",
    "name": "CM",
+   "tier": "other",
    "location": "Coca-Cola Space Science Center, Columbus, Georgia",
    "museums": [
     "coca-cola-space-science-center"
@@ -3291,6 +3508,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "-",
    "name": "CM",
+   "tier": "other",
    "location": "Cradle of Aviation Museum, Long Island, New York",
    "museums": [
     "cradle-of-aviation-museum"
@@ -3303,6 +3521,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "-",
    "name": "CM",
+   "tier": "other",
    "location": "Evergreen Aviation Museum, McMinnville, Oregon",
    "museums": [
     "evergreen-aviation-museum"
@@ -3315,6 +3534,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "-",
    "name": "CM",
+   "tier": "other",
    "location": "Kansas Cosmosphere and Space Center, Hutchinson, Kansas",
    "museums": [
     "cosmosphere"
@@ -3327,6 +3547,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "-",
    "name": "CM",
+   "tier": "other",
    "location": "Kennedy Space Complex Visitors Center, Merritt Island, Florida",
    "museums": [
     "kennedy-space-center"
@@ -3339,6 +3560,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "-",
    "name": "CM,SM",
+   "tier": "other",
    "location": "Science Museum Oklahoma, Oklahoma City, Oklahoma",
    "museums": [
     "science-museum-oklahoma"
@@ -3351,6 +3573,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "-",
    "name": "CM",
+   "tier": "other",
    "location": "Museum of Science, Boston, Massachusetts",
    "museums": [
     "museum-of-science-boston"
@@ -3363,6 +3586,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "-",
    "name": "CM",
+   "tier": "other",
    "location": "Neil Armstrong Air and Space Museum, Wapakoneta, Ohio",
    "museums": [
     "wapakoneta"
@@ -3375,6 +3599,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "-",
    "name": "CM",
+   "tier": "other",
    "location": "Pima Air & Space Museum, Tuscon, Arizona",
    "museums": [
     "pima-air-museum"
@@ -3387,6 +3612,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "-",
    "name": "CM",
+   "tier": "other",
    "location": "Purdue University, West Lafayette, Indiana",
    "museums": [
     "purdue"
@@ -3399,6 +3625,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "-",
    "name": "CM, SM",
+   "tier": "other",
    "location": "San Diego Air & Space Museum, San Diego, California",
    "museums": [
     "san-diego-air-space"
@@ -3411,6 +3638,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "-",
    "name": "CM,SM",
+   "tier": "other",
    "location": "Space Center Houston, Houston, Texas",
    "museums": [
     "space-center-houston"
@@ -3423,6 +3651,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "-",
    "name": "CM",
+   "tier": "other",
    "location": "Stafford Air & Space Center, Weatherford, Oklahoma",
    "museums": [
     "stafford-air-and-space-center"
@@ -3435,6 +3664,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "-",
    "name": "CM,SM",
+   "tier": "other",
    "location": "US Space & Rocket Center, Huntsville, Alabama",
    "museums": [
     "us-space-rocket-center"
@@ -3447,6 +3677,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "-",
    "name": "CM",
+   "tier": "other",
    "location": "Patriots Point Naval & Maritime Museum, Mt Pleasant, South Carolina",
    "museums": [
     "uss-yorktown"
@@ -3459,6 +3690,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "Apollo 1",
    "name": "CM",
+   "tier": "other",
    "location": "Tellus Science Museum, Cartersville, Georgia",
    "museums": [
     "tellus"
@@ -3471,6 +3703,7 @@ window.SPACECRAFT_DATA = {
    "section": "Lunar Modules",
    "ident": "1",
    "name": "Flew uncrewed on Apollo 5.",
+   "tier": "flown",
    "location": "Destroyed during re-entry",
    "museums": [],
    "url": null
@@ -3481,6 +3714,7 @@ window.SPACECRAFT_DATA = {
    "section": "Lunar Modules",
    "ident": "2",
    "name": "Not Used",
+   "tier": "spare",
    "location": "National Air and Space Museum, Washington D.C.",
    "museums": [
     "national-air-and-space-museum"
@@ -3493,6 +3727,7 @@ window.SPACECRAFT_DATA = {
    "section": "Lunar Modules",
    "ident": "3",
    "name": "Flew on Apollo 9 (Spider)",
+   "tier": "flown",
    "location": "Destroyed during re-entry",
    "museums": [],
    "url": null
@@ -3503,6 +3738,7 @@ window.SPACECRAFT_DATA = {
    "section": "Lunar Modules",
    "ident": "4",
    "name": "Flew on Apollo 10 (Snoopy)",
+   "tier": "flown",
    "location": "Descent: Crashed on Moon, Ascent: In heliocentric orbit",
    "museums": [],
    "url": null
@@ -3513,6 +3749,7 @@ window.SPACECRAFT_DATA = {
    "section": "Lunar Modules",
    "ident": "5",
    "name": "Flew on Apollo 11 (Eagle)",
+   "tier": "flown",
    "location": "Descent: Sea of Tranquillity, Moon 0.67 N, 23.49 E, Ascent: Lunar impact, unknown",
    "museums": [],
    "url": null
@@ -3523,6 +3760,7 @@ window.SPACECRAFT_DATA = {
    "section": "Lunar Modules",
    "ident": "6",
    "name": "Flew on Apollo 12 (Intrepid)",
+   "tier": "flown",
    "location": "Descent: Ocean of Storms, Moon 3.20 S, 23.38 W, Ascent: Lunar impact: 3.94 S, 21.21 W",
    "museums": [],
    "url": null
@@ -3533,6 +3771,7 @@ window.SPACECRAFT_DATA = {
    "section": "Lunar Modules",
    "ident": "7",
    "name": "Flew on Apollo 13 (Aquarius)",
+   "tier": "flown",
    "location": "Used as a lifeboat - destroyed during re-entry over Pacific Ocean",
    "museums": [],
    "url": null
@@ -3543,6 +3782,7 @@ window.SPACECRAFT_DATA = {
    "section": "Lunar Modules",
    "ident": "8",
    "name": "Flew on Apollo 14 (Antares)",
+   "tier": "flown",
    "location": "Descent: Fra Mauro, Moon 3.67 S, 17.47 W, Ascent: Lunar impact: 3.42 S, 19.67 W",
    "museums": [],
    "url": null
@@ -3553,6 +3793,7 @@ window.SPACECRAFT_DATA = {
    "section": "Lunar Modules",
    "ident": "9",
    "name": "Not Used",
+   "tier": "spare",
    "location": "Kennedy Space Complex Visitors Center, Merritt Island, Florida",
    "museums": [
     "kennedy-space-center"
@@ -3565,6 +3806,7 @@ window.SPACECRAFT_DATA = {
    "section": "Lunar Modules",
    "ident": "10",
    "name": "Flew on Apollo 15 (Falcon)",
+   "tier": "flown",
    "location": "Descent: Hadley-Apennine, Moon 26.10 N, 3.65 E, Ascent: Lunar impact: 26.36 N, 0.25 E",
    "museums": [],
    "url": null
@@ -3575,6 +3817,7 @@ window.SPACECRAFT_DATA = {
    "section": "Lunar Modules",
    "ident": "11",
    "name": "Flew on Apollo 16 (Orion)",
+   "tier": "flown",
    "location": "Descent: Descartes, Moon 8.99 S, 15.51 E, Ascent: Lunar impact site unknown",
    "museums": [],
    "url": null
@@ -3585,6 +3828,7 @@ window.SPACECRAFT_DATA = {
    "section": "Lunar Modules",
    "ident": "12",
    "name": "Flew on Apollo 17 (Challenger)",
+   "tier": "flown",
    "location": "Descent: Taurus-Littrow, Moon 20.16 N, 30.76 E, Ascent: Lunar impact: 19.96 N, 30.50 E",
    "museums": [],
    "url": null
@@ -3595,6 +3839,7 @@ window.SPACECRAFT_DATA = {
    "section": "Lunar Modules",
    "ident": "13",
    "name": "Not used, mission canceled.",
+   "tier": "spare",
    "location": "Cradle of Aviation Museum, Long Island, New York",
    "museums": [
     "cradle-of-aviation-museum"
@@ -3607,6 +3852,7 @@ window.SPACECRAFT_DATA = {
    "section": "Lunar Modules",
    "ident": "14",
    "name": "Not used, mission canceled.",
+   "tier": "spare",
    "location": "Unknown",
    "museums": [],
    "url": null
@@ -3617,6 +3863,7 @@ window.SPACECRAFT_DATA = {
    "section": "Lunar Modules",
    "ident": "15",
    "name": "Not used, mission canceled.",
+   "tier": "spare",
    "location": "Scrapped",
    "museums": [],
    "url": null
@@ -3627,6 +3874,7 @@ window.SPACECRAFT_DATA = {
    "section": "Test Vehicles",
    "ident": "LTA-1",
    "name": "Unflown",
+   "tier": "other",
    "location": "Cradle of Aviation Museum, Long Island, New York",
    "museums": [
     "cradle-of-aviation-museum"
@@ -3639,6 +3887,7 @@ window.SPACECRAFT_DATA = {
    "section": "Test Vehicles",
    "ident": "LTA-2R",
    "name": "Apollo 6",
+   "tier": "other",
    "location": "Destroyed on reentry",
    "museums": [],
    "url": null
@@ -3649,6 +3898,7 @@ window.SPACECRAFT_DATA = {
    "section": "Test Vehicles",
    "ident": "LTA-3A",
    "name": "Unflown",
+   "tier": "other",
    "location": "Kansas Cosmosphere and Space Center, Hutchinson, Kansas",
    "museums": [
     "cosmosphere"
@@ -3661,6 +3911,7 @@ window.SPACECRAFT_DATA = {
    "section": "Test Vehicles",
    "ident": "LTA-3DR",
    "name": "Unflown",
+   "tier": "other",
    "location": "Franklin Institute, Philadelphia, Pennsylvania",
    "museums": [
     "franklin-institute-science-museum"
@@ -3673,6 +3924,7 @@ window.SPACECRAFT_DATA = {
    "section": "Test Vehicles",
    "ident": "LTA-5D",
    "name": "Unflown",
+   "tier": "other",
    "location": "New Mexico Museum of Space History, Alamogordo, New Mexico",
    "museums": [
     "new-mexico-museum-space-history"
@@ -3685,6 +3937,7 @@ window.SPACECRAFT_DATA = {
    "section": "Test Vehicles",
    "ident": "LTA-8A",
    "name": "Unflown",
+   "tier": "other",
    "location": "Space Center Houston, Houston, Texas",
    "museums": [
     "space-center-houston"
@@ -3697,6 +3950,7 @@ window.SPACECRAFT_DATA = {
    "section": "Test Vehicles",
    "ident": "LTA-10R",
    "name": "Apollo 4",
+   "tier": "other",
    "location": "Destroyed on reentry",
    "museums": [],
    "url": null
@@ -3707,6 +3961,7 @@ window.SPACECRAFT_DATA = {
    "section": "Test Vehicles",
    "ident": "MSC-16",
    "name": "Non-Flight",
+   "tier": "other",
    "location": "Museum of Science & Industry, Chicago, Illinois",
    "museums": [
     "museum-of-science-chicago"
@@ -3719,6 +3974,7 @@ window.SPACECRAFT_DATA = {
    "section": "Test Vehicles",
    "ident": "TM-5",
    "name": "Non-flight",
+   "tier": "other",
    "location": "North Carolina Museum of Life and Sciences, Durham, North Carolina",
    "museums": [
     "north-carolina-museum-of-life-and-sciences"
@@ -3731,6 +3987,7 @@ window.SPACECRAFT_DATA = {
    "section": "Test Vehicles",
    "ident": "PA-1",
    "name": "Unflown",
+   "tier": "other",
    "location": "NASA White Sands Test Facility, White Sands, New Mexico",
    "museums": [
     "x-nasa-white-sands-test-facility-white-sands-new-mexico"
@@ -3743,6 +4000,7 @@ window.SPACECRAFT_DATA = {
    "section": "Trainers",
    "ident": "LLRV-1",
    "name": "Lunar Lander Research Vehicle",
+   "tier": "other",
    "location": "Destroyed",
    "museums": [],
    "url": null
@@ -3753,6 +4011,7 @@ window.SPACECRAFT_DATA = {
    "section": "Trainers",
    "ident": "LLRV-2",
    "name": "Lunar Lander Research Vehicle",
+   "tier": "other",
    "location": "Air Force Flight Test Museum, Edwards AFB, California",
    "museums": [
     "test-flight-museum"
@@ -3765,6 +4024,7 @@ window.SPACECRAFT_DATA = {
    "section": "Trainers",
    "ident": "LLTV-1",
    "name": "Lunar Lander Training Vehicle",
+   "tier": "other",
    "location": "Destroyed",
    "museums": [],
    "url": null
@@ -3775,6 +4035,7 @@ window.SPACECRAFT_DATA = {
    "section": "Trainers",
    "ident": "LLTV-2",
    "name": "Lunar Lander Training Vehicle",
+   "tier": "other",
    "location": "Destroyed",
    "museums": [],
    "url": null
@@ -3785,6 +4046,7 @@ window.SPACECRAFT_DATA = {
    "section": "Trainers",
    "ident": "LLTV-3",
    "name": "Lunar Lander Training Vehicle",
+   "tier": "other",
    "location": "Johnson Space Center, Houston, Texas",
    "museums": [
     "nasa-johnson"
@@ -3797,6 +4059,7 @@ window.SPACECRAFT_DATA = {
    "section": "Trainers",
    "ident": "LEMS",
    "name": "Lunar Excursion Module Simulator",
+   "tier": "other",
    "location": "Virginia Air & Space Center, Hampton, Virginia",
    "museums": [
     "virginia-air-space"
@@ -3809,6 +4072,7 @@ window.SPACECRAFT_DATA = {
    "section": "Simulators",
    "ident": "-",
    "name": "LM Trainer",
+   "tier": "other",
    "location": "Kennedy Space Complex Visitors Center, Merritt Island, Florida",
    "museums": [
     "kennedy-space-center"
@@ -3821,6 +4085,7 @@ window.SPACECRAFT_DATA = {
    "section": "Simulators",
    "ident": "-",
    "name": "LM Trainer",
+   "tier": "other",
    "location": "US Space & Rocket Center, Huntsville, Alabama",
    "museums": [
     "us-space-rocket-center"
@@ -3833,6 +4098,7 @@ window.SPACECRAFT_DATA = {
    "section": "Simulators",
    "ident": "-",
    "name": "LM Simulator",
+   "tier": "other",
    "location": "Cradle of Aviation Museum, Long Island, New York",
    "museums": [
     "cradle-of-aviation-museum"
@@ -3845,6 +4111,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "Model",
    "name": "Custom Built",
+   "tier": "other",
    "location": "Evergreen Aviation Museum, McMinnville, Oregon",
    "museums": [
     "evergreen-aviation-museum"
@@ -3857,6 +4124,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "Model",
    "name": "-",
+   "tier": "other",
    "location": "Intrepid Sea, Air & Space Museum, New York, New York",
    "museums": [
     "uss-intrepid"
@@ -3869,6 +4137,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "Model",
    "name": "Grumman Mockup",
+   "tier": "other",
    "location": "Kansas Cosmosphere and Space Center, Hutchinson, Kansas",
    "museums": [
     "cosmosphere"
@@ -3881,6 +4150,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "Model",
    "name": "-",
+   "tier": "other",
    "location": "Science Museum Oklahoma, Oklahoma City, Oklahoma",
    "museums": [
     "science-museum-oklahoma"
@@ -3893,6 +4163,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "Model",
    "name": "-",
+   "tier": "other",
    "location": "Stafford Air & Space Center, Weatherford, Oklahoma",
    "museums": [
     "stafford-air-and-space-center"
@@ -3905,6 +4176,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "Model",
    "name": "-",
+   "tier": "other",
    "location": "National Museum of Naval Aviation, Pensacola, Florida",
    "museums": [
     "national-museum-of-naval-aviation"
@@ -3917,6 +4189,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "-",
    "name": "Model",
+   "tier": "other",
    "location": "Technik Museum Speyer, Speyer, Germany",
    "museums": [
     "technik-museum-speyer"
@@ -3929,6 +4202,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "Simulator",
    "name": "Low Fidelity Mock-up",
+   "tier": "other",
    "location": "Infinity Space Center, Pearlington, Mississippi",
    "museums": [
     "infinity-science-center"
@@ -3941,6 +4215,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "LM-7 1/2",
    "name": "Grumman Model",
+   "tier": "other",
    "location": "Reported somewhere in Japan - Possibly at Space World",
    "museums": [],
    "url": null
@@ -3951,6 +4226,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "Model",
    "name": "Cabin Interior",
+   "tier": "other",
    "location": "Space Center Houston, Houston, Texas",
    "museums": [
     "space-center-houston"
@@ -3963,6 +4239,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "MSFC 76545",
    "name": "High Fidelity Mock-up",
+   "tier": "other",
    "location": "US Space & Rocket Center, Huntsville, Alabama",
    "museums": [
     "us-space-rocket-center"
@@ -3975,6 +4252,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "Simulator",
    "name": "Low Fidelity Mock-up",
+   "tier": "other",
    "location": "US Space & Rocket Center, Huntsville, Alabama",
    "museums": [
     "us-space-rocket-center"
@@ -3987,6 +4265,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "Model",
    "name": "Trainer",
+   "tier": "other",
    "location": "National Air and Space Museum, Washington D.C.",
    "museums": [
     "national-air-and-space-museum"
@@ -3999,6 +4278,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "Model",
    "name": "Quarter-sized",
+   "tier": "other",
    "location": "Air Zoo, Portage, Michigan",
    "museums": [
     "air-zoo"
@@ -4011,6 +4291,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "Model",
    "name": "High Fidelity Mock-up",
+   "tier": "other",
    "location": "Computer Museum of America, Roswell, Georgia",
    "museums": [
     "computer-museum"
@@ -4023,6 +4304,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "Model",
    "name": "High Fidelity Mock-up",
+   "tier": "other",
    "location": "Omega Headquarters, Biel, Switzerland",
    "museums": [
     "omega-museum"
@@ -4035,6 +4317,7 @@ window.SPACECRAFT_DATA = {
    "section": "Flight Units",
    "ident": "#1",
    "name": "Apollo 15",
+   "tier": "flown",
    "location": "Hadley-Apennine, Moon, 26.10 N, 3.65 E",
    "museums": [],
    "url": "https://www.american-spacecraft.org/lunar-rovers/lrv-1.html"
@@ -4045,6 +4328,7 @@ window.SPACECRAFT_DATA = {
    "section": "Flight Units",
    "ident": "#2",
    "name": "Apollo 16",
+   "tier": "flown",
    "location": "Descartes, Moon, 8.99 S, 15.51 E",
    "museums": [],
    "url": "https://www.american-spacecraft.org/lunar-rovers/lrv-2.html"
@@ -4055,6 +4339,7 @@ window.SPACECRAFT_DATA = {
    "section": "Flight Units",
    "ident": "#3",
    "name": "Apollo 17",
+   "tier": "flown",
    "location": "Taurus-Littrow, Moon, 20.16 N, 30.76 E",
    "museums": [],
    "url": "https://www.american-spacecraft.org/lunar-rovers/lrv-3.html"
@@ -4065,6 +4350,7 @@ window.SPACECRAFT_DATA = {
    "section": "Flight Units",
    "ident": "#4",
    "name": "Unflown",
+   "tier": "spare",
    "location": "National Air and Space Museum, Washington D.C.",
    "museums": [
     "national-air-and-space-museum"
@@ -4077,6 +4363,7 @@ window.SPACECRAFT_DATA = {
    "section": "Qualification Units",
    "ident": "-",
    "name": "Engineering Mockup",
+   "tier": "other",
    "location": "Museum of Flight, Seattle, Washington",
    "museums": [
     "museum-of-flight"
@@ -4089,6 +4376,7 @@ window.SPACECRAFT_DATA = {
    "section": "Qualification Units",
    "ident": "-",
    "name": "Qualification Test Unit",
+   "tier": "other",
    "location": "National Air and Space Museum, Washington D.C.",
    "museums": [
     "national-air-and-space-museum"
@@ -4101,6 +4389,7 @@ window.SPACECRAFT_DATA = {
    "section": "Qualification Units",
    "ident": "-",
    "name": "1-G Trainer",
+   "tier": "other",
    "location": "Space Center Houston, Houston, Texas",
    "museums": [
     "space-center-houston"
@@ -4113,6 +4402,7 @@ window.SPACECRAFT_DATA = {
    "section": "Qualification Units",
    "ident": "-",
    "name": "Vibration Test Unit",
+   "tier": "other",
    "location": "US Space & Rocket Center, Huntsville, Alabama",
    "museums": [
     "us-space-rocket-center"
@@ -4125,6 +4415,7 @@ window.SPACECRAFT_DATA = {
    "section": "Engineering, Test and Training Units",
    "ident": "-",
    "name": "Prototype",
+   "tier": "other",
    "location": "Air Zoo, Portage, Michigan",
    "museums": [
     "air-zoo"
@@ -4137,6 +4428,7 @@ window.SPACECRAFT_DATA = {
    "section": "Engineering, Test and Training Units",
    "ident": "-",
    "name": "1-G Trainer",
+   "tier": "other",
    "location": "Kennedy Space Complex Visitors Center, Merritt Island, Florida",
    "museums": [
     "kennedy-space-center"
@@ -4149,6 +4441,7 @@ window.SPACECRAFT_DATA = {
    "section": "Engineering, Test and Training Units",
    "ident": "Grover",
    "name": "Trainer",
+   "tier": "other",
    "location": "U. S. Geological Survey Flagstaff Field Center, Flagstaff, Arizona",
    "museums": [
     "usgs-flagstaff"
@@ -4161,6 +4454,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "-",
    "name": "Model",
+   "tier": "other",
    "location": "Kansas Cosmosphere and Space Center, Hutchinson, Kansas",
    "museums": [
     "cosmosphere"
@@ -4173,6 +4467,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "-",
    "name": "Model",
+   "tier": "other",
    "location": "Mission: Space, Epcot, Walt Disney World, Orlando, Florida",
    "museums": [
     "x-mission-space-epcot-walt-disney-world-orlando-florida"
@@ -4185,6 +4480,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "-",
    "name": "Model",
+   "tier": "other",
    "location": "National Museum of Naval Aviation, Pensacola, Florida",
    "museums": [
     "national-museum-of-naval-aviation"
@@ -4197,6 +4493,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "-",
    "name": "Model",
+   "tier": "other",
    "location": "Science Museum of Virginia, Richmond, Virginia",
    "museums": [
     "science-museum-virginia"
@@ -4209,6 +4506,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "-",
    "name": "Model",
+   "tier": "other",
    "location": "Technik Museum Speyer, Speyer, Germany",
    "museums": [
     "technik-museum-speyer"
@@ -4221,6 +4519,7 @@ window.SPACECRAFT_DATA = {
    "section": "Prototypes",
    "ident": "Lunar Electric Rover",
    "name": "Prototype",
+   "tier": "other",
    "location": "Johnson Space Center, Houston, Texas",
    "museums": [
     "nasa-johnson"
@@ -4233,6 +4532,7 @@ window.SPACECRAFT_DATA = {
    "section": "Skylab",
    "ident": "S-IVB 212",
    "name": "Skylab 1",
+   "tier": "flown",
    "location": "Destroyed",
    "museums": [],
    "url": "https://www.american-spacecraft.org/skylab/skylab-1.html"
@@ -4243,6 +4543,7 @@ window.SPACECRAFT_DATA = {
    "section": "Skylab",
    "ident": "S-IVB 515",
    "name": "Skylab 2",
+   "tier": "spare",
    "location": "National Air and Space Museum, Washington D.C.",
    "museums": [
     "national-air-and-space-museum"
@@ -4255,6 +4556,7 @@ window.SPACECRAFT_DATA = {
    "section": "Skylab",
    "ident": "-",
    "name": "Trainer",
+   "tier": "other",
    "location": "Space Center Houston, Houston, Texas",
    "museums": [
     "space-center-houston"
@@ -4267,6 +4569,7 @@ window.SPACECRAFT_DATA = {
    "section": "Skylab",
    "ident": "-",
    "name": "Trainer",
+   "tier": "other",
    "location": "US Space & Rocket Center, Huntsville, Alabama",
    "museums": [
     "us-space-rocket-center"
@@ -4279,6 +4582,7 @@ window.SPACECRAFT_DATA = {
    "section": "Skylab",
    "ident": "-",
    "name": "Multiple Docking Adapter only",
+   "tier": "spare",
    "location": "Kennedy Space Complex Visitors Center, Merritt Island, Florida",
    "museums": [
     "kennedy-space-center"
@@ -4291,6 +4595,7 @@ window.SPACECRAFT_DATA = {
    "section": "Skylab Capsules",
    "ident": "116",
    "name": "Skylab 1 SL-2 — (Conrad, Weitz, Kerwin)",
+   "tier": "flown",
    "location": "National Museum of Naval Aviation, Pensacola, Florida",
    "museums": [
     "national-museum-of-naval-aviation"
@@ -4303,6 +4608,7 @@ window.SPACECRAFT_DATA = {
    "section": "Skylab Capsules",
    "ident": "117",
    "name": "Skylab 2 SL-3 — (Bean, Lousma, Garriott)",
+   "tier": "flown",
    "location": "Great Lakes Science Museum, Cleveland, Ohio",
    "museums": [
     "great-lakes-science-center"
@@ -4315,6 +4621,7 @@ window.SPACECRAFT_DATA = {
    "section": "Skylab Capsules",
    "ident": "118",
    "name": "Skylab 3 SL-4 — (Carr, Pogue, Gibson)",
+   "tier": "flown",
    "location": "Oklahoma History Center, Oklahoma City, Oklahoma",
    "museums": [
     "oklahoma-history-center"
@@ -4327,6 +4634,7 @@ window.SPACECRAFT_DATA = {
    "section": "Skylab Capsules",
    "ident": "BP",
    "name": "Skylab Trainer",
+   "tier": "other",
    "location": "Space Center Houston, Houston, Texas",
    "museums": [
     "space-center-houston"
@@ -4339,6 +4647,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "-",
    "name": "Mockup",
+   "tier": "other",
    "location": "US Space & Rocket Center, Huntsville, Alabama",
    "museums": [
     "us-space-rocket-center"
@@ -4351,6 +4660,7 @@ window.SPACECRAFT_DATA = {
    "section": "Orbiters",
    "ident": "OV-095",
    "name": "Shuttle Avionics Integration Laboratory (SAIL)",
+   "tier": "other",
    "location": "Johnson Space Center, Houston, Texas",
    "museums": [
     "nasa-johnson"
@@ -4363,6 +4673,7 @@ window.SPACECRAFT_DATA = {
    "section": "Orbiters",
    "ident": "OV-098",
    "name": "Pathfinder",
+   "tier": "other",
    "location": "U.S. Space & Rocket Center, Huntsville, Alabama",
    "museums": [
     "us-space-rocket-center"
@@ -4375,6 +4686,7 @@ window.SPACECRAFT_DATA = {
    "section": "Orbiters",
    "ident": "OV-099",
    "name": "Challenger",
+   "tier": "flown",
    "location": "SLC 31 & 32, Cape Canaveral Space Force Station, Florida",
    "museums": [
     "cape-canaveral-space-force-station"
@@ -4387,6 +4699,7 @@ window.SPACECRAFT_DATA = {
    "section": "Orbiters",
    "ident": "OV-101",
    "name": "Enterprise",
+   "tier": "spare",
    "location": "Intrepid Sea, Air & Space Museum, New York, New York",
    "museums": [
     "uss-intrepid"
@@ -4399,6 +4712,7 @@ window.SPACECRAFT_DATA = {
    "section": "Orbiters",
    "ident": "OV-102",
    "name": "Columbia",
+   "tier": "flown",
    "location": "VAB, Kennedy Space Center, Florida",
    "museums": [
     "nasa-kennedy"
@@ -4411,6 +4725,7 @@ window.SPACECRAFT_DATA = {
    "section": "Orbiters",
    "ident": "OV-103",
    "name": "Discovery",
+   "tier": "flown",
    "location": "Udvar-Hazy Center, National Air and Space Museum, Chantilly, Virginia",
    "museums": [
     "udvar-hazy"
@@ -4423,6 +4738,7 @@ window.SPACECRAFT_DATA = {
    "section": "Orbiters",
    "ident": "OV-104",
    "name": "Atlantis",
+   "tier": "flown",
    "location": "KSC Visitors Center, Kennedy Space Complex, Florida",
    "museums": [
     "kennedy-space-center"
@@ -4435,6 +4751,7 @@ window.SPACECRAFT_DATA = {
    "section": "Orbiters",
    "ident": "OV-105",
    "name": "Endeavour",
+   "tier": "flown",
    "location": "California Science Center, Los Angeles, California",
    "museums": [
     "california-science-center"
@@ -4447,6 +4764,7 @@ window.SPACECRAFT_DATA = {
    "section": "Trainers",
    "ident": "Full Fuselage Trainer (FFT)",
    "name": "Astronaut Trainer",
+   "tier": "other",
    "location": "Museum of Flight, Seattle, Washington",
    "museums": [
     "museum-of-flight"
@@ -4459,6 +4777,7 @@ window.SPACECRAFT_DATA = {
    "section": "Trainers",
    "ident": "Crew Compartment Trainer (CCT-1)",
    "name": "Astronaut Trainer",
+   "tier": "other",
    "location": "National Museum of the U.S. Air Force, Wright-Patterson Air Force Base, Dayton, Ohio",
    "museums": [
     "national-museum-usaf"
@@ -4471,6 +4790,7 @@ window.SPACECRAFT_DATA = {
    "section": "Trainers",
    "ident": "Crew Compartment Trainer (CCT-2)",
    "name": "Astronaut Trainer",
+   "tier": "other",
    "location": "Lone Star Flight Museum, Houston, Texas",
    "museums": [
     "lone-star-flight-museum"
@@ -4483,6 +4803,7 @@ window.SPACECRAFT_DATA = {
    "section": "Trainers",
    "ident": "Fixed Base Simulator",
    "name": "Astronaut Trainer",
+   "tier": "other",
    "location": "Stafford Air & Space Center, Weatherford, Oklahoma",
    "museums": [
     "stafford-air-and-space-center"
@@ -4495,6 +4816,7 @@ window.SPACECRAFT_DATA = {
    "section": "Trainers",
    "ident": "Motion Base Simulator",
    "name": "Astronaut Trainer",
+   "tier": "other",
    "location": "Lone Star Flight Museum, Houston, Texas",
    "museums": [
     "lone-star-flight-museum"
@@ -4507,6 +4829,7 @@ window.SPACECRAFT_DATA = {
    "section": "Trainers",
    "ident": "Guidance and Navigation Simulator",
    "name": "Astronaut Trainer",
+   "tier": "other",
    "location": "Pima Air & Space Museum, Tuscon, Arizona",
    "museums": [
     "pima-air-museum"
@@ -4519,6 +4842,7 @@ window.SPACECRAFT_DATA = {
    "section": "Trainers",
    "ident": "Manipulator Development Facility (MDF)",
    "name": "Astronaut Trainer",
+   "tier": "other",
    "location": "Johnson Space Center, Houston, Texas",
    "museums": [
     "nasa-johnson"
@@ -4531,6 +4855,7 @@ window.SPACECRAFT_DATA = {
    "section": "Trainers",
    "ident": "Shuttle Astronaut Emergency Trainer",
    "name": "Astronaut Trainer",
+   "tier": "other",
    "location": "Kennedy Space Center, Florida",
    "museums": [
     "nasa-kennedy"
@@ -4543,6 +4868,7 @@ window.SPACECRAFT_DATA = {
    "section": "Trainers",
    "ident": "Engineering Trainer",
    "name": "-",
+   "tier": "other",
    "location": "Goddard Space Flight Center, NASA, Greenbelt, Maryland",
    "museums": [
     "nasa-goddard"
@@ -4555,6 +4881,7 @@ window.SPACECRAFT_DATA = {
    "section": "Trainers",
    "ident": "-",
    "name": "Engineering Mockup",
+   "tier": "other",
    "location": "Columbia Memorial Space Science Learning Center, Downey, California",
    "museums": [
     "center-of-science-and-industry"
@@ -4567,6 +4894,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "Model",
    "name": "(No name)",
+   "tier": "other",
    "location": "Coca-Cola Space Science Center, Columbus, Georgia",
    "museums": [
     "coca-cola-space-science-center"
@@ -4579,6 +4907,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "Model",
    "name": "(No name)",
+   "tier": "other",
    "location": "Air Zoo, Portage, Michigan",
    "museums": [
     "air-zoo"
@@ -4591,6 +4920,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "Model",
    "name": "Endeavour",
+   "tier": "other",
    "location": "Kansas Cosmosphere and Space Center, Hutchinson, Kansas",
    "museums": [
     "cosmosphere"
@@ -4603,6 +4933,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "Model",
    "name": "Independence",
+   "tier": "other",
    "location": "Space Center Houston, Houston, Texas",
    "museums": [
     "space-center-houston"
@@ -4615,6 +4946,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "Model",
    "name": "Atlantis",
+   "tier": "other",
    "location": "Museum of Science & Industry, Chicago, Illinois",
    "museums": [
     "museum-of-science-chicago"
@@ -4627,6 +4959,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "Model",
    "name": "Ambassador",
+   "tier": "other",
    "location": "Location unknown",
    "museums": [],
    "url": "https://www.american-spacecraft.org/shuttle/model-ambassador.html"
@@ -4637,6 +4970,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "Model",
    "name": "(No name)",
+   "tier": "other",
    "location": "Kennedy Space Center, Florida",
    "museums": [
     "nasa-kennedy"
@@ -4649,6 +4983,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "Model",
    "name": "Inspiration",
+   "tier": "other",
    "location": "St. Cloud, Minnesota",
    "museums": [
     "x-st-cloud-minnesota"
@@ -4661,6 +4996,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "Model",
    "name": "Inspiration",
+   "tier": "other",
    "location": "Columbia Memorial Space Science Learning Center, Downey, California",
    "museums": [
     "columbia-memorial-science-center"
@@ -4673,6 +5009,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "Model",
    "name": "Crew Compartment Trainer",
+   "tier": "other",
    "location": "Tulsa Air and Space Museum",
    "museums": [
     "tulsa-air-and-space-museum"
@@ -4685,6 +5022,7 @@ window.SPACECRAFT_DATA = {
    "section": "Space Camp Simulators",
    "ident": "Simulator",
    "name": "Endeavour",
+   "tier": "other",
    "location": "Discovery Science Center, Santa Ana, California",
    "museums": [
     "discovery-science-center-santa-ana"
@@ -4697,6 +5035,7 @@ window.SPACECRAFT_DATA = {
    "section": "Space Camp Simulators",
    "ident": "Simulator",
    "name": "Atlantis",
+   "tier": "other",
    "location": "San Diego Air & Space Museum, San Diego, California",
    "museums": [
     "san-diego-air-space"
@@ -4709,6 +5048,7 @@ window.SPACECRAFT_DATA = {
    "section": "Space Camp Simulators",
    "ident": "Simulator",
    "name": "Atlantis",
+   "tier": "other",
    "location": "U.S. Space & Rocket Center, Huntsville, Alabama",
    "museums": [
     "us-space-rocket-center"
@@ -4721,6 +5061,7 @@ window.SPACECRAFT_DATA = {
    "section": "Space Camp Simulators",
    "ident": "Simulator",
    "name": "Discovery",
+   "tier": "other",
    "location": "U.S. Space & Rocket Center, Huntsville, Alabama",
    "museums": [
     "us-space-rocket-center"
@@ -4733,6 +5074,7 @@ window.SPACECRAFT_DATA = {
    "section": "Space Camp Simulators",
    "ident": "Simulator",
    "name": "Endeavor",
+   "tier": "other",
    "location": "U.S. Space & Rocket Center, Huntsville, Alabama",
    "museums": [
     "us-space-rocket-center"
@@ -4745,6 +5087,7 @@ window.SPACECRAFT_DATA = {
    "section": "Space Camp Simulators",
    "ident": "Simulator",
    "name": "Enterprise",
+   "tier": "other",
    "location": "U.S. Space & Rocket Center, Huntsville, Alabama",
    "museums": [
     "us-space-rocket-center"
@@ -4757,6 +5100,7 @@ window.SPACECRAFT_DATA = {
    "section": "International Space Station",
    "ident": "Space Station",
    "name": "International Space Station",
+   "tier": "flown",
    "location": "Low Earth Orbit, app. alt. 180 nm., inclination 57°",
    "museums": [],
    "url": "https://www.american-spacecraft.org/iss/iss.html"
@@ -4767,6 +5111,7 @@ window.SPACECRAFT_DATA = {
    "section": "Trainers",
    "ident": "Trainer",
    "name": "Astronaut Trainer",
+   "tier": "other",
    "location": "Neutral Buoyancy Lab, Houston, Texas",
    "museums": [
     "neutral-buoyancy-laboratory"
@@ -4779,6 +5124,7 @@ window.SPACECRAFT_DATA = {
    "section": "Trainers",
    "ident": "Mockup",
    "name": "Astronaut Trainer",
+   "tier": "other",
    "location": "Johnson Space Center, Houston, Texas",
    "museums": [
     "nasa-johnson"
@@ -4791,6 +5137,7 @@ window.SPACECRAFT_DATA = {
    "section": "Crew Dragon",
    "ident": "C204",
    "name": "DM-1",
+   "tier": "flown",
    "location": "Destroyed - April 20, 2019",
    "museums": [],
    "url": "https://www.american-spacecraft.org/spacex/dm-1.html"
@@ -4801,6 +5148,7 @@ window.SPACECRAFT_DATA = {
    "section": "Crew Dragon",
    "ident": "C206",
    "name": "Endeavour",
+   "tier": "flown",
    "location": "Active",
    "museums": [],
    "url": "https://www.american-spacecraft.org/spacex/endeavour.html"
@@ -4811,6 +5159,7 @@ window.SPACECRAFT_DATA = {
    "section": "Crew Dragon",
    "ident": "C207",
    "name": "Resilience",
+   "tier": "flown",
    "location": "Active",
    "museums": [],
    "url": "https://www.american-spacecraft.org/spacex/resilience.html"
@@ -4821,6 +5170,7 @@ window.SPACECRAFT_DATA = {
    "section": "Crew Dragon",
    "ident": "C210",
    "name": "Endurance",
+   "tier": "flown",
    "location": "Active",
    "museums": [],
    "url": "https://www.american-spacecraft.org/spacex/endurance.html"
@@ -4831,6 +5181,7 @@ window.SPACECRAFT_DATA = {
    "section": "Crew Dragon",
    "ident": "C212",
    "name": "Freedom",
+   "tier": "flown",
    "location": "Active",
    "museums": [],
    "url": "https://www.american-spacecraft.org/spacex/freedom.html"
@@ -4841,6 +5192,7 @@ window.SPACECRAFT_DATA = {
    "section": "Crew Dragon",
    "ident": "C213",
    "name": "Grace",
+   "tier": "flown",
    "location": "Active",
    "museums": [],
    "url": "https://www.american-spacecraft.org/spacex/grace.html"
@@ -4851,6 +5203,7 @@ window.SPACECRAFT_DATA = {
    "section": "Trainers",
    "ident": "Mockup",
    "name": "Astronaut Trainer",
+   "tier": "other",
    "location": "Johnson Space Center, Houston, Texas",
    "museums": [
     "nasa-johnson"
@@ -4863,6 +5216,7 @@ window.SPACECRAFT_DATA = {
    "section": "Trainers",
    "ident": "Mockup",
    "name": "Astronaut Trainer",
+   "tier": "other",
    "location": "SpaceX, Hawthorne, California",
    "museums": [
     "x-spacex-hawthorne-california"
@@ -4875,6 +5229,7 @@ window.SPACECRAFT_DATA = {
    "section": "Cargo Dragon",
    "ident": "C101",
    "name": "",
+   "tier": "flown",
    "location": "SpaceX, Hawthorne, California",
    "museums": [
     "x-spacex-hawthorne-california"
@@ -4887,6 +5242,7 @@ window.SPACECRAFT_DATA = {
    "section": "Cargo Dragon",
    "ident": "C102",
    "name": "",
+   "tier": "flown",
    "location": "KSC Visitors Center, Kennedy Space Complex, Florida",
    "museums": [
     "kennedy-space-center"
@@ -4899,6 +5255,7 @@ window.SPACECRAFT_DATA = {
    "section": "Cargo Dragon",
    "ident": "C108",
    "name": "",
+   "tier": "flown",
    "location": "California Science Center, Los Angeles, California",
    "museums": [
     "california-science-center"
@@ -4911,6 +5268,7 @@ window.SPACECRAFT_DATA = {
    "section": "Cargo Dragon",
    "ident": "C113",
    "name": "",
+   "tier": "flown",
    "location": "Museum of Science & Industry, Chicago, Illinois",
    "museums": [
     "museum-of-science-chicago"
@@ -4923,6 +5281,7 @@ window.SPACECRAFT_DATA = {
    "section": "Cargo Dragon",
    "ident": "C208",
    "name": "",
+   "tier": "flown",
    "location": "Active",
    "museums": [],
    "url": null
@@ -4933,6 +5292,7 @@ window.SPACECRAFT_DATA = {
    "section": "Cargo Dragon",
    "ident": "C209",
    "name": "",
+   "tier": "flown",
    "location": "Active",
    "museums": [],
    "url": null
@@ -4943,6 +5303,7 @@ window.SPACECRAFT_DATA = {
    "section": "Cargo Dragon",
    "ident": "C211",
    "name": "",
+   "tier": "flown",
    "location": "Active",
    "museums": [],
    "url": null
@@ -4953,6 +5314,7 @@ window.SPACECRAFT_DATA = {
    "section": "Starliner",
    "ident": "Spacecraft 1",
    "name": "",
+   "tier": "flown",
    "location": "Retired",
    "museums": [],
    "url": "https://www.american-spacecraft.org/starliner/spacecraft-1.html"
@@ -4963,6 +5325,7 @@ window.SPACECRAFT_DATA = {
    "section": "Starliner",
    "ident": "Spacecraft 2",
    "name": "-",
+   "tier": "flown",
    "location": "Active",
    "museums": [],
    "url": "https://www.american-spacecraft.org/starliner/spacecraft-2.html"
@@ -4973,6 +5336,7 @@ window.SPACECRAFT_DATA = {
    "section": "Starliner",
    "ident": "Spacecraft 3",
    "name": "Calypso",
+   "tier": "flown",
    "location": "Active",
    "museums": [],
    "url": "https://www.american-spacecraft.org/starliner/calypso.html"
@@ -4983,6 +5347,7 @@ window.SPACECRAFT_DATA = {
    "section": "Trainers",
    "ident": "Mockup",
    "name": "Astronaut Trainer",
+   "tier": "other",
    "location": "Johnson Space Center, Houston, Texas",
    "museums": [
     "nasa-johnson"
@@ -4995,6 +5360,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "Model",
    "name": "-",
+   "tier": "other",
    "location": "Kennedy Space Complex Visitors Center, Merritt Island, Florida",
    "museums": [
     "kennedy-space-center"
@@ -5007,6 +5373,7 @@ window.SPACECRAFT_DATA = {
    "section": "Capsules",
    "ident": "New Shepard Crew Capsule",
    "name": "RSS Jules Verne",
+   "tier": "flown",
    "location": "Blue Origin’s Orbital Launch Complex, Cape Canaveral, Florida",
    "museums": [],
    "url": "https://www.american-spacecraft.org/blue-origin/rss-jules-verne.html"
@@ -5017,6 +5384,7 @@ window.SPACECRAFT_DATA = {
    "section": "Capsules",
    "ident": "New Shepard Crew Capsule",
    "name": "RSS H. G. Wells",
+   "tier": "flown",
    "location": "Active",
    "museums": [],
    "url": "https://www.american-spacecraft.org/blue-origin/rss-hg-wells.html"
@@ -5027,6 +5395,7 @@ window.SPACECRAFT_DATA = {
    "section": "Capsules",
    "ident": "New Shepard Crew Capsule",
    "name": "RSS First Step",
+   "tier": "flown",
    "location": "Active",
    "museums": [],
    "url": "https://www.american-spacecraft.org/blue-origin/rss-first-step.html"
@@ -5037,6 +5406,7 @@ window.SPACECRAFT_DATA = {
    "section": "Capsules",
    "ident": "New Shepard Crew Capsule",
    "name": "RSS Kármán Line",
+   "tier": "flown",
    "location": "Active",
    "museums": [],
    "url": "https://www.american-spacecraft.org/blue-origin/rss-karman-line.html"
@@ -5047,6 +5417,7 @@ window.SPACECRAFT_DATA = {
    "section": "Trainers",
    "ident": "Trainer",
    "name": "",
+   "tier": "other",
    "location": "Launch Site One, Van Horn, Texas",
    "museums": [
     "x-launch-site-one-van-horn-texas"
@@ -5059,6 +5430,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "Model",
    "name": "",
+   "tier": "other",
    "location": "Kennedy Space Complex Visitors Center, Merritt Island, Florida",
    "museums": [
     "kennedy-space-center"
@@ -5071,6 +5443,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "Model",
    "name": "",
+   "tier": "other",
    "location": "National Air and Space Museum, Washington D.C.",
    "museums": [
     "national-air-and-space-museum"
@@ -5083,6 +5456,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "Model",
    "name": "",
+   "tier": "other",
    "location": "Science Museum, London, England",
    "museums": [
     "science-museum-london"
@@ -5095,6 +5469,7 @@ window.SPACECRAFT_DATA = {
    "section": "SpaceShipOne",
    "ident": "316",
    "name": "SpaceShipOne",
+   "tier": "flown",
    "location": "National Air and Space Museum, Washington D.C.",
    "museums": [
     "national-air-and-space-museum"
@@ -5107,6 +5482,7 @@ window.SPACECRAFT_DATA = {
    "section": "SpaceShipTwo",
    "ident": "N339SS",
    "name": "VSS Enterprise",
+   "tier": "flown",
    "location": "Destroyed October 31, 2014",
    "museums": [],
    "url": "https://www.american-spacecraft.org/virgin-galactic/vss-enterprise.html"
@@ -5117,6 +5493,7 @@ window.SPACECRAFT_DATA = {
    "section": "SpaceShipTwo",
    "ident": "N202VG",
    "name": "VSS Unity",
+   "tier": "flown",
    "location": "Spaceport America, Truth or Consequences, New Mexico",
    "museums": [
     "x-spaceport-america-truth-or-consequences-new-mexico"
@@ -5129,6 +5506,7 @@ window.SPACECRAFT_DATA = {
    "section": "Launch Vehicles",
    "ident": "N318SL",
    "name": "WhiteKnightOne",
+   "tier": "other",
    "location": "Flying Heritage & Combat Armor Museum, Everett, Washington",
    "museums": [
     "flying-heritage"
@@ -5141,6 +5519,7 @@ window.SPACECRAFT_DATA = {
    "section": "Launch Vehicles",
    "ident": "N348MS",
    "name": "VMS Eve",
+   "tier": "other",
    "location": "Spaceport America, Truth or Consequences, New Mexico",
    "museums": [
     "x-spaceport-america-truth-or-consequences-new-mexico"
@@ -5153,6 +5532,7 @@ window.SPACECRAFT_DATA = {
    "section": "Replicas",
    "ident": "SpaceShipOne",
    "name": "Replica",
+   "tier": "other",
    "location": "Meadows Field, Bakersfield, California",
    "museums": [
     "meadows-field"
@@ -5165,6 +5545,7 @@ window.SPACECRAFT_DATA = {
    "section": "Replicas",
    "ident": "SpaceShipOne",
    "name": "Replica",
+   "tier": "other",
    "location": "Flying Heritage & Combat Armor Museum, Everett, Washington",
    "museums": [
     "flying-heritage"
@@ -5177,6 +5558,7 @@ window.SPACECRAFT_DATA = {
    "section": "Replicas",
    "ident": "SpaceShipOne",
    "name": "Replica",
+   "tier": "other",
    "location": "Google Headquarters, Mountain View, California",
    "museums": [
     "google-headquarters"
@@ -5189,6 +5571,7 @@ window.SPACECRAFT_DATA = {
    "section": "Replicas",
    "ident": "SpaceShipOne",
    "name": "Replica",
+   "tier": "other",
    "location": "Mojave Air & Space Port Legacy Park, Mojave, California",
    "museums": [
     "mojave-air-and-space-port-legacy-park"
@@ -5201,6 +5584,7 @@ window.SPACECRAFT_DATA = {
    "section": "Replicas",
    "ident": "SpaceShipOne",
    "name": "Replica",
+   "tier": "other",
    "location": "EAA Aviation Museum, Oshkosh, Wisconsin",
    "museums": [
     "oshkosh"
@@ -5213,6 +5597,7 @@ window.SPACECRAFT_DATA = {
    "section": "Replicas",
    "ident": "SpaceShipOne",
    "name": "Replica",
+   "tier": "other",
    "location": "Frontiers of Flight Museum, Dallas Love Field, Dallas, Texas",
    "museums": [
     "frontiers-of-flight-museum"
@@ -5225,6 +5610,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "SpaceShipOne",
    "name": "Model",
+   "tier": "other",
    "location": "Museum of Flight, Seattle, Washington",
    "museums": [
     "museum-of-flight"
@@ -5237,6 +5623,7 @@ window.SPACECRAFT_DATA = {
    "section": "Orion",
    "ident": "CM-001",
    "name": "Exploration Flight Test-1",
+   "tier": "flown",
    "location": "Kennedy Space Complex Visitors Center, Merritt Island, Florida",
    "museums": [
     "kennedy-space-center"
@@ -5249,6 +5636,7 @@ window.SPACECRAFT_DATA = {
    "section": "Orion",
    "ident": "CM-002",
    "name": "Artemis I",
+   "tier": "flown",
    "location": "-",
    "museums": [],
    "url": "https://www.american-spacecraft.org/orion/cm-002.html"
@@ -5259,6 +5647,7 @@ window.SPACECRAFT_DATA = {
    "section": "Orion",
    "ident": "CM-003",
    "name": "Integrity",
+   "tier": "flown",
    "location": "Operations and Checkout Facility, Kennedy Space Center, Florida",
    "museums": [
     "nasa-kennedy"
@@ -5271,6 +5660,7 @@ window.SPACECRAFT_DATA = {
    "section": "Orion",
    "ident": "CM-004",
    "name": "Artemis III",
+   "tier": "spare",
    "location": "Operations and Checkout Facility, Kennedy Space Center, Florida",
    "museums": [
     "nasa-kennedy"
@@ -5283,6 +5673,7 @@ window.SPACECRAFT_DATA = {
    "section": "Orion",
    "ident": "CM-005",
    "name": "Artemis IV",
+   "tier": "spare",
    "location": "Operations and Checkout Facility, Kennedy Space Center, Florida",
    "museums": [
     "nasa-kennedy"
@@ -5295,6 +5686,7 @@ window.SPACECRAFT_DATA = {
    "section": "Boilerplates",
    "ident": "PA-1",
    "name": "Boilerplate",
+   "tier": "other",
    "location": "Virginia Air & Space Center, Hampton, Virginia",
    "museums": [
     "nasa-langley"
@@ -5307,6 +5699,7 @@ window.SPACECRAFT_DATA = {
    "section": "Boilerplates",
    "ident": "AA-2",
    "name": "Boilerplate",
+   "tier": "other",
    "location": "Intentionally Destroyed",
    "museums": [],
    "url": "https://www.american-spacecraft.org/orion/aa-2.html"
@@ -5317,6 +5710,7 @@ window.SPACECRAFT_DATA = {
    "section": "Boilerplates",
    "ident": "Boilerplate Test Article (BTA)",
    "name": "Boilerplate",
+   "tier": "other",
    "location": "John F. Kennedy Space Center, Florida",
    "museums": [
     "nasa-kennedy"
@@ -5329,6 +5723,7 @@ window.SPACECRAFT_DATA = {
    "section": "Boilerplates",
    "ident": "Ground Test Article (GTA)",
    "name": "Boilerplate",
+   "tier": "other",
    "location": "Kennedy Space Center, Florida",
    "museums": [
     "nasa-kennedy"
@@ -5341,6 +5736,7 @@ window.SPACECRAFT_DATA = {
    "section": "Boilerplates",
    "ident": "Max Launch Abort System (MLAS)",
    "name": "Boilerplate",
+   "tier": "other",
    "location": "University of North Dakota, North Dakota",
    "museums": [
     "x-university-of-north-dakota-north-dakota"
@@ -5353,6 +5749,7 @@ window.SPACECRAFT_DATA = {
    "section": "Trainers",
    "ident": "Crew Module Test Article (CMTA)",
    "name": "Boilerplate",
+   "tier": "other",
    "location": "In-Use",
    "museums": [],
    "url": "https://www.american-spacecraft.org/orion/cmta.html"
@@ -5363,6 +5760,7 @@ window.SPACECRAFT_DATA = {
    "section": "Trainers",
    "ident": "Mockup",
    "name": "Astronaut Trainer",
+   "tier": "other",
    "location": "Johnson Space Center, Houston, Texas",
    "museums": [
     "nasa-johnson"
@@ -5375,6 +5773,7 @@ window.SPACECRAFT_DATA = {
    "section": "Models",
    "ident": "Model",
    "name": "Orion Spacecraft",
+   "tier": "other",
    "location": "Kennedy Space Complex Visitors Center, Merritt Island, Florida",
    "museums": [
     "kennedy-space-center"
@@ -5387,6 +5786,7 @@ window.SPACECRAFT_DATA = {
    "section": "Astronaut Maneuvering Unit",
    "ident": "-",
    "name": "Test Article",
+   "tier": "other",
    "location": "National Museum of the U.S. Air Force, Wright-Patterson Air Force Base, Dayton, Ohio",
    "museums": [
     "national-museum-usaf"
@@ -5399,6 +5799,7 @@ window.SPACECRAFT_DATA = {
    "section": "Astronaut Maneuvering Unit",
    "ident": "-",
    "name": "Test Article",
+   "tier": "other",
    "location": "Stafford Air & Space Center, Weatherford, Oklahoma",
    "museums": [
     "stafford-air-and-space-center"
@@ -5411,6 +5812,7 @@ window.SPACECRAFT_DATA = {
    "section": "Astronaut Maneuvering Unit",
    "ident": "-",
    "name": "Test Article",
+   "tier": "other",
    "location": "Hillar Aviation Museum, San Carlos, California",
    "museums": [
     "x-hillar-aviation-museum-san-carlos-california"
@@ -5423,6 +5825,7 @@ window.SPACECRAFT_DATA = {
    "section": "Manned Maneuvering Unit",
    "ident": "MMU-1",
    "name": "Flight Article",
+   "tier": "spare",
    "location": "Johnson Space Center, Houston, Texas",
    "museums": [
     "nasa-johnson"
@@ -5435,6 +5838,7 @@ window.SPACECRAFT_DATA = {
    "section": "Manned Maneuvering Unit",
    "ident": "MMU-2",
    "name": "Flight Article",
+   "tier": "flown",
    "location": "US Space & Rocket Center, Huntsville, Alabama",
    "museums": [
     "us-space-rocket-center"
@@ -5447,6 +5851,7 @@ window.SPACECRAFT_DATA = {
    "section": "Manned Maneuvering Unit",
    "ident": "MMU-3",
    "name": "Flight Article",
+   "tier": "flown",
    "location": "Udvar-Hazy Center, National Air and Space Museum, Chantilly, Virginia",
    "museums": [
     "udvar-hazy"
@@ -5459,6 +5864,7 @@ window.SPACECRAFT_DATA = {
    "section": "Manned Maneuvering Unit",
    "ident": "MMU",
    "name": "Trainer",
+   "tier": "other",
    "location": "Wings Over the Rockies Air and Space Museum, Denver, Colorado",
    "museums": [
     "wings-over-rockies"
@@ -5471,6 +5877,7 @@ window.SPACECRAFT_DATA = {
    "section": "Manned Maneuvering Unit",
    "ident": "-",
    "name": "Model",
+   "tier": "other",
    "location": "Coca-Cola Space Science Center, Columbus, Georgia",
    "museums": [
     "coca-cola-space-science-center"
@@ -5483,6 +5890,7 @@ window.SPACECRAFT_DATA = {
    "section": "Manned Maneuvering Unit",
    "ident": "-",
    "name": "Model",
+   "tier": "other",
    "location": "Kennedy Space Complex Visitors Center, Merritt Island, Florida",
    "museums": [
     "kennedy-space-center"
@@ -5495,6 +5903,7 @@ window.SPACECRAFT_DATA = {
    "section": "Little Joe",
    "ident": "Mercury",
    "name": "Little Joe",
+   "tier": "spare",
    "location": "Air Power Park and Museum, Hampton, Virginia",
    "museums": [
     "airpower"
@@ -5507,6 +5916,7 @@ window.SPACECRAFT_DATA = {
    "section": "Little Joe",
    "ident": "Mercury",
    "name": "Little Joe",
+   "tier": "spare",
    "location": "Wallops Flight Facility Visitors Center, Wallops Island, Virginia",
    "museums": [
     "nasa-wallops"
@@ -5519,6 +5929,7 @@ window.SPACECRAFT_DATA = {
    "section": "Redstone",
    "ident": "Mercury",
    "name": "Redstone",
+   "tier": "spare",
    "location": "Kansas Cosmosphere and Space Center, Hutchinson, Kansas",
    "museums": [
     "cosmosphere"
@@ -5531,6 +5942,7 @@ window.SPACECRAFT_DATA = {
    "section": "Redstone",
    "ident": "Mercury",
    "name": "Redstone",
+   "tier": "spare",
    "location": "Kennedy Space Center, Florida",
    "museums": [
     "nasa-kennedy"
@@ -5543,6 +5955,7 @@ window.SPACECRAFT_DATA = {
    "section": "Redstone",
    "ident": "Mercury",
    "name": "Redstone",
+   "tier": "spare",
    "location": "Kennedy Space Complex Visitors Center, Merritt Island, Florida",
    "museums": [
     "kennedy-space-center"
@@ -5555,6 +5968,7 @@ window.SPACECRAFT_DATA = {
    "section": "Redstone",
    "ident": "Mercury",
    "name": "Redstone",
+   "tier": "spare",
    "location": "Hall of Legends, Kennedy Space Complex, Florida",
    "museums": [
     "kennedy-space-center"
@@ -5567,6 +5981,7 @@ window.SPACECRAFT_DATA = {
    "section": "Redstone",
    "ident": "Mercury",
    "name": "Redstone",
+   "tier": "spare",
    "location": "Air Zoo, Portage, Michigan",
    "museums": [
     "air-zoo"
@@ -5579,6 +5994,7 @@ window.SPACECRAFT_DATA = {
    "section": "Redstone",
    "ident": "Mercury",
    "name": "Redstone",
+   "tier": "spare",
    "location": "North Carolina Museum of Life and Sciences, Durham, North Carolina",
    "museums": [
     "north-carolina-museum-of-life-and-sciences"
@@ -5591,6 +6007,7 @@ window.SPACECRAFT_DATA = {
    "section": "Redstone",
    "ident": "Mercury",
    "name": "Redstone",
+   "tier": "spare",
    "location": "Johnson Space Center, Houston, Texas",
    "museums": [
     "nasa-johnson"
@@ -5603,6 +6020,7 @@ window.SPACECRAFT_DATA = {
    "section": "Redstone",
    "ident": "Mercury",
    "name": "Redstone",
+   "tier": "spare",
    "location": "Parque de las Ciencias Luis A. Ferré, Bayamón, Puerto Rico",
    "museums": [
     "parque"
@@ -5615,6 +6033,7 @@ window.SPACECRAFT_DATA = {
    "section": "Redstone",
    "ident": "Mercury",
    "name": "Redstone",
+   "tier": "spare",
    "location": "Cape Canaveral Space Force Museum, Cape Canaveral Space Force Station, Florida",
    "museums": [
     "cape-canaveral-space-force-museum"
@@ -5627,6 +6046,7 @@ window.SPACECRAFT_DATA = {
    "section": "Redstone",
    "ident": "Mercury",
    "name": "Redstone",
+   "tier": "spare",
    "location": "US Space & Rocket Center, Huntsville, Alabama",
    "museums": [
     "us-space-rocket-center"
@@ -5639,6 +6059,7 @@ window.SPACECRAFT_DATA = {
    "section": "Redstone",
    "ident": "Mercury",
    "name": "Redstone",
+   "tier": "spare",
    "location": "McAuliffe-Shepard Discovery Center, Concord, New Hampshire",
    "museums": [
     "mcauliffe-shepard-center"
@@ -5651,6 +6072,7 @@ window.SPACECRAFT_DATA = {
    "section": "Redstone",
    "ident": "Mercury",
    "name": "Redstone",
+   "tier": "spare",
    "location": "Warren, New Hampshire",
    "museums": [
     "x-warren-new-hampshire"
@@ -5663,6 +6085,7 @@ window.SPACECRAFT_DATA = {
    "section": "Redstone",
    "ident": "Mercury",
    "name": "Redstone",
+   "tier": "spare",
    "location": "Marshall Space Flight Center, Huntsville, Alabama",
    "museums": [
     "nasa-marshall"
@@ -5675,6 +6098,7 @@ window.SPACECRAFT_DATA = {
    "section": "Atlas",
    "ident": "Mercury",
    "name": "Atlas",
+   "tier": "spare",
    "location": "Kennedy Space Complex Visitors Center, Merritt Island, Florida",
    "museums": [
     "kennedy-space-center"
@@ -5687,6 +6111,7 @@ window.SPACECRAFT_DATA = {
    "section": "Atlas",
    "ident": "Mercury",
    "name": "Atlas",
+   "tier": "spare",
    "location": "National Museum of the U.S. Air Force, Wright-Patterson Air Force Base, Dayton, Ohio",
    "museums": [
     "national-museum-usaf"
@@ -5699,6 +6124,7 @@ window.SPACECRAFT_DATA = {
    "section": "Atlas",
    "ident": "Mercury",
    "name": "Atlas",
+   "tier": "spare",
    "location": "New York Hall of Science, Corona Park, New York",
    "museums": [
     "new-york-hall-of-science"
@@ -5711,6 +6137,7 @@ window.SPACECRAFT_DATA = {
    "section": "Atlas",
    "ident": "Mercury",
    "name": "Atlas",
+   "tier": "spare",
    "location": "Parque de las Ciencias Luis A. Ferré, Bayamón, Puerto Rico",
    "museums": [
     "parque"
@@ -5723,6 +6150,7 @@ window.SPACECRAFT_DATA = {
    "section": "Titan II",
    "ident": "Gemini",
    "name": "Titan II",
+   "tier": "spare",
    "location": "Kennedy Space Complex Visitors Center, Merritt Island, Florida",
    "museums": [
     "kennedy-space-center"
@@ -5735,6 +6163,7 @@ window.SPACECRAFT_DATA = {
    "section": "Titan II",
    "ident": "Gemini",
    "name": "Titan II",
+   "tier": "spare",
    "location": "Kansas Cosmosphere and Space Center, Hutchinson, Kansas",
    "museums": [
     "cosmosphere"
@@ -5747,6 +6176,7 @@ window.SPACECRAFT_DATA = {
    "section": "Titan II",
    "ident": "Gemini",
    "name": "Titan II",
+   "tier": "spare",
    "location": "New York Hall of Science, Corona Park, New York",
    "museums": [
     "new-york-hall-of-science"
@@ -5759,6 +6189,7 @@ window.SPACECRAFT_DATA = {
    "section": "Titan II",
    "ident": "Gemini",
    "name": "Titan II",
+   "tier": "spare",
    "location": "Parque de las Ciencias Luis A. Ferré, Bayamon, Puerto Rico",
    "museums": [
     "parque"
@@ -5771,6 +6202,7 @@ window.SPACECRAFT_DATA = {
    "section": "Titan II",
    "ident": "-",
    "name": "Titan II",
+   "tier": "spare",
    "location": "Stafford Air & Space Center, Weatherford, Oklahoma",
    "museums": [
     "stafford-air-and-space-center"
@@ -5783,6 +6215,7 @@ window.SPACECRAFT_DATA = {
    "section": "Little Joe II",
    "ident": "Apollo",
    "name": "Little Joe II",
+   "tier": "spare",
    "location": "New Mexico Museum of Space History, Alamogordo, New Mexico",
    "museums": [
     "new-mexico-museum-space-history"
@@ -5795,6 +6228,7 @@ window.SPACECRAFT_DATA = {
    "section": "Little Joe II",
    "ident": "Apollo",
    "name": "Little Joe II",
+   "tier": "spare",
    "location": "Johnson Space Center, Houston, Texas",
    "museums": [
     "nasa-johnson"
@@ -5807,6 +6241,7 @@ window.SPACECRAFT_DATA = {
    "section": "Saturn",
    "ident": "Apollo",
    "name": "Saturn I",
+   "tier": "spare",
    "location": "US Space & Rocket Center, Huntsville, Alabama",
    "museums": [
     "us-space-rocket-center"
@@ -5819,6 +6254,7 @@ window.SPACECRAFT_DATA = {
    "section": "Saturn",
    "ident": "Apollo",
    "name": "Saturn I",
+   "tier": "spare",
    "location": "Marshall Space Flight Center, Huntsville, Alabama",
    "museums": [
     "nasa-marshall"
@@ -5831,6 +6267,7 @@ window.SPACECRAFT_DATA = {
    "section": "Saturn",
    "ident": "Apollo",
    "name": "Saturn IB",
+   "tier": "spare",
    "location": "Alabama Welcome Center, I-65 South, near TN-AL line",
    "museums": [
     "alabama-welcome-center"
@@ -5843,6 +6280,7 @@ window.SPACECRAFT_DATA = {
    "section": "Saturn",
    "ident": "Apollo",
    "name": "Saturn IB",
+   "tier": "spare",
    "location": "Kennedy Space Complex Visitors Center, Merritt Island, Florida",
    "museums": [
     "kennedy-space-center"
@@ -5855,6 +6293,7 @@ window.SPACECRAFT_DATA = {
    "section": "Saturn",
    "ident": "Skylab",
    "name": "Saturn IB",
+   "tier": "spare",
    "location": "US Space & Rocket Center, Huntsville, Alabama",
    "museums": [
     "us-space-rocket-center"
@@ -5867,6 +6306,7 @@ window.SPACECRAFT_DATA = {
    "section": "Saturn",
    "ident": "Apollo",
    "name": "Saturn V",
+   "tier": "spare",
    "location": "Kennedy Space Complex Visitors Center, Merritt Island, Florida",
    "museums": [
     "kennedy-space-center"
@@ -5879,6 +6319,7 @@ window.SPACECRAFT_DATA = {
    "section": "Saturn",
    "ident": "Apollo",
    "name": "Saturn V",
+   "tier": "spare",
    "location": "Johnson Space Center, Houston, Texas",
    "museums": [
     "nasa-johnson"
@@ -5891,6 +6332,7 @@ window.SPACECRAFT_DATA = {
    "section": "Saturn",
    "ident": "Apollo",
    "name": "Saturn V",
+   "tier": "spare",
    "location": "US Space & Rocket Center, Huntsville, Alabama",
    "museums": [
     "us-space-rocket-center"
@@ -5903,6 +6345,7 @@ window.SPACECRAFT_DATA = {
    "section": "Saturn",
    "ident": "Apollo",
    "name": "Saturn V",
+   "tier": "spare",
    "location": "US Space & Rocket Center, Huntsville, Alabama",
    "museums": [
     "us-space-rocket-center"
@@ -5915,6 +6358,7 @@ window.SPACECRAFT_DATA = {
    "section": "Saturn",
    "ident": "Apollo",
    "name": "Saturn V SI-C",
+   "tier": "spare",
    "location": "Infinity Space Center, Pearlington, Mississippi",
    "museums": [
     "infinity-science-center"
@@ -5927,6 +6371,7 @@ window.SPACECRAFT_DATA = {
    "section": "Saturn",
    "ident": "Apollo",
    "name": "Saturn V",
+   "tier": "spare",
    "location": "Parque de las Ciencias Luis A. Ferré, Bayamón, Puerto Rico",
    "museums": [
     "parque"
@@ -5939,6 +6384,7 @@ window.SPACECRAFT_DATA = {
    "section": "Space Shuttle",
    "ident": "STS",
    "name": "SRB (set)",
+   "tier": "spare",
    "location": "Kennedy Space Complex Visitors Center, Merritt Island, Florida",
    "museums": [
     "kennedy-space-center"
@@ -5951,6 +6397,7 @@ window.SPACECRAFT_DATA = {
    "section": "Space Shuttle",
    "ident": "STS",
    "name": "SRB",
+   "tier": "spare",
    "location": "Thiokol Missile Systems, Promontory, Utah",
    "museums": [
     "thiokol"
@@ -5963,6 +6410,7 @@ window.SPACECRAFT_DATA = {
    "section": "Space Shuttle",
    "ident": "STS",
    "name": "SRB (set)",
+   "tier": "spare",
    "location": "US Space & Rocket Center, Huntsville, Alabama",
    "museums": [
     "us-space-rocket-center"
@@ -5975,6 +6423,7 @@ window.SPACECRAFT_DATA = {
    "section": "Space Shuttle",
    "ident": "STS",
    "name": "SRB",
+   "tier": "spare",
    "location": "Marshall Space Flight Center, Huntsville, Alabama",
    "museums": [
     "nasa-marshall"
@@ -5987,6 +6436,7 @@ window.SPACECRAFT_DATA = {
    "section": "Space Shuttle",
    "ident": "STS",
    "name": "SRB",
+   "tier": "spare",
    "location": "Pima Air & Space Museum, Tuscon, Arizona",
    "museums": [
     "pima-air-museum"
@@ -5999,6 +6449,7 @@ window.SPACECRAFT_DATA = {
    "section": "Space Shuttle",
    "ident": "STS",
    "name": "SRB",
+   "tier": "spare",
    "location": "March Field Air Museum, Riverside, California",
    "museums": [
     "march-air-museum"
@@ -6011,6 +6462,7 @@ window.SPACECRAFT_DATA = {
    "section": "Space Shuttle",
    "ident": "STS",
    "name": "SRB",
+   "tier": "spare",
    "location": "California Science Center, Los Angeles, California",
    "museums": [
     "california-science-center"
@@ -6023,6 +6475,7 @@ window.SPACECRAFT_DATA = {
    "section": "Space Shuttle",
    "ident": "STS",
    "name": "ET-94",
+   "tier": "spare",
    "location": "California Science Center, Los Angeles, California",
    "museums": [
     "california-science-center"
@@ -6035,6 +6488,7 @@ window.SPACECRAFT_DATA = {
    "section": "Space Shuttle",
    "ident": "STS",
    "name": "MPTA-ET",
+   "tier": "spare",
    "location": "US Space & Rocket Center, Huntsville, Alabama",
    "museums": [
     "us-space-rocket-center"
@@ -6047,6 +6501,7 @@ window.SPACECRAFT_DATA = {
    "section": "Space Shuttle",
    "ident": "STS",
    "name": "ET",
+   "tier": "spare",
    "location": "KSC Visitors Center, Kennedy Space Complex, Florida",
    "museums": [
     "kennedy-space-center"
@@ -6059,6 +6514,7 @@ window.SPACECRAFT_DATA = {
    "section": "Space Shuttle",
    "ident": "STS",
    "name": "ET",
+   "tier": "spare",
    "location": "Green Cove Springs, Florida",
    "museums": [
     "x-green-cove-springs-florida"
@@ -6071,6 +6527,7 @@ window.SPACECRAFT_DATA = {
    "section": "Falcon 9",
    "ident": "-",
    "name": "B1019",
+   "tier": "flown",
    "location": "SpaceX Headquarters, Hawthorne, California",
    "museums": [
     "x-spacex-hawthorne-california"
@@ -6083,6 +6540,7 @@ window.SPACECRAFT_DATA = {
    "section": "Falcon 9",
    "ident": "-",
    "name": "B1021",
+   "tier": "flown",
    "location": "DISH Network Corporation headquarters, Littleton, Colorado",
    "museums": [
     "x-dish-network-corporation-headquarters-littleton-colorado"
@@ -6095,6 +6553,7 @@ window.SPACECRAFT_DATA = {
    "section": "Falcon 9",
    "ident": "-",
    "name": "B1023",
+   "tier": "flown",
    "location": "Kennedy Space Center, Florida",
    "museums": [
     "nasa-kennedy"
@@ -6107,6 +6566,7 @@ window.SPACECRAFT_DATA = {
    "section": "Falcon 9",
    "ident": "-",
    "name": "B1035",
+   "tier": "flown",
    "location": "Johnson Space Center, Houston, Texas",
    "museums": [
     "nasa-johnson"
@@ -6119,6 +6579,7 @@ window.SPACECRAFT_DATA = {
    "section": "Falcon 9",
    "ident": "Commercial Crew",
    "name": "B1051",
+   "tier": "flown",
    "location": "Expended",
    "museums": [],
    "url": "https://www.american-spacecraft.org/boosters/falcon9-b1051.html"
@@ -6129,6 +6590,7 @@ window.SPACECRAFT_DATA = {
    "section": "Falcon 9",
    "ident": "Commercial Crew",
    "name": "B1058",
+   "tier": "flown",
    "location": "Lost after landing",
    "museums": [],
    "url": "https://www.american-spacecraft.org/boosters/falcon9-b1058.html"
@@ -6139,6 +6601,7 @@ window.SPACECRAFT_DATA = {
    "section": "Falcon 9",
    "ident": "Commercial Crew",
    "name": "B1061",
+   "tier": "flown",
    "location": "Expended",
    "museums": [],
    "url": "https://www.american-spacecraft.org/boosters/falcon9-b1061.html"
@@ -6149,6 +6612,7 @@ window.SPACECRAFT_DATA = {
    "section": "Falcon 9",
    "ident": "Private",
    "name": "B1062",
+   "tier": "flown",
    "location": "Destroyed during its 23rd landing attempt.",
    "museums": [],
    "url": "https://www.american-spacecraft.org/boosters/falcon9-b1062.html"
@@ -6159,6 +6623,7 @@ window.SPACECRAFT_DATA = {
    "section": "Falcon 9",
    "ident": "Commercial Crew",
    "name": "B1067",
+   "tier": "flown",
    "location": "Active",
    "museums": [],
    "url": "https://www.american-spacecraft.org/boosters/falcon9-b1067.html"
@@ -6169,6 +6634,7 @@ window.SPACECRAFT_DATA = {
    "section": "Falcon 9",
    "ident": "Commercial Crew",
    "name": "B1077",
+   "tier": "flown",
    "location": "Active",
    "museums": [],
    "url": "https://www.american-spacecraft.org/boosters/falcon9-b1077.html"
@@ -6179,6 +6645,7 @@ window.SPACECRAFT_DATA = {
    "section": "Falcon 9",
    "ident": "Commercial Crew",
    "name": "B1078",
+   "tier": "flown",
    "location": "Active",
    "museums": [],
    "url": "https://www.american-spacecraft.org/boosters/falcon9-b1078.html"
@@ -6189,6 +6656,7 @@ window.SPACECRAFT_DATA = {
    "section": "Falcon 9",
    "ident": "Private & Commercial Cargo",
    "name": "B1080",
+   "tier": "flown",
    "location": "Active",
    "museums": [],
    "url": "https://www.american-spacecraft.org/boosters/falcon9-b1080.html"
@@ -6199,6 +6667,7 @@ window.SPACECRAFT_DATA = {
    "section": "Falcon 9",
    "ident": "Commercial Crew",
    "name": "B1081",
+   "tier": "flown",
    "location": "Active",
    "museums": [],
    "url": "https://www.american-spacecraft.org/boosters/falcon9-b1081.html"
@@ -6209,6 +6678,7 @@ window.SPACECRAFT_DATA = {
    "section": "Falcon 9",
    "ident": "Commercial Crew & Private",
    "name": "B1083",
+   "tier": "flown",
    "location": "Active",
    "museums": [],
    "url": "https://www.american-spacecraft.org/boosters/falcon9-b1083.html"
@@ -6219,6 +6689,7 @@ window.SPACECRAFT_DATA = {
    "section": "Falcon 9",
    "ident": "Commercial Crew",
    "name": "B1085",
+   "tier": "flown",
    "location": "Active",
    "museums": [],
    "url": "https://www.american-spacecraft.org/boosters/falcon9-b1085.html"
@@ -6229,6 +6700,7 @@ window.SPACECRAFT_DATA = {
    "section": "Falcon 9",
    "ident": "Commercial Crew",
    "name": "B1090",
+   "tier": "flown",
    "location": "Active",
    "museums": [],
    "url": "https://www.american-spacecraft.org/boosters/falcon9-b1090.html"
@@ -6239,6 +6711,7 @@ window.SPACECRAFT_DATA = {
    "section": "Falcon 9",
    "ident": "Commercial Crew & Private",
    "name": "B1094",
+   "tier": "flown",
    "location": "Active",
    "museums": [],
    "url": "https://www.american-spacecraft.org/boosters/falcon9-b1094.html"
@@ -6249,6 +6722,7 @@ window.SPACECRAFT_DATA = {
    "section": "Falcon 9",
    "ident": "Commercial Crew",
    "name": "B1101",
+   "tier": "flown",
    "location": "Active",
    "museums": [],
    "url": "https://www.american-spacecraft.org/boosters/falcon9-b1101.html"
@@ -6259,6 +6733,7 @@ window.SPACECRAFT_DATA = {
    "section": "New Shepard",
    "ident": "-",
    "name": "New Shepard 1",
+   "tier": "flown",
    "location": "Destroyed - April 29, 2015",
    "museums": [],
    "url": "https://www.american-spacecraft.org/boosters/ns1.html"
@@ -6269,6 +6744,7 @@ window.SPACECRAFT_DATA = {
    "section": "New Shepard",
    "ident": "-",
    "name": "New Shepard 2",
+   "tier": "flown",
    "location": "National Air and Space Museum, Washington D.C.",
    "museums": [
     "national-air-and-space-museum"
@@ -6281,6 +6757,7 @@ window.SPACECRAFT_DATA = {
    "section": "New Shepard",
    "ident": "-",
    "name": "New Shepard 3",
+   "tier": "flown",
    "location": "Destroyed - September 12, 2022",
    "museums": [],
    "url": "https://www.american-spacecraft.org/boosters/ns3.html"
@@ -6291,6 +6768,7 @@ window.SPACECRAFT_DATA = {
    "section": "New Shepard",
    "ident": "-",
    "name": "New Shepard 4",
+   "tier": "flown",
    "location": "Active",
    "museums": [],
    "url": "https://www.american-spacecraft.org/boosters/ns4.html"
@@ -6301,6 +6779,7 @@ window.SPACECRAFT_DATA = {
    "section": "New Shepard",
    "ident": "-",
    "name": "New Shepard 5",
+   "tier": "flown",
    "location": "Active",
    "museums": [],
    "url": "https://www.american-spacecraft.org/boosters/ns5.html"
@@ -6311,6 +6790,7 @@ window.SPACECRAFT_DATA = {
    "section": "Space Launch System (SLS)",
    "ident": "Artemis",
    "name": "Artemis 1",
+   "tier": "flown",
    "location": "Launched - November 16, 2022",
    "museums": [],
    "url": "https://www.american-spacecraft.org/boosters/sls-1.html"
@@ -6321,6 +6801,7 @@ window.SPACECRAFT_DATA = {
    "section": "Aircraft launchers",
    "ident": "X-15",
    "name": "B-52 0008",
+   "tier": "other",
    "location": "Armstrong Flight Research Center, Edwards Air Force Base, California",
    "museums": [
     "nasa-armstrong"
@@ -6333,6 +6814,7 @@ window.SPACECRAFT_DATA = {
    "section": "Aircraft launchers",
    "ident": "X-15",
    "name": "B-52 0003",
+   "tier": "other",
    "location": "Pima Air & Space Museum, Tucson, Arizona",
    "museums": [
     "pima-air-museum"
@@ -6345,6 +6827,7 @@ window.SPACECRAFT_DATA = {
    "section": "Aircraft launchers",
    "ident": "SpaceShipOne",
    "name": "N318SL WhiteKnightOne",
+   "tier": "other",
    "location": "Everett, Washington",
    "museums": [
     "x-everett-washington"
@@ -6357,6 +6840,7 @@ window.SPACECRAFT_DATA = {
    "section": "Aircraft launchers",
    "ident": "SpaceShipTwo",
    "name": "N348MS WhiteKnightTwo (VMS Eve)",
+   "tier": "other",
    "location": "Spaceport America",
    "museums": [
     "x-spaceport-america-truth-or-consequences-new-mexico"
@@ -6369,6 +6853,7 @@ window.SPACECRAFT_DATA = {
    "section": "Pad Hardware",
    "ident": "Gemini",
    "name": "White Room",
+   "tier": "other",
    "location": "Cape Canaveral Space Force Museum, Cape Canaveral Space Force Station, Florida",
    "museums": [
     "cape-canaveral-space-force-museum",
@@ -6382,6 +6867,7 @@ window.SPACECRAFT_DATA = {
    "section": "Pad Hardware",
    "ident": "Apollo",
    "name": "White Room",
+   "tier": "other",
    "location": "Kansas Cosmosphere and Space Center, Hutchinson, Kansas",
    "museums": [
     "cosmosphere"
@@ -6394,6 +6880,7 @@ window.SPACECRAFT_DATA = {
    "section": "Pad Hardware",
    "ident": "Apollo",
    "name": "White Room",
+   "tier": "other",
    "location": "Kennedy Space Complex Visitors Center, Merritt Island, Florida",
    "museums": [
     "kennedy-space-center"
@@ -6406,6 +6893,7 @@ window.SPACECRAFT_DATA = {
    "section": "Mission Control Centers",
    "ident": "Juno/Redstone",
    "name": "Complex 26",
+   "tier": "other",
    "location": "Cape Canaveral Space Force Museum, Cape Canaveral Space Force Station, Florida",
    "museums": [
     "cape-canaveral-space-force-museum",
@@ -6419,6 +6907,7 @@ window.SPACECRAFT_DATA = {
    "section": "Mission Control Centers",
    "ident": "",
    "name": "Mercury Control Center",
+   "tier": "other",
    "location": "Kennedy Space Complex Visitors Center, Merritt Island, Florida",
    "museums": [
     "kennedy-space-center"
@@ -6431,6 +6920,7 @@ window.SPACECRAFT_DATA = {
    "section": "Mission Control Centers",
    "ident": "",
    "name": "Mission Operations Control Room 2",
+   "tier": "other",
    "location": "Johnson Space Center, Houston, Texas",
    "museums": [
     "nasa-johnson"
@@ -6443,6 +6933,7 @@ window.SPACECRAFT_DATA = {
    "section": "Mission Control Centers",
    "ident": "",
    "name": "ISS Mission Control",
+   "tier": "other",
    "location": "Johnson Space Center, Houston, Texas",
    "museums": [
     "nasa-johnson"
@@ -6455,6 +6946,7 @@ window.SPACECRAFT_DATA = {
    "section": "Crew Transport Vehicle",
    "ident": "Apollo",
    "name": "Astrovan",
+   "tier": "other",
    "location": "Kennedy Space Complex Visitors Center, Merritt Island, Florida",
    "museums": [
     "kennedy-space-center"
@@ -6467,6 +6959,7 @@ window.SPACECRAFT_DATA = {
    "section": "Crew Transport Vehicle",
    "ident": "Shuttle",
    "name": "Astrovan",
+   "tier": "other",
    "location": "KSC Visitors Center, Kennedy Space Complex, Florida",
    "museums": [
     "kennedy-space-center"
@@ -6479,6 +6972,7 @@ window.SPACECRAFT_DATA = {
    "section": "Crew Transport Vehicle",
    "ident": "Shuttle",
    "name": "CTV",
+   "tier": "other",
    "location": "Air Force Flight Test Museum, Edwards AFB, California",
    "museums": [
     "test-flight-museum"
@@ -6491,6 +6985,7 @@ window.SPACECRAFT_DATA = {
    "section": "Crew Transport Vehicle",
    "ident": "Shuttle",
    "name": "CTV",
+   "tier": "other",
    "location": "Wings of Dreams, Starke, Florida",
    "museums": [
     "x-wings-of-dreams-starke-florida"
@@ -6503,6 +6998,7 @@ window.SPACECRAFT_DATA = {
    "section": "Crew Transport Vehicle",
    "ident": "Crew Dragon",
    "name": "Tesla Model X",
+   "tier": "other",
    "location": "Kennedy Space Center, Florida",
    "museums": [
     "nasa-kennedy"
@@ -6515,6 +7011,7 @@ window.SPACECRAFT_DATA = {
    "section": "Crew Transport Vehicle",
    "ident": "Starliner",
    "name": "Airstream Astrovan II",
+   "tier": "other",
    "location": "Kennedy Space Center, Florida",
    "museums": [
     "nasa-kennedy"
@@ -6527,6 +7024,7 @@ window.SPACECRAFT_DATA = {
    "section": "Crew Transport Vehicle",
    "ident": "Artemis/Orion",
    "name": "Canoo",
+   "tier": "other",
    "location": "Kennedy Space Center, Florida",
    "museums": [
     "nasa-kennedy"
@@ -6539,6 +7037,7 @@ window.SPACECRAFT_DATA = {
    "section": "Crew Transport Vehicle",
    "ident": "Artemis/Orion",
    "name": "Airstream Astrovan II",
+   "tier": "other",
    "location": "Kennedy Space Center, Florida",
    "museums": [
     "nasa-kennedy"
@@ -6551,6 +7050,7 @@ window.SPACECRAFT_DATA = {
    "section": "Support Hardware",
    "ident": "MQF001",
    "name": "Mobile Quarantine Facility",
+   "tier": "other",
    "location": "Weed Research Lab, Stonesville, Mississippi",
    "museums": [
     "x-weed-research-lab-stonesville-mississippi"
@@ -6563,6 +7063,7 @@ window.SPACECRAFT_DATA = {
    "section": "Support Hardware",
    "ident": "MQF002",
    "name": "Mobile Quarantine Facility",
+   "tier": "other",
    "location": "US Space & Rocket Center, Huntsville, Alabama",
    "museums": [
     "us-space-rocket-center"
@@ -6575,6 +7076,7 @@ window.SPACECRAFT_DATA = {
    "section": "Support Hardware",
    "ident": "MQF003",
    "name": "Mobile Quarantine Facility",
+   "tier": "other",
    "location": "Udvar-Hazy Center, National Air and Space Museum, Chantilly, Virginia",
    "museums": [
     "udvar-hazy"
@@ -6587,6 +7089,7 @@ window.SPACECRAFT_DATA = {
    "section": "Support Hardware",
    "ident": "MQF004",
    "name": "Mobile Quarantine Facility",
+   "tier": "other",
    "location": "USS Hornet Museum, Alameda, California",
    "museums": [
     "uss-hornet"
@@ -6599,6 +7102,7 @@ window.SPACECRAFT_DATA = {
    "section": "Other",
    "ident": "",
    "name": "Vehicle Assembly Building (VAB)",
+   "tier": "other",
    "location": "Kennedy Space Center, Florida",
    "museums": [
     "nasa-kennedy"

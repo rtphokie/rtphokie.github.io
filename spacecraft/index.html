@@ -22,7 +22,7 @@ a:hover { text-decoration: underline; }
 header { padding: 20px 16px 0; max-width: 1200px; margin: 0 auto; }
 h1 { margin: 0 0 4px; font-size: 22px; }
 .sub { color: var(--muted); font-size: 13px; }
-.stats { display:flex; gap:12px; flex-wrap:wrap; margin:16px 0; }
+.stats { display:grid; grid-template-columns:repeat(auto-fit, minmax(160px, 1fr)); gap:10px; margin:16px 0; }
 .stat { background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:10px 14px; min-width:150px; }
 .stat b { display:block; font-size:22px; font-variant-numeric: tabular-nums; }
 .stat span { color:var(--muted); font-size:12px; }
@@ -69,6 +69,12 @@ label.chk { display:inline-flex; gap:6px; align-items:center; font-size:13px; co
 .items .what { flex:1; }
 .items .where { color:var(--muted); font-size:12px; display:block; }
 .items input { accent-color: var(--good); margin-top:3px; }
+.tier-flown { --tc: #f0883e; } .tier-spare { --tc: #a371f7; } .tier-other { --tc: #8b96a3; }
+.sec .dot { display:inline-block; width:8px; height:8px; border-radius:50%; background:var(--tc); margin-right:6px; }
+.sec .bar.sm > i { background: var(--tc); }
+.sec .bar.sm.done > i { background: var(--good); }
+.items li.sech { font-size:11px; text-transform:uppercase; letter-spacing:.05em; color:var(--muted); padding-top:8px; justify-content:space-between; }
+.saved { font-size:12px; color:var(--muted); }
 .ov { font-size:10px; color:var(--warn); margin-left:4px; }
 .muted { color: var(--muted); }
 table.next { width:100%; border-collapse:collapse; background:var(--panel); border:1px solid var(--line); border-radius:10px; overflow:hidden; }
@@ -100,6 +106,7 @@ footer { max-width:1200px; margin:0 auto; padding:16px; color:var(--muted); font
     <label class="chk"><input type="checkbox" id="optModels"> Include models &amp; replicas</label>
     <label class="chk"><input type="checkbox" id="optNA"> Show items not on display</label>
     <span style="flex:1"></span>
+    <span class="saved" id="savedMsg"></span>
     <button class="btn" id="btnExport">Export progress</button>
     <button class="btn" id="btnImport">Import</button>
     <button class="btn" id="btnReset">Reset</button>
@@ -138,7 +145,12 @@ const $ = id => document.getElementById(id);
 
 let state = { visited: {}, overrides: {}, opts: { models: true, na: false }, tab: 'report' };
 try { Object.assign(state, JSON.parse(localStorage.getItem(KEY) || '{}')); } catch (e) {}
-const save = () => { try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {} };
+let storageOk = true;
+const save = () => {
+  try { localStorage.setItem(KEY, JSON.stringify(state)); storageOk = true; } catch (e) { storageOk = false; }
+  const el = document.getElementById('savedMsg');
+  if (el) el.textContent = storageOk ? '✓ Saved in this browser' : '⚠ Browser storage unavailable — use Export to keep progress';
+};
 
 const M = D.museums;
 const items = D.items;
@@ -181,10 +193,29 @@ function renderStats() {
     <div class="stat"><b>${seen} / ${pool.length}</b><span>spacecraft seen (on display)</span></div>
     <div class="stat"><b>${pool.length ? Math.round(100 * seen / pool.length) : 0}%</b><span>overall complete</span></div>
     <div class="stat"><b>${visited} / ${Object.keys(M).length}</b><span>museums visited</span></div>
-    <div class="stat"><b>${progsDone} / ${D.programs.length}</b><span>programs 100% complete</span></div>`;
+    <div class="stat"><b>${progsDone} / ${D.programs.length}</b><span>programs 100% complete</span></div>` +
+    TIERS.map(t => { const tp = pool.filter(it => it.tier === t.key); const ts = tp.filter(isSeen).length;
+      return `<div class="stat tier-${t.key}"><b>${ts} / ${tp.length}</b><span><span class="dot" style="display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--tc);margin-right:5px"></span>${esc(t.label)}</span></div>`; }).join('');
 }
 
+const TIERS = [
+  { key: 'flown', label: 'Flown in space', note: 'actually flew in space, incl. suborbital' },
+  { key: 'spare', label: 'Flight hardware, not flown in space', note: 'spares, backups, unflown vehicles, abort-test articles' },
+  { key: 'other', label: 'Boilerplates, trainers, mockups & models', note: 'test articles, trainers, simulators, models' },
+];
 const openSecs = new Set();
+function itemLi(it) {
+  const seenNow = isSeen(it), na = !displayable(it), ov = it.id in state.overrides;
+  const where = it.museums.length
+    ? it.museums.map(m => M[m]?.url ? `<a href="${esc(M[m].url)}" target="_blank">${esc(mname(m))}</a>` : esc(mname(m))).join(', ')
+      + (M[it.museums[0]]?.place ? ` — ${esc(M[it.museums[0]].place)}` : '')
+    : esc(it.location || 'Unknown');
+  const what = it.url ? `<a href="${esc(it.url)}" target="_blank">${esc(itemLabel(it))}</a>` : esc(itemLabel(it));
+  return `<li class="${seenNow ? 'seen' : ''} ${na ? 'na' : ''}">
+    <input type="checkbox" data-item="${esc(it.id)}" ${seenNow ? 'checked' : ''} title="Mark seen / unseen manually">
+    <span class="what">${what}${ov ? '<span class="ov" title="Manually set — right-click checkbox to clear">manual</span>' : ''}
+      <span class="where">${where}</span></span></li>`;
+}
 function renderReport() {
   const html = D.programs.map(p => {
     const all = items.filter(it => it.program === p.slug && counted(it));
@@ -192,35 +223,29 @@ function renderReport() {
     const disp = all.filter(displayable);
     const seen = disp.filter(isSeen).length;
     const pct = disp.length ? Math.round(100 * seen / disp.length) : 0;
-    const sections = [...new Set(all.map(it => it.section))];
-    const secHtml = sections.map(s => {
-      const sAll = all.filter(it => it.section === s);
-      const sDisp = sAll.filter(displayable);
-      const sSeen = sDisp.filter(isSeen).length;
-      const shown = state.opts.na ? sAll : sDisp;
-      const key = p.slug + '|' + s;
-      const lis = shown.map(it => {
-        const seenNow = isSeen(it), na = !displayable(it), ov = it.id in state.overrides;
-        const where = it.museums.length
-          ? it.museums.map(m => M[m]?.url ? `<a href="${esc(M[m].url)}" target="_blank">${esc(mname(m))}</a>` : esc(mname(m))).join(', ')
-            + (M[it.museums[0]]?.place ? ` — ${esc(M[it.museums[0]].place)}` : '')
-          : esc(it.location || 'Unknown');
-        const what = it.url ? `<a href="${esc(it.url)}" target="_blank">${esc(itemLabel(it))}</a>` : esc(itemLabel(it));
-        return `<li class="${seenNow ? 'seen' : ''} ${na ? 'na' : ''}">
-          <input type="checkbox" data-item="${esc(it.id)}" ${seenNow ? 'checked' : ''} title="Mark seen / unseen manually">
-          <span class="what">${what}${ov ? '<span class="ov" title="Manually set — right-click checkbox to clear">manual</span>' : ''}
-            <span class="where">${where}</span></span></li>`;
+    const tierHtml = TIERS.map(t => {
+      const tAll = all.filter(it => it.tier === t.key);
+      if (!tAll.length) return '';
+      const tDisp = tAll.filter(displayable);
+      const tSeen = tDisp.filter(isSeen).length;
+      const key = p.slug + '|' + t.key;
+      const shown = state.opts.na ? tAll : tDisp;
+      const sections = [...new Set(shown.map(it => it.section))];
+      const body = sections.map(s => {
+        const ss = shown.filter(it => it.section === s);
+        const sd = ss.filter(displayable);
+        return `<li class="sech">${esc(s)} <span class="n">${sd.filter(isSeen).length}/${sd.length}</span></li>` + ss.map(itemLi).join('');
       }).join('');
-      return `<details class="sec" data-key="${esc(key)}" ${openSecs.has(key) ? 'open' : ''}>
-        <summary><div class="row"><span>${esc(s)}</span>
-          <span class="n">${sDisp.length ? `${sSeen}/${sDisp.length}` : 'none on display'}${sAll.length > sDisp.length ? ` <span title="not on public display">(+${sAll.length - sDisp.length})</span>` : ''}</span></div>
-          ${pctBar(sSeen, sDisp.length, 'sm')}</summary>
-        <ul class="items">${lis || '<li class="muted">No items on public display.</li>'}</ul></details>`;
+      return `<details class="sec tier-${t.key}" data-key="${esc(key)}" ${openSecs.has(key) ? 'open' : ''}>
+        <summary title="${esc(t.note)}"><div class="row"><span><span class="dot"></span>${esc(t.label)}</span>
+          <span class="n">${tDisp.length ? `${tSeen}/${tDisp.length}` : 'none on display'}${tAll.length > tDisp.length ? ` <span title="lost, flown, scrapped, active or private">(+${tAll.length - tDisp.length})</span>` : ''}</span></div>
+          ${pctBar(tSeen, tDisp.length, 'sm')}</summary>
+        <ul class="items">${body || '<li class="muted">None on public display.</li>'}</ul></details>`;
     }).join('');
     return `<div class="prog"><h2><span>${esc(p.label)}</span><span class="pct">${pct}%</span></h2>
       ${pctBar(seen, disp.length)}
-      <div class="sub">${seen} of ${disp.length} on display seen${all.length > disp.length ? ` · ${all.length - disp.length} lost, flown, scrapped or private` : ''}</div>
-      ${secHtml}</div>`;
+      <div class="sub">${seen} of ${disp.length} on display seen${all.length > disp.length ? ` · ${all.length - disp.length} lost, scrapped, active or private` : ''}</div>
+      ${tierHtml}</div>`;
   }).join('');
   $('tab-report').innerHTML = `<div class="progs">${html}</div>`;
 }
