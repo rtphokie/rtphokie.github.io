@@ -76,6 +76,10 @@ label.chk { display:inline-flex; gap:6px; align-items:center; font-size:13px; co
 .sec .bar.sm.done > i { background: var(--good); }
 .items li.sech { font-size:11px; text-transform:uppercase; letter-spacing:.05em; color:var(--muted); padding-top:8px; justify-content:space-between; }
 .saved { font-size:12px; color:var(--muted); }
+.sources { margin-top:28px; padding-top:14px; border-top:1px solid var(--line); font-size:14px; }
+.sources h3 { font-size:13px; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); margin:0 0 8px; }
+.sources ul { margin:0 0 8px; padding-left:18px; } .sources li { margin:4px 0; }
+.sources p { font-size:12px; }
 .ov { font-size:10px; color:var(--warn); margin-left:4px; }
 .muted { color: var(--muted); }
 table.next { width:100%; border-collapse:collapse; background:var(--panel); border:1px solid var(--line); border-radius:10px; overflow:hidden; }
@@ -123,6 +127,11 @@ footer { max-width:1200px; margin:0 auto; padding:16px; color:var(--muted); font
       <label class="chk lunar-opt" title="Adds NASA's public lunar sample displays (curator.jsc.nasa.gov) to the museum list and report"><input type="checkbox" id="optLunar"> 🌕 Also track lunar samples</label>
     </div>
     <div id="museumList"></div>
+    <section class="sources">
+      <h3>Sources</h3>
+      <ul id="sourceList"></ul>
+      <p class="muted">Data last scraped <span class="scrapedDate"></span>. Which items flew in space, and which places on different lists are the same museum, were worked out by this tracker, not by the sources.</p>
+    </section>
   </section>
 
   <section id="tab-next" class="hidden">
@@ -180,6 +189,9 @@ const region = m => {
 };
 
 $('scraped').textContent = D.scraped;
+document.querySelectorAll('.scrapedDate').forEach(e => e.textContent = D.scraped);
+$('sourceList').innerHTML = (D.sources || []).map(src =>
+  `<li><a href="${esc(src.url)}" target="_blank" rel="noopener">${esc(src.name)}</a><span class="muted"> — ${esc(src.desc)}</span></li>`).join('');
 $('optModels').checked = state.opts.models;
 $('optNA').checked = state.opts.na;
 $('optLunar').checked = lunarOn();
@@ -268,7 +280,11 @@ function lunarCard() {
     const mi = lunar.filter(it => it.section === ms);
     const ss = mi.filter(isSeen).length;
     const key = 'lunar|' + ms;
-    const lis = mi.slice().sort((a, b) => mname(a.museums[0]).localeCompare(mname(b.museums[0]))).map(itemLi).join('');
+    const byName = (a, b) => mname(a.museums[0]).localeCompare(mname(b.museums[0]));
+    const groups = [['NASA public displays & awards', mi.filter(it => !it.id.startsWith('goodwill'))],
+                    ['Goodwill displays (states & nations)', mi.filter(it => it.id.startsWith('goodwill'))]];
+    const lis = groups.filter(g => g[1].length).map(([label, g]) =>
+      `<li class="sech">${label} <span class="n">${g.filter(isSeen).length}/${g.length}</span></li>` + g.slice().sort(byName).map(itemLi).join('')).join('');
     return `<details class="sec tier-lunar" data-key="${esc(key)}" ${openSecs.has(key) ? 'open' : ''}>
       <summary><div class="row"><span><span class="dot"></span>${esc(ms)}</span><span class="n">${ss}/${mi.length}</span></div>
         ${pctBar(ss, mi.length, 'sm')}</summary>
@@ -276,8 +292,7 @@ function lunarCard() {
   }).join('');
   return `<div class="prog lunar-card"><h2><span>🌕 Lunar Samples</span><span class="pct">${pct}%</span></h2>
     ${pctBar(seen, lunar.length)}
-    <div class="sub">${seen} of ${lunar.length} public display &amp; Ambassador of Exploration samples seen ·
-      <a href="${esc(D.lunarSource)}" target="_blank">NASA list</a></div>${rows}</div>`;
+    <div class="sub">${seen} of ${lunar.length} lunar sample displays seen — NASA loans, Ambassador of Exploration awards and Apollo 11 / 17 goodwill displays</div>${rows}</div>`;
 }
 
 function renderMuseums() {
